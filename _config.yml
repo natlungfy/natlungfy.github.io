@@ -21,7 +21,7 @@ sass:
   style: compressed
 
 # Theme settings
-theme_mode: standard  # choices are: 'dark', 'standard', 'markdown'
+theme_mode: markdown  # choices are: 'dark', 'standard', 'markdown'
 
 # Customizations
 your_name: Natalie Lung
@@ -58,6 +58,9 @@ social:
   - service: twitter
     username: natlungfy
     link: https://twitter.com/natlungfy
+  - service: instagram
+    username: natlungfy
+    link: https://instagram.com/natlungfy
 
 # Plugins
 gems:
