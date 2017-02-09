@@ -21,7 +21,7 @@ sass:
   style: compressed
 
 # Theme settings
-theme_mode: markdown  # choices are: 'dark', 'standard', 'markdown'
+theme_mode: standard  # choices are: 'dark', 'standard', 'markdown'
 
 # Customizations
 your_name: Natalie Lung
@@ -32,8 +32,8 @@ navigation:
     url: /
   - text: Work
     url: /work
-  - text: Outside of Work
-    url: /voluntary
+  - text: Community Work
+    url: /community
   - text: Resume
     url: /Natalie_Lung_CV.pdf
   - text: Blog
