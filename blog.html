@@ -14,16 +14,13 @@ permalink: blog
 <section>
 
   {% for blogblogpost in site.blog %}
-    {% assign nth = forloop.index0 | modulo:2 %}
     <div class="media t-hackcss-media">
 
-      {% if nth == 0 %}
       <div class="t-hackcss-media-shift media-left">
         <img class="t-hackcss-media-image"
              src="{{ blogpost.image_preview }}" alt="{{ blogpost.title }}"
              title="{{ blogpost.title }}" />
       </div>
-      {% endif %}
 
       <div class="media-body">
         <div class="media-heading">
@@ -43,14 +40,6 @@ permalink: blog
           {{ blogpost.short_description }}
         </div>
       </div>
-
-      {% if nth == 1 %}
-      <div class="t-hackcss-media-shift media-right">
-        <img class="t-hackcss-media-image"
-             src="{{ blogpost.image_preview }}" alt="{{ blogpost.title }}"
-             title="{{ blogpost.title }}" />
-      </div>
-      {% endif %}
     </div>
   {% endfor %}
 </section>
