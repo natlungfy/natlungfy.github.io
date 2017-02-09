@@ -12,11 +12,11 @@ permalink: work
 </section>
 
 <section>
-<h2>Writing</h2>
+  <h2>Writing</h2>
   {% for post in site.posts %}
- <!--    {% assign nth = forloop.index0 | modulo:2 %} -->
+  <!--    {% assign nth = forloop.index0 | modulo:2 %} -->
   {% if post.categories == "work" %}
-    <div class="media t-hackcss-media">
+  <div class="media t-hackcss-media">
 
 <!--       {% if nth == 0 %}
       <div class="t-hackcss-media-shift media-left">
@@ -27,15 +27,15 @@ permalink: work
       {% endif %} -->
       <div class="media-body">
         <div class="media-heading">
-            {% if post.external_url %}
-              <a href="{{ post.external_url }}" target="_blank" title="{{ project.name }}">
-                {{ post.title }}
-              </a>
-            {% else %}
-              <a href="{{ post.url | prepend: site.baseurl }}" title="{{ project.name }}">
-                {{ post.title }}
-              </a>
-            {% endif %}
+          {% if post.external_url %}
+          <a href="{{ post.external_url }}" target="_blank" title="{{ project.name }}">
+            {{ post.title }}
+          </a>
+          {% else %}
+          <a href="{{ post.url | prepend: site.baseurl }}" title="{{ project.name }}">
+            {{ post.title }}
+          </a>
+          {% endif %}
         </div>
         <div class="media-content">
           <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
@@ -47,13 +47,13 @@ permalink: work
         <img class="t-hackcss-media-image"
              src="{{ post.image_preview }}" alt="{{ post.title }}"
              title="{{ post.title }}" />
-      </div> -->
-      {% endif %}
-    </div>
-  {% endfor %}
-</section>
+           </div> -->
+         </div>
+         {% endif %}
+         {% endfor %}
+       </section>
 
-<h2>Multimedia and Video</h2>
+       <h2>Multimedia and Video</h2>
 
 
-<h2>Data and Graphics</h2>
+       <h2>Data and Graphics</h2>
