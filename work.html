@@ -1,13 +1,13 @@
 ---
 layout: default
-permalink: examples
+permalink: work
 ---
 
 <section>
-  <h1>Examples</h1>
+  <h1>Work</h1>
 
   <p>
-    This is more like an example page with different widgets.
+    A portfolio with my writings, multimedia, and data work in journalism.
   </p>
 </section>
 
@@ -15,16 +15,16 @@ permalink: examples
   <h2>Posts</h2>
 
   {% for post in site.posts %}
-    {% assign nth = forloop.index0 | modulo:2 %}
+ <!--    {% assign nth = forloop.index0 | modulo:2 %} -->
     <div class="media t-hackcss-media">
 
-      {% if nth == 0 %}
+<!--       {% if nth == 0 %}
       <div class="t-hackcss-media-shift media-left">
         <img class="t-hackcss-media-image"
              src="{{ post.image_preview }}" alt="{{ post.title }}"
              title="{{ post.title }}" />
       </div>
-      {% endif %}
+      {% endif %} -->
 
       <div class="media-body">
         <div class="media-heading">
@@ -45,49 +45,13 @@ permalink: examples
         </div>
       </div>
 
-      {% if nth == 1 %}
+<!--       {% if nth == 1 %}
       <div class="t-hackcss-media-shift media-right">
         <img class="t-hackcss-media-image"
              src="{{ post.image_preview }}" alt="{{ post.title }}"
              title="{{ post.title }}" />
       </div>
-      {% endif %}
+      {% endif %} -->
     </div>
   {% endfor %}
-</section>
-
-<section>
-
-  <h2>Cards</h2>
-
-  <div class="grid t-hackcss-cards">
-
-    {% for project in site.projects %}
-
-    <div class="cell -6of12 t-hackcss-cards-cell">
-      <div class="card">
-        <header class="card-header">{{ project.name }}</header>
-        <div class="card-content">
-          <div class="inner">
-
-            {% if project.image %}
-            <img src="{{ project.image }}" class="t-hackcss-cards-image"
-                 alt="{{ project.name }}"
-                 title="{{ project.name }}" />
-            {% endif %}
-
-            <p class="t-hackcss-cards-text">{{ project.description }}</p>
-            <p class="t-hackcss-cards-link">
-              <a href="{{ project.link }}" title="{{ project.name }}" target="_blank">
-                 {{ project.name }}
-               </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {% endfor %}
-
-  </div>
 </section>
