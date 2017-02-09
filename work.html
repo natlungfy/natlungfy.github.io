@@ -15,6 +15,7 @@ permalink: work
 <h2>Writing</h2>
   {% for post in site.posts %}
  <!--    {% assign nth = forloop.index0 | modulo:2 %} -->
+  {% if post.categories == "work" %}
     <div class="media t-hackcss-media">
 
 <!--       {% if nth == 0 %}
@@ -24,7 +25,6 @@ permalink: work
              title="{{ post.title }}" />
       </div>
       {% endif %} -->
-
       <div class="media-body">
         <div class="media-heading">
             {% if post.external_url %}
@@ -47,8 +47,8 @@ permalink: work
         <img class="t-hackcss-media-image"
              src="{{ post.image_preview }}" alt="{{ post.title }}"
              title="{{ post.title }}" />
-      </div>
-      {% endif %} -->
+      </div> -->
+      {% endif %}
     </div>
   {% endfor %}
 </section>
