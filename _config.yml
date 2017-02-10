@@ -30,8 +30,8 @@ email: nat@natalielung.xyz
 navigation:
   - text: Home
     url: /
-  - text: Work
-    url: /work
+  - text: Media Work
+    url: /portfolio
   - text: Community Work
     url: /community
   - text: Resume
@@ -40,13 +40,13 @@ navigation:
     url: /blog
 
 projects:
-  - name: Electing the Chief Executive
+  - name: South China Morning Post - Electing the Chief Executive
     description: Multimedia visual guide Hong Kong’s political reform voted down. Contributed text and prepped data for interactive graphic.
     link: http://multimedia.scmp.com/hong-kong-election-2017/
     image: http://natalielung.xyz/images/scmpvote.png
-  - name: Hong Kong’s wall trees
+  - name: South China Morning Post - Hong Kong’s wall trees
     description: Infographic of everything you need to know about the banyans that define the city’s landscape. Contributed research and graphic concept
-    link: http://www.scmp.com/infographics/article/1845412/hong-kongs-wall-trees-everything-you-need-know-about-banyans-define#comments
+    link: http://www.scmp.com/infographics/article/1845412/hong-kongs-wall-trees-everything-you-need-know-about-banyans-define
     image: http://natalielung.xyz/images/scmptrees.png
   - name: Shophouse
     description: Multimedia reporting group project about Hong Kong's historical tenement buildings. [Timeline.js, Google Maps, photosphere, infographics]
