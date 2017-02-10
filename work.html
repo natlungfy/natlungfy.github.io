@@ -15,30 +15,64 @@ permalink: work
   <h2>Writing</h2>
 
   {% for post in site.posts %}
-<!--     {% assign nth = forloop.index0 | modulo:2 %} -->
-    <div class="media t-hackcss-media">
+  <!--     {% assign nth = forloop.index0 | modulo:2 %} -->
+  <div class="media t-hackcss-media">
 
-      <div class="media-body">
-        <div class="media-heading">
-            {% if post.external_url %}
-              <a href="{{ post.external_url }}" target="_blank" title="{{ project.name }}">
-                {{ post.title }}
-              </a>
-            {% else %}
-              <a href="{{ post.url | prepend: site.baseurl }}" title="{{ project.name }}">
-                {{ post.title }}
-              </a>
-            {% endif %}
-        </div>
-        <div class="media-content">
-          <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
-        </div>
+    <div class="media-body">
+      <div class="media-heading">
+        {% if post.external_url %}
+        <a href="{{ post.external_url }}" target="_blank" title="{{ project.name }}">
+          {{ post.title }}
+        </a>
+        {% else %}
+        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ project.name }}">
+          {{ post.title }}
+        </a>
+        {% endif %}
+      </div>
+      <div class="media-content">
+        <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
       </div>
     </div>
+  </div>
   {% endfor %}
 </section>
 
-       <h2>Multimedia and Video</h2>
+
+<section>
+ <h2>Multimedia and Video</h2>
+
+ <div class="grid t-hackcss-cards">
+
+  {% for project in site.projects %}
+
+  <div class="cell -6of12 t-hackcss-cards-cell">
+    <div class="card">
+      <header class="card-header">{{ project.name }}</header>
+      <div class="card-content">
+        <div class="inner">
+
+          {% if project.image %}
+          <img src="{{ project.image }}" class="t-hackcss-cards-image"
+          alt="{{ project.name }}"
+          title="{{ project.name }}" />
+          {% endif %}
+
+          <p class="t-hackcss-cards-text">{{ project.description }}</p>
+          <p class="t-hackcss-cards-link">
+            <a href="{{ project.link }}" title="{{ project.name }}" target="_blank">
+             {{ project.name }}
+           </a>
+         </p>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ {% endfor %}
+
+</div>
 
 
-       <h2>Data and Graphics</h2>
+
+<h2>Data and Graphics</h2>
