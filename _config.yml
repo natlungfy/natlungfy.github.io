@@ -1,0 +1,65 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Natalie Lung
+description: > # this means to ignore newlines until "baseurl:"
+  A Portfolio
+repository: https://github.com/natlungfy/natlungfy.github.io
+baseurl:  # the subpath of your site, e.g. /blog
+url: http://natalielung.xyz  # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+# Sass settings
+sass:
+  style: compressed
+
+# Theme settings
+theme_mode: markdown  # choices are: 'dark', 'standard', 'markdown'
+
+# Customizations
+your_name: Natalie Lung
+email: nat@natalielung.xyz
+
+navigation:
+  - text: Home
+    url: /
+  - text: Work
+    url: /work
+  - text: Community Work
+    url: /community
+  - text: Resume
+    url: /Natalie_Lung_CV.pdf
+  - text: Blog
+    url: /blog
+
+projects:
+  - name: Shophouse
+    description: Multimedia reporting project about the conservation and development of historical tenement buildings in Hong Kong.
+    link: http://hkshophouse.wixsite.com/home/
+    image: http://natalielung.xyz/images/shophouse.png
+  - name: In 360 - Whampoa through the years, before and after the MTR Station
+    description: Multimedia reporting project about the changes in Whampoa before and after the construction of the subway station.
+    link: https://natlungfy.wordpress.com/2016/11/03/whampoa-before-and-after-in-360
+    image: https://natlungfy.files.wordpress.com/2016/11/mtr.jpg?w=1200&h=800&crop=1
+
+social:
+  - service: github
+    username: natlungfy
+    link: https://github.com/natlungfy
+  - service: twitter
+    username: natlungfy
+    link: https://twitter.com/natlungfy
+  - service: instagram
+    username: natlungfy
+    link: https://instagram.com/natlungfy
+
+# Plugins
+gems:
+  - jekyll-seo-tag
