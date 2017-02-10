@@ -41,13 +41,21 @@ navigation:
 
 projects:
   - name: Shophouse
-    description: Multimedia reporting project about the conservation and development of historical tenement buildings in Hong Kong.
+    description: Multimedia reporting group project about Hong Kong's historical tenement buildings. [Timeline.js, Google Maps, photosphere, infographics]
     link: http://hkshophouse.wixsite.com/home/
     image: http://natalielung.xyz/images/shophouse.png
   - name: In 360 - Whampoa through the years, before and after the MTR Station
-    description: Multimedia reporting project about the changes in Whampoa before and after the construction of the subway station.
+    description: Multimedia reporting project [Google Maps, photospheres]
     link: https://natlungfy.wordpress.com/2016/11/03/whampoa-before-and-after-in-360
     image: https://natlungfy.files.wordpress.com/2016/11/mtr.jpg?w=1200&h=800&crop=1
+  - name: Photojournalism in the age of smartphones - AFP Pedro Ugarte
+    description: Video interview with AFP Photo Director [Edited with Premiere]
+    link: https://www.youtube.com/watch?v=HexekAo3pNQ
+    image: http://i3.ytimg.com/vi/HexekAo3pNQ/hqdefault.jpg
+  - name: Siu Fung
+    description: Documentary group project about a transgender bodybuilder. Won Grand Prize at the TVB Inter-Collegiate Documentary Competition [Edited with Premiere]
+    link: https://www.youtube.com/watch?v=MdMy4zuZdok
+    image: http://i3.ytimg.com/vi/MdMy4zuZdok/hqdefault.jpg
 
 social:
   - service: github
