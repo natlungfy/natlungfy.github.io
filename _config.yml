@@ -41,13 +41,17 @@ navigation:
 
 projects:
   - name: South China Morning Post - Electing the Chief Executive
-    description: Multimedia visual guide Hong Kong’s political reform voted down. Contributed text and prepped data for interactive graphic.
+    description: Multimedia visual guide to Hong Kong’s political reform vote in 2015. Prepped data for interactive graphic and contributed text. [ArchieML, Google Sheets]
     link: http://multimedia.scmp.com/hong-kong-election-2017/
     image: http://natalielung.xyz/images/scmpvote.png
   - name: South China Morning Post - Hong Kong’s wall trees
-    description: Infographic of everything you need to know about the banyans that define the city’s landscape. Contributed research and graphic concept
+    description: Infographic of everything you need to know about the banyans that define the city’s landscape. Contributed research and graphic concept.
     link: http://www.scmp.com/infographics/article/1845412/hong-kongs-wall-trees-everything-you-need-know-about-banyans-define
     image: http://natalielung.xyz/images/scmptrees.PNG
+  - name: Droste - Rent Control
+    description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template. [Plotly.JS, Semantic UI]
+    link: http://droste.hk
+    image: http://natalielung.xyz/images/rentcontrol.png
   - name: Shophouse
     description: Multimedia reporting group project about Hong Kong's historical tenement buildings. [Timeline.js, Google Maps, photosphere, infographics]
     link: http://hkshophouse.wixsite.com/home/
@@ -56,14 +60,6 @@ projects:
     description: Multimedia reporting project [Google Maps, photospheres]
     link: https://natlungfy.wordpress.com/2016/11/03/whampoa-before-and-after-in-360
     image: https://natlungfy.files.wordpress.com/2016/11/mtr.jpg?w=1200&h=800&crop=1
-  - name: Photojournalism in the age of smartphones - AFP Pedro Ugarte
-    description: Video interview with AFP Photo Director [Edited with Premiere]
-    link: https://www.youtube.com/watch?v=HexekAo3pNQ
-    image: http://i3.ytimg.com/vi/HexekAo3pNQ/hqdefault.jpg
-  - name: Siu Fung
-    description: Documentary group project about a transgender bodybuilder. Won Grand Prize at the TVB Inter-Collegiate Documentary Competition [Edited with Premiere]
-    link: https://www.youtube.com/watch?v=MdMy4zuZdok
-    image: http://i3.ytimg.com/vi/MdMy4zuZdok/hqdefault.jpg
 
 social:
   - service: github

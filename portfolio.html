@@ -4,15 +4,15 @@ permalink: portfolio
 ---
 
 <section>
-  <h1>Work</h1>
+  <h1>Portfolio</h1>
 
   <p>
-    A collection of my journalistic writing, multimedia and data work
+    A collection of my journalistic <a href="#writing">writing</a>, <a href="#projects">multimedia and data projects</a>, and <a href="#videos">videos</a>
   </p>
 </section>
 
 <section>
-  <h2>Writing</h2>
+  <h2 id="writing">Writing</h2>
 
   {% for post in site.posts %}
   <!--     {% assign nth = forloop.index0 | modulo:2 %} -->
@@ -40,7 +40,7 @@ permalink: portfolio
 
 
 <section>
- <h2>Multimedia and Video</h2>
+ <h2 id="projects">Multimedia and Data Projects</h2>
 
  <div class="grid t-hackcss-cards">
 
@@ -75,4 +75,53 @@ permalink: portfolio
 
 </section>
 
-<h2>Data and Graphics</h2>
+<section>
+ <h2 id="videos">Video</h2>
+  <div class="grid t-hackcss-cards">
+
+  <div class="cell -6of12 t-hackcss-cards-cell">
+    <div class="card">
+      <header class="card-header">Photojournalism in the age of smartphones - AFP Pedro Ugarte</header>
+      <div class="card-content">
+        <div class="inner">
+          <img src="http://i3.ytimg.com/vi/HexekAo3pNQ/hqdefault.jpg" class="t-hackcss-cards-image"
+          alt="Photojournalism in the age of smartphones - AFP Pedro Ugarte"
+          title="Photojournalism in the age of smartphones - AFP Pedro Ugarte" />
+
+          <p class="t-hackcss-cards-text">Video interview with AFP Photo Director (APAC). [Edited with Premiere]</p>
+          <p class="t-hackcss-cards-link">
+            <a href="https://www.youtube.com/watch?v=HexekAo3pNQ" title="Photojournalism in the age of smartphones - AFP Pedro Ugarte" target="_blank">
+             Photojournalism in the age of smartphones - AFP Pedro Ugarte
+           </a>
+         </p>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+<div class="grid t-hackcss-cards">
+
+  <div class="cell -6of12 t-hackcss-cards-cell">
+    <div class="card">
+      <header class="card-header">Siu Fung</header>
+      <div class="card-content">
+        <div class="inner">
+          <img src="http://i3.ytimg.com/vi/MdMy4zuZdok/hqdefault.jpg" class="t-hackcss-cards-image"
+          alt="Siu Fung"
+          title="Siu Fung" />
+
+          <p class="t-hackcss-cards-text">Documentary group project about a transgender bodybuilder. Won Grand Prize at the TVB Inter-Collegiate Documentary Competition. [Edited with Premiere]</p>
+          <p class="t-hackcss-cards-link">
+            <a href="https://www.youtube.com/watch?v=MdMy4zuZdok" title="Siu Fung" target="_blank">
+             Siu Fung
+           </a>
+         </p>
+       </div>
+     </div>
+   </div>
+ </div>
+
+</div>
+
+</section>
