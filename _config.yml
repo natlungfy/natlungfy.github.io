@@ -36,8 +36,8 @@ navigation:
     url: /community
   - text: Resume
     url: /Natalie_Lung_CV.pdf
-  - text: Blog
-    url: /blog
+  # - text: Blog
+  #   url: /blog
 
 projects:
   - name: South China Morning Post - Electing the Chief Executive
@@ -62,15 +62,21 @@ projects:
     image: https://natlungfy.files.wordpress.com/2016/11/mtr.jpg?w=1200&h=800&crop=1
 
 social:
-  - service: github
-    username: natlungfy
-    link: https://github.com/natlungfy
   - service: twitter
     username: natlungfy
     link: https://twitter.com/natlungfy
   - service: instagram
     username: natlungfy
     link: https://instagram.com/natlungfy
+  - service: youtube
+    username: natlungfy
+    link: https://youtube.com/user/natlungfy
+  - service: linkedin
+    username: natlungfy
+    link: https://linkedin.com/in/natlungfy
+  - service: github
+    username: natlungfy
+    link: https://github.com/natlungfy
 
 # Plugins
 gems:
