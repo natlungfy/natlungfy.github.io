@@ -198,7 +198,7 @@ width: 71px;
 height: 56px;
 background-image: url('../images/jisc-logo-small.png');
 background-repeat: no-repeat;
-display:inline-block;
+display:none;
 }
 
 #jisc span {
@@ -210,7 +210,7 @@ width: 227px;
 height: 56px;
 background-image: url('../images/oii_text.png');
 background-repeat: no-repeat;
-display:inline-block;
+display:none;
 margin-right:10px;
 
 }
