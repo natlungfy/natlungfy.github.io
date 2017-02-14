@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog - Final Pitches at Startup Weekend HKU #2
+title: Blog - Final Pitches at Startup Weekend HKU 2
 date: 2015-10-19
 author: Natalie Lung
 categories: work
