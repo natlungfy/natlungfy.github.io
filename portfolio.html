@@ -8,8 +8,35 @@ title: Natalie Lung - Portfolio
   <h1>Portfolio</h1>
 
   <p>
-    A collection of my journalistic <a href="#projects">multimedia and data projects</a>, <a href="#writing">writing</a>, and <a href="#videos">videos</a>
+    A collection of my journalistic <a href="#writing">writing</a>, <a href="#projects">multimedia and data projects</a>, and <a href="#videos">videos</a>
   </p>
+</section>
+
+<section>
+  <h2 id="writing">Writing</h2>
+
+  {% for post in site.posts %}
+  <!--     {% assign nth = forloop.index0 | modulo:2 %} -->
+  <div class="media t-hackcss-media">
+
+    <div class="media-body">
+      <div class="media-heading">
+        {% if post.external_url %}
+        <a href="{{ post.external_url }}" target="_blank" title="{{ project.name }}">
+          {{ post.title }}
+        </a>
+        {% else %}
+        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ project.name }}">
+          {{ post.title }}
+        </a>
+        {% endif %}
+      </div>
+      <div class="media-content">
+        <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </section>
 
 <section>
@@ -46,33 +73,6 @@ title: Natalie Lung - Portfolio
 
 </div>
 
-</section>
-
-<section>
-  <h2 id="writing">Writing</h2>
-
-  {% for post in site.posts %}
-  <!--     {% assign nth = forloop.index0 | modulo:2 %} -->
-  <div class="media t-hackcss-media">
-
-    <div class="media-body">
-      <div class="media-heading">
-        {% if post.external_url %}
-        <a href="{{ post.external_url }}" target="_blank" title="{{ project.name }}">
-          {{ post.title }}
-        </a>
-        {% else %}
-        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ project.name }}">
-          {{ post.title }}
-        </a>
-        {% endif %}
-      </div>
-      <div class="media-content">
-        <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
-      </div>
-    </div>
-  </div>
-  {% endfor %}
 </section>
 
 <section>
