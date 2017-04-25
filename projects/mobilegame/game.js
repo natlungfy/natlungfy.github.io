@@ -33,7 +33,7 @@ window.onload = function() {
           // enabling physics car.body.collideWorldBounds = true;
           game.physics.enable(player, Phaser.Physics.ARCADE);
           // the player will collide with bounds
-          player.body.collideWorldBounds = false;
+          player.body.collideWorldBounds = true;
           // setting player bounce
           player.body.bounce.set(0.0);
 	     // setting gyroscope update frequency
