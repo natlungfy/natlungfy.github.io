@@ -29,7 +29,7 @@ window.onload = function() {
           goFullScreen();
           // adding the player on stage
           player = game.add.sprite(160,240,"player");
-          bgtile = game.add.tileSprite(0,0,game.stage.bounds.width, game.cache.getImage('bgtile').height, 'bgtile');
+          //bgtile = game.add.tileSprite(0,0,game.stage.bounds.width, game.cache.getImage('bgtile').height, 'bgtile');
           //change background color
            game.stage.backgroundColor = '#fff7af';
           // setting player anchor point
