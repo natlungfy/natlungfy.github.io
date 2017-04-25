@@ -33,7 +33,7 @@ window.onload = function() {
           //change background color
            game.stage.backgroundColor = '#fff7af';
           // setting player anchor point
-          player.anchor.setTo(0.5);
+          player.anchor.setTo(0.5,-1);
           // enabling physics car.body.collideWorldBounds = true;
           game.physics.enable(player, Phaser.Physics.ARCADE);
           // the player will collide with bounds
@@ -50,7 +50,7 @@ window.onload = function() {
           });		
 	}
 
-     function update() {
-          bgtile.tilePosition.x -= 1;
-     }
+     // function update() {
+     //      bgtile.tilePosition.x -= 1;
+     // }
 }
