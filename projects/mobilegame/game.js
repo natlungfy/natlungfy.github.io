@@ -8,7 +8,7 @@ window.onload = function() {
 
      // function executed on preload
 	function onPreload() {
-	    	game.load.image("player","shoot_up.png");	
+	    	game.load.image("player","mainCharacter/shoot_up.png");	
 	}
 
 	// function to scale up the game to full screen
@@ -36,7 +36,7 @@ window.onload = function() {
           // setting player bounce
           player.body.bounce.set(0.8);
 	     // setting gyroscope update frequency
-          gyro.frequency = 10;
+          gyro.frequency = 100;
 		// start gyroscope detection
           gyro.startTracking(function(o) {
                // updating player velocity
