@@ -27,16 +27,17 @@ window.onload = function() {
           goFullScreen();
           // adding the player on stage
           player = game.add.sprite(160,240,"player");
+           game.stage.backgroundColor = '#fff7af';
           // setting player anchor point
           player.anchor.setTo(0.5);
           // enabling physics car.body.collideWorldBounds = true;
           game.physics.enable(player, Phaser.Physics.ARCADE);
           // the player will collide with bounds
-          player.body.collideWorldBounds = true;
+          player.body.collideWorldBounds = false;
           // setting player bounce
-          player.body.bounce.set(0.8);
+          player.body.bounce.set(0.0);
 	     // setting gyroscope update frequency
-          gyro.frequency = 100;
+          gyro.frequency = 5;
 		// start gyroscope detection
           gyro.startTracking(function(o) {
                // updating player velocity
