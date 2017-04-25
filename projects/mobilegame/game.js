@@ -4,11 +4,13 @@ window.onload = function() {
 	var game = new Phaser.Game(320,480,Phaser.CANVAS,"",{preload:onPreload, create:onCreate});                
 
      // the player
-     var player
+     var player;
+     var bgtile;
 
      // function executed on preload
 	function onPreload() {
-	    	game.load.image("player","mainCharacter/shoot_up.png");	
+	    	game.load.image("player","mainCharacter/shoot_up.png");
+          game.load.image("bgtile", "office.jpg");	
 	}
 
 	// function to scale up the game to full screen
@@ -27,6 +29,8 @@ window.onload = function() {
           goFullScreen();
           // adding the player on stage
           player = game.add.sprite(160,240,"player");
+          bgtile = game.add.tileSprite(0,0,game.stage.bounds.width, game.cache.getImage('bgtile').height, 'bgtile');
+          //change background color
            game.stage.backgroundColor = '#fff7af';
           // setting player anchor point
           player.anchor.setTo(0.5);
@@ -45,4 +49,8 @@ window.onload = function() {
                player.body.velocity.y += o.beta/20;
           });		
 	}
+
+     function update() {
+          bgtile.tilePosition.x -= 1;
+     }
 }
