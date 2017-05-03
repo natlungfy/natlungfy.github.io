@@ -38,13 +38,13 @@
   pointer-events: none;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-  body, html {
-/*    width:100%;
-    height:100%;*/
-    margin: 20px;
-  }
+/*  body, html {
+  	width:100%;
+  	height:100%;
+  }*/
   img {
-    width: 500px;
+    width: 300px;
+    margin-left: 20px;
   }
 
   #infoBox {
@@ -55,17 +55,24 @@
 .table-nonfluid {
    width: auto !important;
 }
-   </style>
-     <script src="http://d3js.org/d3.v3.min.js"></script>
+
+#header {
+	padding: 30px;
+	background-color: gainsboro;
+	margin-bottom: 20px;
+}
+#title {
+	font-size: 30px;
+}
+
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
 <script src="legend.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-
-<!--    <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> -->
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -74,8 +81,10 @@
 </head>
 
 <body>
-<h1>Which county in Missouri has the highest number of monthly health violations in 2013-2016?</h1>
+<div id="header">
+<p id="title">Which county in Missouri has the highest number of monthly health violations in 2013-2016?</p>
 <h4>Click a county on the map to explore the health-based violations by local public water suppliers</h4>
+</div>
   <svg xmlns="http://www.w3.org/2000/svg" width="551" height="480" viewBox="0 0 132 115">
  <g class="counties" id="counties">
   <path id="New Madrid, MO" class="c29143" d="m116.090881,89.470734l3.118225,-0.441986l3.888428,5.237976l-1.422729,3.190002l-1.244446,0.123016l0.180115,-0.33902l0.028503,-0.059998l0.023193,-0.089996l0.057068,-0.22699l0.015991,-0.059998l0,-0.100006l-0.006958,-0.040009l0,0l-0.057129,-0.25l-0.112305,-0.265991l-0.010681,-0.019989l-0.117676,-0.183014l-0.025024,-0.019989l-0.039185,-0.029999l-0.048096,-0.029999l-0.281677,-0.080017l-0.513489,-0.0802l-0.336975,0.05011l-0.114075,0.070099l-0.210388,0.281006l-0.030334,0.039978l-0.023193,0.090027l-0.024963,0.10498l-0.017822,0.080017l0.017822,0.069977l0.017761,0.100006l0.007019,0.02002l0.199707,0.426971l0.024963,0.029999l0.408264,0.584015l0.14624,3.737l-0.964539,-1.484985l-0.363708,-0.153015l-1.331848,0.23999l-1.351379,0.520996l-2.818726,0.178009l-0.884277,0l-0.315613,-5.55899l4.72644,-0.266998l-0.424377,-5.358002l0.231812,-0.019989" style="fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:0.178287;fill:#fcbba1">
@@ -359,7 +368,7 @@ if (temp.length == 0) {
   });
 });</script>
 
-<div id="infoBox"><table id="myTable" class="table table-bordered table-responsive table-nonfluid"><caption id="capt"></caption><thead><tr><th>Water system name</th><th>Violation found between</th><th>Violation Name</th><th>Contaminant</th></tr></thead><tbody id="hello"></tbody></table></div>
+<div id="infoBox"><table id="myTable" class="table table-bordered table-responsive table-nonfluid"><caption id="capt"></caption><thead class="thead-inverse"><tr><th>Water system name</th><th>Violation found between</th><th>Violation Name</th><th>Contaminant</th></tr></thead><tbody id="hello"></tbody></table></div>
 
 <div><img src="http://natalielung.xyz/projects/mo-water-health-violations/legend.PNG"></div>
 
