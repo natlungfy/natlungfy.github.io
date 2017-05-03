@@ -39,8 +39,9 @@
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
   body, html {
-    width:100%;
-    height:100%;
+/*    width:100%;
+    height:100%;*/
+    margin: 20px;
   }
   img {
     width: 500px;
@@ -74,6 +75,7 @@
 
 <body>
 <h1>Which county in Missouri has the highest number of monthly health violations in 2013-2016?</h1>
+<h4>Click a county on the map to explore the health-based violations by local public water suppliers</h4>
   <svg xmlns="http://www.w3.org/2000/svg" width="551" height="480" viewBox="0 0 132 115">
  <g class="counties" id="counties">
   <path id="New Madrid, MO" class="c29143" d="m116.090881,89.470734l3.118225,-0.441986l3.888428,5.237976l-1.422729,3.190002l-1.244446,0.123016l0.180115,-0.33902l0.028503,-0.059998l0.023193,-0.089996l0.057068,-0.22699l0.015991,-0.059998l0,-0.100006l-0.006958,-0.040009l0,0l-0.057129,-0.25l-0.112305,-0.265991l-0.010681,-0.019989l-0.117676,-0.183014l-0.025024,-0.019989l-0.039185,-0.029999l-0.048096,-0.029999l-0.281677,-0.080017l-0.513489,-0.0802l-0.336975,0.05011l-0.114075,0.070099l-0.210388,0.281006l-0.030334,0.039978l-0.023193,0.090027l-0.024963,0.10498l-0.017822,0.080017l0.017822,0.069977l0.017761,0.100006l0.007019,0.02002l0.199707,0.426971l0.024963,0.029999l0.408264,0.584015l0.14624,3.737l-0.964539,-1.484985l-0.363708,-0.153015l-1.331848,0.23999l-1.351379,0.520996l-2.818726,0.178009l-0.884277,0l-0.315613,-5.55899l4.72644,-0.266998l-0.424377,-5.358002l0.231812,-0.019989" style="fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:0.178287;fill:#fcbba1">
@@ -330,9 +332,9 @@
 }
 
 if (temp.length == 0) {
-   document.getElementById("capt").innerHTML = "<h4>Number of violations " + item.getAttribute("id") + " in 2013-16: 0</h3>";
+   document.getElementById("capt").innerHTML = "<h4>Number of violations in " + item.getAttribute("id") + " in 2013-16: 0</h3>";
 } else {
-    document.getElementById("capt").innerHTML = "<h4>Number of violations " + temp[0]['County'] + " in 2013-16: " + temp.length + "</h3>";
+    document.getElementById("capt").innerHTML = "<h4>Number of violations in " + temp[0]['County'] + " in 2013-16: " + temp.length + "</h3>";
     for (i = 0; i<temp.length; i++) {
   document.getElementById("hello").innerHTML += "<tr>" + "<td>" + temp[i]['Name'] + "</td>"+ "<td>" + temp[i]['FedBgnDt'] + ' to ' + temp[i]['FedEndDt'] + "</td>" + "<td>" + temp[i]['VioName'] + "</td>"+"<td>" + temp[i]['Analyte'] + "</td>"+"</tr>";
 }
