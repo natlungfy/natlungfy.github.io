@@ -2,13 +2,129 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>MO PWS health violators</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+  <title>MO PWS health violators</title>  
+   <style>
+.counties {
+  fill: #d0d0d0;
+  fill-rule: nonzero;
+  stroke: #000000;
+  stroke-width: 0.178287;
+}
+
+.State_Lines {
+  fill: none;
+  stroke: #221e1f;
+  stroke-width: 0.89143497;
+}
+
+.separator {
+  fill: none;
+  stroke: #a9a9a9;
+  stroke-width: 2.3177309;
+}
+
+.map-tooltip {
+  position: absolute;
+  display: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: #d3d3d3 solid 1px;
+  background: #fff;
+  color: black;
+  font-family: Comfortaa, Verdana;
+  font-size: smaller;
+  padding: 8px;
+  pointer-events: none;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  body, html {
+    width:100%;
+    height:100%;
+  }
+
+  #vizcontainer {
+    width:100%;
+    height:100%;
+  }
+  #vizcontainer svg {
+    width: 50%;
+    height: 50%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  #infoBox {
+    position: absolute;
+    display: inline-block;
+  }
+
+.table-nonfluid {
+   width: auto !important;
+}
+   </style>
+     <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+<script src="legend.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<!--    <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> -->
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script type="text/javascript" charset="utf8" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   
+  <script>
+
+//  var tabulate = function (data,columns) {
+//   var table = d3.select('body').append('table').attr('class','table table-bordered table-responsive table-nonfluid')
+//   var thead = table.append('thead')
+//   var tbody = table.append('tbody')
+
+//   thead.append('tr')
+//     .selectAll('th')
+//       .data(columns)
+//       .enter()
+//     .append('th')
+//       .text(function (d) { return d })
+
+//   var rows = tbody.selectAll('tr')
+//       .data(data)
+//       .enter()
+//     .append('tr')
+
+//   var cells = rows.selectAll('td')
+//       .data(function(row) {
+//         return columns.map(function (column) {
+//           return { column: column, value: row[column] }
+//         })
+//       })
+//       .enter()
+//     .append('td')
+//       .text(function (d) { return d.value })
+
+//   return table;
+// }
+
+// d3.csv('https://raw.githubusercontent.com/natlungfy/datasets/master/raw.csv',function (data) {
+//   var columns = ['Name','County','FedBgnDt','FedEndDt','VioName','count']
+//   tabulate(data,columns)
+// })
+
+  </script>
+  <script>
+
+   // $('#myTable').DataTable();
+
+   </script>
 </head>
 
 <body>
@@ -252,8 +368,53 @@
  </g>
 </svg>
 <div class="map-tooltip"></div>
+<script>var tooltip = document.querySelector('.map-tooltip');
+    
+// iterate throw all `path` tags
+[].forEach.call(document.querySelectorAll('path'), function(item) {
+  // attach click event, you can read the URL from a attribute for example.
+ item.addEventListener('click', function(){
+  document.getElementById("hello").innerHTML = "";
+  var i;
+  var temp = [];
+  d3.csv('https://raw.githubusercontent.com/natlungfy/datasets/master/raw.csv',function (data) {
+    for (i=0; i < data.length; i++) {
+    if (item.getAttribute('id') == data[i]['County']) {
+      temp.push(data[i]);
+    }
+}
+
+if (temp.length == 0) {
+   document.getElementById("capt").innerHTML = "<h4>Number of violations " + item.getAttribute("id") + " in 2013-16: 0</h3>";
+} else {
+    document.getElementById("capt").innerHTML = "<h4>Number of violations " + temp[0]['County'] + " in 2013-16: " + temp.length + "</h3>";
+    for (i = 0; i<temp.length; i++) {
+  document.getElementById("hello").innerHTML += "<tr>" + "<td>" + temp[i]['Name'] + "</td>"+ "<td>" + temp[i]['FedBgnDt'] + ' to ' + temp[i]['FedEndDt'] + "</td>" + "<td>" + temp[i]['VioName'] + "</td>"+"<td>" + temp[i]['Analyte'] + "</td>"+"</tr>";
+}
+}
+ });
+});
   
-    <script src="js/index.js"></script>
+  // attach mouseenter event
+  item.addEventListener('mouseenter', function() {
+    tooltip.innerHTML = item.getAttribute('id');
+    tooltip.style.display = 'block';
+  });
+  
+  item.addEventListener('mousemove', function(e) {
+    tooltip.style.top = e.clientY + 'px';
+    tooltip.style.left = e.clientX + 'px';
+  });
+  
+  // when mouse leave hide the tooltip
+  item.addEventListener('mouseleave', function(){
+    tooltip.style.display = 'none';
+  });
+});</script>
+
+<div id="infoBox"><table id="myTable" class="table table-bordered table-responsive table-nonfluid"><caption id="capt"></caption><thead><tr><th>Water system name</th><th>Violation found between</th><th>Violation Name</th><th>Contaminant</th></tr></thead><tbody id="hello"></tbody></table></div>
+
+<iframe src="legend.html" frameborder="0" scrolling="no"></iframe>
 
 </body>
 </html>
