@@ -4,7 +4,6 @@ pws = {}
 reader = csv.reader(open('countyCount.csv'), delimiter=",")
 for row in reader:
     try:
-        #full_fips = row[0] + row[1]
         count = float( row[3].strip() )
         pws[row[2]] = count
     except:
@@ -22,22 +21,12 @@ for p in paths:
             count = pws[p['id']]
         except:
             continue
-        #print str(float(len(colors)-1) * float(count - 0) / float(119 - 0))
-
-        # if count > 120:
-        #     color_class = 4
         if count > 105:
             color_class = 5
-        # elif count > 90:
-        #     color_class = 3
         elif count > 75:
             color_class = 4
-        # elif count > 60:
-        #     color_class = 2
         elif count > 45:
             color_class = 3
-        # elif count > 30:
-        #     color_class = 1
         elif count > 15:
             color_class = 2
         elif count >= 1:

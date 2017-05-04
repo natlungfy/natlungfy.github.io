@@ -80,7 +80,9 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 
 <script type="text/javascript" charset="utf8" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -372,7 +374,11 @@ if (temp.length == 0) {
   item.addEventListener('mouseleave', function(){
     tooltip.style.display = 'none';
   });
-});</script>
+});
+// $(document).ready(function() {
+//   $("#myTable").dataTable();
+// })
+</script>
 
 <div id="infoBox"><table id="myTable" class="table table-bordered table-responsive table-nonfluid"><caption id="capt"></caption><thead class="thead-inverse"><tr><th>Water system name</th><th>Violation found between</th><th>Violation Name</th><th>Contaminant</th></tr></thead><tbody id="hello"></tbody></table></div>
 
