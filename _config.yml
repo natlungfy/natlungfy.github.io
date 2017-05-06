@@ -48,11 +48,15 @@ projects:
     description: Infographic of everything you need to know about the banyans that define the city’s landscape. Contributed research and graphic concept.
     link: http://www.scmp.com/infographics/article/1845412/hong-kongs-wall-trees-everything-you-need-know-about-banyans-define
     image: http://natalielung.xyz/images/scmptrees.PNG
+  - name: Health violations by Missouri drinking water systems
+    description: An interactive heatmap and data explorer for health violations committed by public water systems in Missouri. Individual project for the Advanced Data Journalism course at Mizzou. [Python, Javascript]
+    link: http://natalielung.xyz/projects/mo-water-health-violations
+    image: http://natalielung.xyz/images/screenshot_pws.PNG
   - name: Droste - Rent Control
     description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template. [Plotly.JS, Semantic UI]
     link: http://droste.hk
     image: http://natalielung.xyz/images/rentcontrol.png
-  - name: Shophouse
+  - name: Hong Kong Shophouse
     description: Multimedia reporting group project about Hong Kong's historical tenement buildings. [Timeline.js, Google Maps, photosphere, infographics]
     link: http://hkshophouse.wixsite.com/home/
     image: http://natalielung.xyz/images/shophouse.png
