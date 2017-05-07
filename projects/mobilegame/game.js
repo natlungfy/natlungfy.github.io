@@ -15,7 +15,7 @@ window.onload = function () {
     function onPreload() {
         game.load.image("player", "mainCharacter/shoot_up.png");
         game.load.image("bgtile", "office.png");
-        game.load.audio("bgsound", "sounds/mainBackground.mp3");
+        game.load.audio("bgsound", ["sounds/mainBackground.mp3", "sounds/mainBackground.ogg"]);
 
     }
 
@@ -40,8 +40,8 @@ window.onload = function () {
         bgtileAhead.anchor.setTo(0.5, 0.5);
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
-        setTimeout(function() {bgsound.play();},100);
-
+        bgsound.play(); 
+        
         // adding the player on stage
         player = game.add.sprite(160, 240, "player");
         //bgtile = game.add.tileSprite(0,0,game.stage.bounds.width, game.cache.getImage('bgtile').height, 'bgtile');
