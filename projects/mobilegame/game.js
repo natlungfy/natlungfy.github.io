@@ -49,12 +49,12 @@ this.playerScore = 0;
             //player.x = 160 + o.gamma * 2;
             //player.y = 240 + o.beta * 2;
         });
-  },
-  update: function() {
-
-  	this.mainSound = this.game.add.audio('mainSound');
+            this.mainSound = this.game.add.audio('mainSound');
 this.win = this.game.add.audio('win');
 this.lose = this.game.add.audio('lose');
+            this.mainSound.play();
+  },
+  update: function() {
 
   },
 };
