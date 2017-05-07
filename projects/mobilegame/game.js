@@ -15,7 +15,7 @@ window.onload = function () {
     function onPreload() {
         game.load.image("player", "mainCharacter/shoot_up.png");
         game.load.image("bgtile", "office.png");
-        game.load.audio("bgsound", "sounds/mainBackground.mp3");
+        game.load.audio("bgsound", "sounds/mainBackground.ogg");
 
     }
 
