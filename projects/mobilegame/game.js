@@ -39,7 +39,7 @@ window.onload = function () {
         bgtileAhead.anchor.setTo(0.5, 0.5);
 
         bgsound = game.add.audio('bgsound',1,true); //true means looping is enabled.
-
+        bgsound.play();
         // adding the player on stage
         player = game.add.sprite(160, 240, "player");
         //bgtile = game.add.tileSprite(0,0,game.stage.bounds.width, game.cache.getImage('bgtile').height, 'bgtile');
