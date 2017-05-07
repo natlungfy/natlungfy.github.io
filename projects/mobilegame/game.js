@@ -15,7 +15,8 @@ window.onload = function () {
     function onPreload() {
         game.load.image("player", "mainCharacter/shoot_up.png");
         game.load.image("bgtile", "office.png");
-        game.load.audio("bgsound", "sounds/mainBackground.mp3")
+        game.load.audio("bgsound", "sounds/mainBackground.mp3");
+
     }
 
     // function to scale up the game to full screen
@@ -38,15 +39,15 @@ window.onload = function () {
         bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
         bgtileAhead.anchor.setTo(0.5, 0.5);
 
-        bgsound = game.add.audio('bgsound',1,true); //true means looping is enabled.
-        bgsound.play();
+        bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
+        setTimeout(function() {bgsound.play();},100);
+
         // adding the player on stage
         player = game.add.sprite(160, 240, "player");
         //bgtile = game.add.tileSprite(0,0,game.stage.bounds.width, game.cache.getImage('bgtile').height, 'bgtile');
-        
         //change background color
-        //game.stage.backgroundColor = '#fff7af';
 
+        //game.stage.backgroundColor = '#fff7af';
         // setting player anchor point
         player.anchor.setTo(0.5, -1.5);
         // enabling physics car.body.collideWorldBounds = true;
@@ -62,8 +63,28 @@ window.onload = function () {
             // updating player velocity
             //player.body.velocity.x += o.gamma / 20; // TODO, CHANGE THIS
             //player.body.velocity.y += o.beta / 20;
-            player.x = o.gamma; // TODO, CHANGE THIS??
-            player.y = o.beta;
+            
+            if(!(o.gamma > 45||o.gamma < -45)){
+                player.x = 164 + o.gamma * 2;
+            }else{
+                if(o.gamma > 0){
+                    player.x = 254;
+                }else{
+                    player.x = 74
+                }
+            }
+            
+            if(!(o.beta > 45||o.beta < -45)){
+                player.y = 230 + o.beta * 2;
+            }else{
+                if(o.beta > 0){
+                    player.y = 320;
+                }else{
+                    player.y = 140; 
+                }
+            }
+            //player.x = 160 + o.gamma * 2;
+            //player.y = 240 + o.beta * 2;
         });
     }
 
