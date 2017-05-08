@@ -1,10 +1,10 @@
-var SpaceHipster = SpaceHipster || {};
+var OfficeEscape = OfficeEscape || {};
 
-SpaceHipster.game = new Phaser.Game(320, 480, Phaser.AUTO, '');
+OfficeEscape.game = new Phaser.Game(320, 480, Phaser.AUTO, '');
 
-SpaceHipster.game.state.add('Boot', SpaceHipster.Boot);
-SpaceHipster.game.state.add('Preload', SpaceHipster.Preload);
-SpaceHipster.game.state.add('MainMenu', SpaceHipster.MainMenu);
-SpaceHipster.game.state.add('Game', SpaceHipster.Game);
+OfficeEscape.game.state.add('Boot', OfficeEscape.Boot);
+OfficeEscape.game.state.add('Preload', OfficeEscape.Preload);
+OfficeEscape.game.state.add('MainMenu', OfficeEscape.MainMenu);
+OfficeEscape.game.state.add('Game', OfficeEscape.Game);
 
-SpaceHipster.game.state.start('Boot');
+OfficeEscape.game.state.start('Boot');

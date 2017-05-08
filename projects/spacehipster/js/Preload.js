@@ -1,9 +1,9 @@
-var SpaceHipster = SpaceHipster || {};
+var OfficeEscape = OfficeEscape || {};
 
 //loading the game assets
-SpaceHipster.Preload = function(){};
+OfficeEscape.Preload = function(){};
 
-SpaceHipster.Preload.prototype = {
+OfficeEscape.Preload.prototype = {
   preload: function() {
   	//show loading screen
   	this.splash = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'logo');

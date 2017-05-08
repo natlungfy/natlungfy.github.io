@@ -1,9 +1,9 @@
-var SpaceHipster = SpaceHipster || {};
+var OfficeEscape = OfficeEscape || {};
 
 //title screen
-SpaceHipster.MainMenu = function(){};
+OfficeEscape.MainMenu = function(){};
 
-SpaceHipster.MainMenu.prototype = {
+OfficeEscape.MainMenu.prototype = {
   init: function(score) {
     var score = score || 0;
     this.highestScore = this.highestScore || 0;

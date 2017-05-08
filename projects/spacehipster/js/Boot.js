@@ -1,9 +1,9 @@
-var SpaceHipster = SpaceHipster || {};
+var OfficeEscape = OfficeEscape || {};
 
-SpaceHipster.Boot = function(){};
+OfficeEscape.Boot = function(){};
 
 //setting game configuration and loading the assets for the loading screen
-SpaceHipster.Boot.prototype = {
+OfficeEscape.Boot.prototype = {
   preload: function() {
   	//assets we'll use in the loading screen
     this.load.image('logo', 'assets/ui/gameTitle.png');
