@@ -13,9 +13,9 @@ OfficeEscape.MainMenu.prototype = {
   create: function() {
   	//show the space tile, repeated
     this.background = this.game.add.tileSprite(0, 0, this.game.width, this.game.height, 'bgtile');
-    this.gameTitle = this.game.add.sprite(this.game.world.centerX-128, this.game.world.centerY-128,'gameTitle');
-    this.gameTitle.scale.setTo(0.5);
-    this.playButton = this.game.add.sprite(this.game.world.centerX-128, this.game.world.centerY, 'playButton');
+    this.gameTitle = this.game.add.sprite(this.game.world.centerX-100, this.game.world.centerY-128,'gameTitle');
+    this.gameTitle.scale.setTo(0.8);
+    this.playButton = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'playButton');
     this.playButton.scale.setTo(0.3);
 
     //highest score
