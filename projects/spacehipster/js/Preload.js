@@ -15,7 +15,7 @@ SpaceHipster.Preload.prototype = {
     this.load.setPreloadSprite(this.preloadBar);
 
   	//load game assets
-    this.load.image('bgtile','assets/ui/office.png');
+    this.load.image('bgtile','assets/office.png');
   	this.load.image('gameOver', 'assets/ui/gameOver.png');
   	this.load.image('gameOverButton', 'assets/ui/startOverButton.png');
     this.load.spritesheet('player', 'assets/guy.png', 32, 64);
