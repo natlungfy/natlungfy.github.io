@@ -22,11 +22,11 @@ SpaceHipster.Game.prototype = {
 
     //enable player physics
     this.game.physics.arcade.enable(this.player);
-    this.playerSpeed = 120;
+    // this.playerSpeed = 120;
     this.player.body.collideWorldBounds = true;
 
     //the camera will follow the player in the world
-    this.game.camera.follow(this.player);
+    // this.game.camera.follow(this.player);
 
     //generate game elements
     // this.generateCollectables();
@@ -39,7 +39,8 @@ SpaceHipster.Game.prototype = {
     // this.explosionSound = this.game.add.audio('win');
     // console.log(this.explosionSound);
     // this.collectSound = this.game.add.audio('collect');
-//   },
+   }
+}
 //   update: function() {
 //     if(this.game.input.activePointer.justPressed()) {
       
