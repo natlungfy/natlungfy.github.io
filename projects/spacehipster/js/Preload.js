@@ -12,6 +12,7 @@ OfficeEscape.Preload.prototype = {
     this.load.setPreloadSprite(this.preloadBar);
 
   	//load game assets
+    this.load.script('gyro.min.js', 'gyro.min.js');
     this.load.image('gameTitle', 'assets/ui/gameTitle.png');
     this.load.image('playButton', 'assets/ui/playButton.png');
     this.load.image('bgtile','assets/office.png');

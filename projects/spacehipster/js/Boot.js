@@ -20,7 +20,7 @@ OfficeEscape.Boot.prototype = {
 	this.scale.pageAlignHorizontally = true;
 
 	//screen size will be set automatically
-	// DEPRECATED this.scale.setScreenSize(true);
+  this.scale.setScreenSize(true);
 
 	//physics system for movement
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
