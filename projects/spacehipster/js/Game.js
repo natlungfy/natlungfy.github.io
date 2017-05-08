@@ -9,12 +9,12 @@ OfficeEscape.Game.prototype = {
     //this.game.world.setBounds(0, 0, 1920, 1920);
 
     //background
-    this.background = this.game.add.tileSprite(0, 0, this.game.world.width, this.game.world.height, 'bgtile');;
+    this.background = this.game.add.tileSprite(0, 0, this.game.world.width, this.game.world.height, 'bgtile');
     
     //give it speed in x
     this.background.autoScroll(0, 100);
     //create player
-    this.player = this.game.add.sprite(160,240, 'player');
+    this.player = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY + 128, 'player');
 
     //this.player.scale.setTo(2);
     this.player.animations.add('run', [0, 1], 8, true);
