@@ -4,7 +4,7 @@ OfficeEscape.Preload = function(){};
 OfficeEscape.Preload.prototype = {
   preload: function() {
   	//show logo in loading screen
-    this.bgtile = this.add.sprite(game.world.centerX, game.world.centerY, "bgtile");
+    this.bgtile = this.add.sprite(this.game.world.centerX, this.game.world.centerY, "bgtile");
     this.bgtile.anchor.setTo(0.5, 0.5);
  
     this.loading = this.add.sprite(this.game.world.centerX, this.game.world.centerY + 128, 'loading');
