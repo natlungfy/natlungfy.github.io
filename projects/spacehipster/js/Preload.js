@@ -20,7 +20,7 @@ SpaceHipster.Preload.prototype = {
   	this.load.image('gameOverButton', 'assets/ui/startOverButton.png');
     this.load.spritesheet('player', 'assets/guy.png', 32, 64);
     this.load.spritesheet('boss', 'assets/Boss.png', 32, 32);
-    this.load.spritesheet('paper','assets/Paper.png',32,32)s
+    this.load.spritesheet('paper','assets/Paper.png',32,32);
     this.load.audio('bgsound', 'assets/sounds/mainBackground.ogg');
     this.load.audio('win', 'assets/sounds/win.wav');
   },
