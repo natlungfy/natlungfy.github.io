@@ -7,8 +7,6 @@ OfficeEscape.Game.prototype = {
   create: function() {
   	//set world dimensions
     //this.game.world.setBounds(0, 0, 1920, 1920);
-
-    this.gyro = this.game.add.script('gyro.js')''
     //background
     this.background = this.game.add.tileSprite(0, 0, this.game.world.width, this.game.world.height, 'bgtile');
     
@@ -32,7 +30,7 @@ OfficeEscape.Game.prototype = {
 
     this.gyro.frequency = 5;
         // start gyroscope detection
-    gyro.startTracking(function (o) {
+    this.gyro.startTracking(function (o) {
             // updating player velocity
             //player.body.velocity.x += o.gamma / 20; // TODO, CHANGE THIS
             //player.body.velocity.y += o.beta / 20;
