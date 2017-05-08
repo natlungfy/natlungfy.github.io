@@ -15,13 +15,14 @@ SpaceHipster.Preload.prototype = {
     this.load.setPreloadSprite(this.preloadBar);
 
   	//load game assets
-  	this.load.image('space', 'assets/images/space.png');
-  	this.load.image('rock', 'assets/images/rock.png');
-    this.load.spritesheet('playership', 'assets/images/player.png', 12, 12);
-    this.load.spritesheet('power', 'assets/images/power.png', 12, 12);
-  	this.load.image('playerParticle', 'assets/images/player-particle.png');
-    this.load.audio('collect', 'assets/audio/collect.ogg');
-    this.load.audio('explosion', 'assets/audio/explosion.ogg');
+    this.load.image('bgtile','assets/ui/office.png');
+  	this.load.image('gameOver', 'assets/ui/gameOver.png');
+  	this.load.image('gameOverButton', 'assets/ui/startOverButton.png');
+    this.load.spritesheet('player', 'assets/guy.png', 32, 64);
+    this.load.spritesheet('boss', 'assets/Boss.png', 32, 32);
+    this.load.spritesheet('paper','assets/Paper.png',32,32)s
+    this.load.audio('bgsound', 'assets/sounds/mainBackground.ogg');
+    this.load.audio('win', 'assets/sounds/win.wav');
   },
   create: function() {
   	this.state.start('MainMenu');

@@ -6,19 +6,19 @@ SpaceHipster.Game = function(){};
 SpaceHipster.Game.prototype = {
   create: function() {
   	//set world dimensions
-    this.game.world.setBounds(0, 0, 1920, 1920);
+    //this.game.world.setBounds(0, 0, 1920, 1920);
 
     //background
-    this.background = this.game.add.tileSprite(0, 0, this.game.world.width, this.game.world.height, 'space');
+    this.background = this.game.add.tileSprite(0, 0, this.game.world.width, this.game.world.height, 'bgtile');
 
     //create player
-    this.player = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'playership');
-    this.player.scale.setTo(2);
-    this.player.animations.add('fly', [0, 1, 2, 3], 5, true);
-    this.player.animations.play('fly');
+    this.player = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'player');
+    //this.player.scale.setTo(2);
+    this.player.animations.add('run', [0, 1], 8, true);
+    this.player.animations.play('run');
 
     //player initial score of zero
-    this.playerScore = 0;
+    //this.playerScore = 0;
 
     //enable player physics
     this.game.physics.arcade.enable(this.player);
@@ -32,13 +32,13 @@ SpaceHipster.Game.prototype = {
     this.generateCollectables();
     this.generateAsteriods();
 
-    //show score
-    this.showLabels();
+    // //show score
+    // this.showLabels();
 
-    //sounds
-    this.explosionSound = this.game.add.audio('explosion');
-    console.log(this.explosionSound);
-    this.collectSound = this.game.add.audio('collect');
+    // //sounds
+    // this.explosionSound = this.game.add.audio('win');
+    // console.log(this.explosionSound);
+    // this.collectSound = this.game.add.audio('collect');
   },
   update: function() {
     if(this.game.input.activePointer.justPressed()) {
@@ -64,12 +64,12 @@ SpaceHipster.Game.prototype = {
     var numCollectables = this.game.rnd.integerInRange(100, 150)
     var collectable;
 
-    for (var i = 0; i < numCollectables; i++) {
-      //add sprite
-      collectable = this.collectables.create(this.game.world.randomX, this.game.world.randomY, 'power');
-      collectable.animations.add('fly', [0, 1, 2, 3], 5, true);
-      collectable.animations.play('fly');
-    }
+    // for (var i = 0; i < numCollectables; i++) {
+    //   //add sprite
+    //   collectable = this.collectables.create(this.game.world.randomX, this.game.world.randomY, 'power');
+    //   collectable.animations.add('fly', [0, 1, 2, 3], 5, true);
+    //   collectable.animations.play('fly');
+    // }
 
   },
   generateAsteriods: function() {
