@@ -1,9 +1,11 @@
+var OfficeEscape = OfficeEscape || {};
+
 OfficeEscape.MainMenu = function(){};
  
 OfficeEscape.MainMenu.prototype = {
   create: function() {
   	//show the space tile, repeated
-    this.background = this.game.add.sprite(0, 0, this.game.width, this.game.height, 'bgtile');
+    this.background = this.game.add.tileSprite(0, 0, this.game.width, this.game.height, 'bgtile');
     //give it speed in y
     this.background.autoScroll(0, -20);
  
@@ -13,9 +15,9 @@ OfficeEscape.MainMenu.prototype = {
     var t = this.game.add.text(this.game.width/2, this.game.height/2, text, style);
     t.anchor.set(0.5);
  
-    //highest score
-    text = "Highest score: "+this.highestScore;
-    style = { font: "15px Arial", fill: "#fff", align: "center" };
+    // //highest score
+    // text = "Highest score: "+this.highestScore;
+    // style = { font: "15px Arial", fill: "#fff", align: "center" };
   
     var h = this.game.add.text(this.game.width/2, this.game.height/2 + 50, text, style);
     h.anchor.set(0.5);
