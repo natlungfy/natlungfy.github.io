@@ -6,7 +6,6 @@ OfficeEscape.Boot = function(){};
 OfficeEscape.Boot.prototype = {
   preload: function() {
   	//assets we'll use in the loading screen
-    this.load.image('logo', 'assets/ui/gameTitle.png');
     this.load.image('preloadbar', 'assets/ui/loading.png');
   },
   create: function() {

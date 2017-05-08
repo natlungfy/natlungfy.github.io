@@ -13,10 +13,7 @@ OfficeEscape.MainMenu.prototype = {
   create: function() {
   	//show the space tile, repeated
     this.background = this.game.add.tileSprite(0, 0, this.game.width, this.game.height, 'bgtile');
-    
-    //give it speed in x
-    this.background.autoScroll(0, -20);
-
+    this.gameTitle = this.game.add.sprite(this.game.width/2,this.game.height/2+150,'gameTitle');
     //start game text
     var text = "Tap to begin";
     var style = { font: "30px Arial", fill: "#fff", align: "center" };
