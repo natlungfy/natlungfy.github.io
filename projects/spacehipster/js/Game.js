@@ -29,8 +29,8 @@ SpaceHipster.Game.prototype = {
     this.game.camera.follow(this.player);
 
     //generate game elements
-    this.generateCollectables();
-    this.generateAsteriods();
+    // this.generateCollectables();
+    // this.generateAsteriods();
 
     // //show score
     // this.showLabels();
@@ -39,103 +39,103 @@ SpaceHipster.Game.prototype = {
     // this.explosionSound = this.game.add.audio('win');
     // console.log(this.explosionSound);
     // this.collectSound = this.game.add.audio('collect');
-  },
-  update: function() {
-    if(this.game.input.activePointer.justPressed()) {
+//   },
+//   update: function() {
+//     if(this.game.input.activePointer.justPressed()) {
       
-      //move on the direction of the input
-      this.game.physics.arcade.moveToPointer(this.player, this.playerSpeed);
-    }
+//       //move on the direction of the input
+//       this.game.physics.arcade.moveToPointer(this.player, this.playerSpeed);
+//     }
 
-    //collision between player and asteroids
-    this.game.physics.arcade.collide(this.player, this.asteroids, this.hitAsteroid, null, this);
+//     //collision between player and asteroids
+//     this.game.physics.arcade.collide(this.player, this.asteroids, this.hitAsteroid, null, this);
 
-    //overlapping between player and collectables
-    this.game.physics.arcade.overlap(this.player, this.collectables, this.collect, null, this);
-  },
-  generateCollectables: function() {
-    this.collectables = this.game.add.group();
+//     //overlapping between player and collectables
+//     this.game.physics.arcade.overlap(this.player, this.collectables, this.collect, null, this);
+//   },
+//   generateCollectables: function() {
+//     this.collectables = this.game.add.group();
 
-    //enable physics in them
-    this.collectables.enableBody = true;
-    this.collectables.physicsBodyType = Phaser.Physics.ARCADE;
+//     //enable physics in them
+//     this.collectables.enableBody = true;
+//     this.collectables.physicsBodyType = Phaser.Physics.ARCADE;
 
-    //phaser's random number generator
-    var numCollectables = this.game.rnd.integerInRange(100, 150)
-    var collectable;
+//     //phaser's random number generator
+//     var numCollectables = this.game.rnd.integerInRange(100, 150)
+//     var collectable;
 
-    // for (var i = 0; i < numCollectables; i++) {
-    //   //add sprite
-    //   collectable = this.collectables.create(this.game.world.randomX, this.game.world.randomY, 'power');
-    //   collectable.animations.add('fly', [0, 1, 2, 3], 5, true);
-    //   collectable.animations.play('fly');
-    // }
+//     // for (var i = 0; i < numCollectables; i++) {
+//     //   //add sprite
+//     //   collectable = this.collectables.create(this.game.world.randomX, this.game.world.randomY, 'power');
+//     //   collectable.animations.add('fly', [0, 1, 2, 3], 5, true);
+//     //   collectable.animations.play('fly');
+//     // }
 
-  },
-  generateAsteriods: function() {
-    this.asteroids = this.game.add.group();
+//   },
+//   generateAsteriods: function() {
+//     this.asteroids = this.game.add.group();
     
-    //enable physics in them
-    this.asteroids.enableBody = true;
+//     //enable physics in them
+//     this.asteroids.enableBody = true;
 
-    //phaser's random number generator
-    var numAsteroids = this.game.rnd.integerInRange(150, 200)
-    var asteriod;
+//     //phaser's random number generator
+//     var numAsteroids = this.game.rnd.integerInRange(150, 200)
+//     var asteriod;
 
-    for (var i = 0; i < numAsteroids; i++) {
-      //add sprite
-      asteriod = this.asteroids.create(this.game.world.randomX, this.game.world.randomY, 'rock');
-      asteriod.scale.setTo(this.game.rnd.integerInRange(10, 40)/10);
+//     for (var i = 0; i < numAsteroids; i++) {
+//       //add sprite
+//       asteriod = this.asteroids.create(this.game.world.randomX, this.game.world.randomY, 'rock');
+//       asteriod.scale.setTo(this.game.rnd.integerInRange(10, 40)/10);
 
-      //physics properties
-      asteriod.body.velocity.x = this.game.rnd.integerInRange(-20, 20);
-      asteriod.body.velocity.y = this.game.rnd.integerInRange(-20, 20);
-      asteriod.body.immovable = true;
-      asteriod.body.collideWorldBounds = true;
-    }
-  },
-  hitAsteroid: function(player, asteroid) {
-    //play explosion sound
-    this.explosionSound.play();
+//       //physics properties
+//       asteriod.body.velocity.x = this.game.rnd.integerInRange(-20, 20);
+//       asteriod.body.velocity.y = this.game.rnd.integerInRange(-20, 20);
+//       asteriod.body.immovable = true;
+//       asteriod.body.collideWorldBounds = true;
+//     }
+//   },
+//   hitAsteroid: function(player, asteroid) {
+//     //play explosion sound
+//     this.explosionSound.play();
 
-    //make the player explode
-    var emitter = this.game.add.emitter(this.player.x, this.player.y, 100);
-    emitter.makeParticles('playerParticle');
-    emitter.minParticleSpeed.setTo(-200, -200);
-    emitter.maxParticleSpeed.setTo(200, 200);
-    emitter.gravity = 0;
-    emitter.start(true, 1000, null, 100);
-    this.player.kill();
+//     //make the player explode
+//     var emitter = this.game.add.emitter(this.player.x, this.player.y, 100);
+//     emitter.makeParticles('playerParticle');
+//     emitter.minParticleSpeed.setTo(-200, -200);
+//     emitter.maxParticleSpeed.setTo(200, 200);
+//     emitter.gravity = 0;
+//     emitter.start(true, 1000, null, 100);
+//     this.player.kill();
 
-    this.game.time.events.add(800, this.gameOver, this);
-  },
-  gameOver: function() {    
-    //pass it the score as a parameter 
-    this.game.state.start('MainMenu', true, false, this.playerScore);
-  },
-  collect: function(player, collectable) {
-    //play collect sound
-    this.collectSound.play();
+//     this.game.time.events.add(800, this.gameOver, this);
+//   },
+//   gameOver: function() {    
+//     //pass it the score as a parameter 
+//     this.game.state.start('MainMenu', true, false, this.playerScore);
+//   },
+//   collect: function(player, collectable) {
+//     //play collect sound
+//     this.collectSound.play();
 
-    //update score
-    this.playerScore++;
-    this.scoreLabel.text = this.playerScore;
+//     //update score
+//     this.playerScore++;
+//     this.scoreLabel.text = this.playerScore;
 
-    //remove sprite
-    collectable.destroy();
-  },
-  showLabels: function() {
-    //score text
-    var text = "0";
-    var style = { font: "20px Arial", fill: "#fff", align: "center" };
-    this.scoreLabel = this.game.add.text(this.game.width-50, this.game.height - 50, text, style);
-    this.scoreLabel.fixedToCamera = true;
-  }
-};
+//     //remove sprite
+//     collectable.destroy();
+//   },
+//   showLabels: function() {
+//     //score text
+//     var text = "0";
+//     var style = { font: "20px Arial", fill: "#fff", align: "center" };
+//     this.scoreLabel = this.game.add.text(this.game.width-50, this.game.height - 50, text, style);
+//     this.scoreLabel.fixedToCamera = true;
+//   }
+// };
 
-/*
-TODO
+// /*
+// TODO
 
--audio
--asteriod bounch
-*/
+// -audio
+// -asteriod bounch
+// */
