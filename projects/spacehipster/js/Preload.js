@@ -13,6 +13,7 @@ OfficeEscape.Preload.prototype = {
 
   	//load game assets
     this.load.image('gameTitle', 'assets/ui/gameTitle.png');
+    this.load.image('playButton', 'assets/ui/playButton.png');
     this.load.image('bgtile','assets/office.png');
   	this.load.image('gameOver', 'assets/ui/gameOver.png');
   	this.load.image('gameOverButton', 'assets/ui/startOverButton.png');

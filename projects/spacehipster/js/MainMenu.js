@@ -13,13 +13,10 @@ OfficeEscape.MainMenu.prototype = {
   create: function() {
   	//show the space tile, repeated
     this.background = this.game.add.tileSprite(0, 0, this.game.width, this.game.height, 'bgtile');
-    this.gameTitle = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY-128,'gameTitle');
-    this.gameTitle.scale.setTo(0.5);
-    //start game text
-    var text = "Tap to begin";
-    var style = { font: "30px Arial", fill: "#fff", align: "center" };
-    var t = this.game.add.text(this.game.width/2, this.game.height/2, text, style);
-    t.anchor.set(0.5);
+    this.gameTitle = this.game.add.sprite(this.game.world.centerX-128, this.game.world.centerY-128,'gameTitle');
+    this.gameTitle.scale.setTo(0.8);
+    this.playButton = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY-128, 'playButton');
+    this.playButton.scale.setTo(0.5);
 
     //highest score
     text = "Highest score: "+this.highestScore;

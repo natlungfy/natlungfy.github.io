@@ -27,32 +27,32 @@ OfficeEscape.Game.prototype = {
     this.game.physics.arcade.enable(this.player);
     // this.playerSpeed = 120;
     this.player.body.collideWorldBounds = true;
-    player.body.bounce.set(0.0);
+    this.player.body.bounce.set(0.0);
 
     gyro.frequency = 5;
         // start gyroscope detection
-        gyro.startTracking(function (o) {
+    gyro.startTracking(function (o) {
             // updating player velocity
             //player.body.velocity.x += o.gamma / 20; // TODO, CHANGE THIS
             //player.body.velocity.y += o.beta / 20;
             
             if(!(o.gamma > 45||o.gamma < -45)){
-                player.x = 164 + o.gamma * 2;
+                this.player.x = 164 + o.gamma * 2;
             }else{
                 if(o.gamma > 0){
-                    player.x = 254;
+                    this.player.x = 254;
                 }else{
-                    player.x = 74
+                    this.player.x = 74
                 }
             }
             
             if(!(o.beta > 45||o.beta < -45)){
-                player.y = 230 + o.beta * 2;
+                this.player.y = 230 + o.beta * 2;
             }else{
                 if(o.beta > 0){
-                    player.y = 320;
+                    this.player.y = 320;
                 }else{
-                    player.y = 140; 
+                    this.player.y = 140; 
                 }
             }
             //player.x = 160 + o.gamma * 2;
