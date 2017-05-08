@@ -6,16 +6,13 @@ OfficeEscape.Preload = function(){};
 OfficeEscape.Preload.prototype = {
   preload: function() {
   	//show loading screen
-  	this.splash = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'logo');
-    this.splash.anchor.setTo(0.5);
-
     this.preloadBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY + 128, 'preloadbar');
     this.preloadBar.anchor.setTo(0.5);
 
     this.load.setPreloadSprite(this.preloadBar);
 
   	//load game assets
-    this.load.image('logo', 'assets/ui/gameTitle.png');
+    this.load.image('gameTitle', 'assets/ui/gameTitle.png');
     this.load.image('bgtile','assets/office.png');
   	this.load.image('gameOver', 'assets/ui/gameOver.png');
   	this.load.image('gameOverButton', 'assets/ui/startOverButton.png');
