@@ -40,7 +40,7 @@ window.onload = function () {
                 fill: "#fff"
             });
         loading.anchor.setTo(0.5);
-        game.load.setPreloadSprite(loading);
+        // game.load.setPreloadSprite(loading);
         game.load.spritesheet("player", "assets/mainchar.png",32,64);
         game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
