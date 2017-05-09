@@ -26,8 +26,8 @@ window.onload = function () {
         game.load.spritesheet("paper","assets/Paper.png",32,32);
         game.load.image("bgtile", "assets/office.png");
         game.load.image("gameOver", "assets/ui/gameOver.png")
-        game.load.audio("bgsound", ["assets/sounds/mainBackground.ogg","assets/sounds/mainBackground.mp3"]);
-        game.load.audio("hit", ['assets/sounds/hit.ogg',"assets/sounds/hit.mp3"]);
+        game.load.audio("bgsound", ["assets/sounds/mainBackground.ogg","assets/sounds/mainBackground.mp3", "assets/sounds/mainBackground.m4a"]);
+        game.load.audio("hit", ['assets/sounds/hit.ogg',"assets/sounds/hit.mp3","assets/sounds/hit.m4a"]);
 
     }
 
