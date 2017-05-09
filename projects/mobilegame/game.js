@@ -15,7 +15,14 @@ window.onload = function () {
     var gameOver;
     var hit;
     var loading;
-    
+        // function to scale up the game to full screen
+    function goFullScreen() {
+        game.scale.pageAlignHorizontally = true;
+        game.scale.pageAlignVertically = true;
+        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        game.scale.setScreenSize(true);
+    }
+
     function onBoot() {
         game.load.image("loading","assets/ui/loading.png");
         // initializing physics system
@@ -26,9 +33,8 @@ window.onload = function () {
     // function executed on preload to load assets
     function onPreload() {
         loading = game.add.sprite(game.world.centerX, game.world.centerY, 'loading');
-    loading.anchor.setTo(0.5);
-
-    game.load.setPreloadSprite(loading);
+        loading.anchor.setTo(0.5);
+        game.load.setPreloadSprite(loading);
         game.load.spritesheet("player", "assets/mainchar.png",32,64);
         game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
@@ -37,14 +43,6 @@ window.onload = function () {
         game.load.audio("bgsound", ["assets/sounds/mainBackground.ogg","assets/sounds/mainBackground.mp3", "assets/sounds/mainBackground.m4a"]);
         game.load.audio("hit", ['assets/sounds/hit.ogg',"assets/sounds/hit.mp3","assets/sounds/hit.m4a"]);
 
-    }
-
-    // function to scale up the game to full screen
-    function goFullScreen() {
-        game.scale.pageAlignHorizontally = true;
-        game.scale.pageAlignVertically = true;
-        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        game.scale.setScreenSize(true);
     }
 
     // function to be called when the game has been created
