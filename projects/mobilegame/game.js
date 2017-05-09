@@ -15,6 +15,7 @@ window.onload = function () {
     var pencil;
     var pencils;
     var pencilTime = 0;
+    var gameOver;
     
     // function executed on preload
     function onPreload() {
@@ -24,6 +25,7 @@ window.onload = function () {
         game.load.spritesheet("playerDie", "assets/die_down.png",32,64);
         game.load.image("bgtile", "assets/office.png");
         game.load.image("pencil", "assets/pencil.png");
+        game.load.image("gameOver", "assets/ui/gameOver.png")
         game.load.audio("bgsound", "assets/sounds/mainBackground.ogg");
 
     }
@@ -122,9 +124,10 @@ window.onload = function () {
     function handleCollision(){
         //player.animations.stop('playerRun', true);
         player.kill();
-        playerDie = game.add.sprite(160, 320, "playerDie");
+        playerDie = game.add.sprite(160, 400, "playerDie");
         playerDie.frame = 0;
-        playerDie.animations.add('die', [0, 1,2], 5, false);
+        playerDie.animations.add('die', [0, 1,2], 3, false);
+        gameOver = game.add.sprite(game.world.centerX, game.world.centerY, "gameOver");
         playerDie.animations.play('die');
         game.physics.arcade.gravity.y = 0;
         game.time.events.pause();
