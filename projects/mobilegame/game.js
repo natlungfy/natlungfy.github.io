@@ -123,7 +123,7 @@ window.onload = function () {
         hit = game.add.audio('hit');
         hit.play();
         game.physics.arcade.gravity.y = 0;
-        timer.stop();
+        //timer.stop();
     }
 
     function update() {
