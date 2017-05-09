@@ -38,10 +38,10 @@ window.onload = function () {
         // going full screen
         goFullScreen();
 
-        bgtile = game.add.sprite(game.world.centerX, game.world.centerY, "bgtile");
-        bgtile.anchor.setTo(0.5, 0.5);
-        bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
-        bgtileAhead.anchor.setTo(0.5, 0.5);
+        bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
+        // bgtile.anchor.setTo(0.5, 0.5);
+        // bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
+        // bgtileAhead.anchor.setTo(0.5, 0.5);
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
        setTimeout(function() {bgsound.play();},100);
@@ -116,14 +116,7 @@ window.onload = function () {
     }
 
     function update() {
-        bgtile.y += 2;
-        bgtileAhead.y += 2;
-        if(bgtile.y > game.world.centerY * 3 - 1){
-            bgtile.y = -game.world.centerY + 1;
-        }
-        if(bgtileAhead.y > game.world.centerY * 3 - 1){
-            bgtileAhead.y = -game.world.centerY + 1;
-        }
+        bgtile.tilePosition.y += 2;
         game.physics.arcade.collide(player, boss, handleCollision);
         game.physics.arcade.collide(player, paper, handleCollision);
     }
