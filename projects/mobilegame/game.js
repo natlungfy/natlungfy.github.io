@@ -14,6 +14,7 @@ window.onload = function () {
     var score;
     var gameOver;
     var hit;
+    var loading;
     
     function onBoot() {
         game.load.image("loading","assets/ui/loading.png");
@@ -24,6 +25,10 @@ window.onload = function () {
     }
     // function executed on preload to load assets
     function onPreload() {
+        loading = game.add.sprite(game.world.centerX, game.world.centerY, 'loading');
+    loading.anchor.setTo(0.5);
+
+    game.load.setPreloadSprite(loading);
         game.load.spritesheet("player", "assets/mainchar.png",32,64);
         game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
