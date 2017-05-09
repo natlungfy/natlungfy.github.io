@@ -39,9 +39,10 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.sprite(game.world.centerX, game.world.centerY, "bgtile");
-        bgtile.anchor.setTo(0.5, 0.5);
-        bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
-        bgtileAhead.anchor.setTo(0.5, 0.5);
+       bgtile.autoScroll(0, 100);
+        // bgtile.anchor.setTo(0.5, 0.5);
+        // bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
+        // bgtileAhead.anchor.setTo(0.5, 0.5);
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
         setTimeout(function() {bgsound.play();},100);
