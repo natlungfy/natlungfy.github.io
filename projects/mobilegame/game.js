@@ -46,7 +46,14 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
-
+          pencils = game.add.group();
+    pencils.enableBody = true;
+    pencils.physicsBodyType = Phaser.Physics.ARCADE;
+    pencils.createMultiple(30, 'pencil');
+    pencils.setAll('anchor.x', 0.5);
+    pencils.setAll('anchor.y', 1);
+    pencils.setAll('outOfBoundsKill', true);
+    pencils.setAll('checkWorldBounds', true);
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
         setTimeout(function() {bgsound.play();},100);
@@ -68,21 +75,10 @@ window.onload = function () {
         // setting player bounce
         player.body.bounce.set(0.0);
 
-        pencils = game.add.group();
-        pencils.enableBody = true;
-        pencils.physicsBodyType = Phaser.Physics.ARCADE;
-        pencils.createMultiple(30, 'pencil');
-        pencils.setAll('anchor.x', 0.5);
-        pencils.setAll('anchor.y', -1.5);
-        pencils.setAll('outOfBoundsKill', true);
-        pencils.setAll('checkWorldBounds', true);
         // setting gyroscope update frequency
         gyro.frequency = 5;
         // start gyroscope detection
         gyro.startTracking(function (o) {
-            // updating player velocity
-            //player.body.velocity.x += o.gamma / 20; // TODO, CHANGE THIS
-            //player.body.velocity.y += o.beta / 20;
             
             //Player's position confined to the bounds of the background
             if(!(o.gamma > 45||o.gamma < -45)){
@@ -99,7 +95,14 @@ window.onload = function () {
         });
 
 
-        fireButton = game.input.activePointer;
+        if(game.input.activePointer.justPressed()) {
+            pencil.y-=2;
+          pencil = pencils.getFirstExists(false);
+          if (pencil) {
+            pencil.reset(player.x,player.y+8);
+            pencil.y -= 2;
+        }
+        }
         //Random spawns of enemies.
         game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
         game.time.events.repeat(Phaser.Timer.SECOND * 3, 200, newPaper, this);
@@ -136,11 +139,6 @@ window.onload = function () {
 
     function update() {
         bgtile.tilePosition.y += 2;
-        if(fireButton.justPressed()) {
-          pencil = pencils.getFirstExists(false);
-          if (pencil) {
-            pencil.reset(player.x,player.y+8);
-            pencil.y -= 2;
 
         }
     }
