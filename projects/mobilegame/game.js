@@ -21,7 +21,7 @@ window.onload = function () {
         game.load.spritesheet("player", "assets/guy.png",32,64);
         game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
-        gmae.load.spritesheet("playerDie", "assets/die_down.png",32,64);
+        game.load.spritesheet("playerDie", "assets/die_down.png",32,64);
         game.load.image("bgtile", "assets/office.png");
         game.load.image("pencil", "assets/pencil.png");
         game.load.audio("bgsound", "assets/sounds/mainBackground.ogg");
