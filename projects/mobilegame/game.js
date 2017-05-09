@@ -47,7 +47,8 @@ window.onload = function () {
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
         score = game.time.totalElapsedSeconds().toFixed(0)*1000;
         scoreText = game.add.text(64,64,"-",{
-                font:"bold 16px Arial"
+                font:"bold 16px Courier",
+                fill: "#fff"
             });
         updateScore();
 
