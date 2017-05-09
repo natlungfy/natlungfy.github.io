@@ -35,10 +35,8 @@ window.onload = function () {
         game.physics.startSystem(Phaser.Physics.ARCADE);
         // going full screen
         goFullScreen();
-        loading = game.add.text(game.world.centerX, game.world.centerY, "Loading...",{
-                font:"bold 50px Courier",
-                fill: "#fff"
-            });
+        game.load.image("loading","assets/ui/loading.png");
+        loading = game.add.sprite(game.world.centerX, game.world.centerY, "loading");
         loading.anchor.setTo(0.5);
         // game.load.setPreloadSprite(loading);
         game.load.spritesheet("player", "assets/mainchar.png",32,64);
