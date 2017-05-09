@@ -88,14 +88,17 @@ window.onload = function () {
         });
 
         timer = game.time.create(false);
-        timer.loop(1000, total++, this);
+        timer.loop(2000, this.updateCounter this);
         timer.start();
 
         //Random spawns of enemies.
-        game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
-        game.time.events.repeat(Phaser.Timer.SECOND * 3, 2400, newPaper, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, this.newBoss, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 3, 2400, this.newPaper, this);
     }
 
+    function updateCounter() {
+        total++;
+    }
     
     function newBoss() {
         // adding Boss obstacle on the stage
