@@ -19,10 +19,9 @@ window.onload = function () {
     
     // function executed on preload
     function onPreload() {
-        game.load.spritesheet("player", "assets/guy.png",32,64);
+        game.load.spritesheet("player", "assets/mainchar.png",32,64);
         game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
-        game.load.spritesheet("playerDie", "assets/die_down.png",32,64);
         game.load.image("bgtile", "assets/office.png");
         game.load.image("pencil", "assets/pencil.png");
         game.load.image("gameOver", "assets/ui/gameOver.png")
@@ -123,12 +122,9 @@ window.onload = function () {
     }
     function handleCollision(){
         //player.animations.stop('playerRun', true);
-        player.kill();
-        playerDie = game.add.sprite(game.world.centerX, 400, "playerDie");
-        playerDie.frame = 0;
-        playerDie.animations.add('die', [0, 1,2], 3, false);
-        gameOver = game.add.sprite(game.world.centerX-100, game.world.centerY-100, "gameOver");
-        playerDie.animations.play('die');
+        player.animations.add('die',[3,4,5],3,false);
+        player.animations.play('die');
+        gameOver = game.add.sprite(game.world.centerX-120, game.world.centerY-100, "gameOver");
         game.physics.arcade.gravity.y = 0;
         game.time.events.pause();
         var score = game.time.totalElapsedSeconds().toFixed(0);
