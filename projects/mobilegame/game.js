@@ -121,8 +121,6 @@ window.onload = function () {
     
     game.physics.arcade.collide(player, boss, handleCollision);
     game.physics.arcade.collide(player, paper, handleCollision);
-    game.physics.arcade.collide(pencils,boss, handleCollision);
-    game.physics.arcade.collide(pencils,paper, handleCollision);
 
 }
 
