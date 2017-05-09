@@ -28,43 +28,33 @@ OfficeEscape.Game.prototype = {
     this.player.body.collideWorldBounds = true;
     this.player.body.bounce.set(0.0);
 
-    this.gyro.frequency = 5;
-        // start gyroscope detection
-    this.gyro.startTracking(function (o) {
-            // updating player velocity
-            //player.body.velocity.x += o.gamma / 20; // TODO, CHANGE THIS
-            //player.body.velocity.y += o.beta / 20;
+    //gyroscope
+
+    // this.gyro.frequency = 5;
+    //     // start gyroscope detection
+    // this.gyro.startTracking(function (o) {
+    //         if(!(o.gamma > 45||o.gamma < -45)){
+    //             this.player.x = 164 + o.gamma * 2;
+    //         }else{
+    //             if(o.gamma > 0){
+    //                 this.player.x = 254;
+    //             }else{
+    //                 this.player.x = 74
+    //             }
+    //         }
             
-            if(!(o.gamma > 45||o.gamma < -45)){
-                this.player.x = 164 + o.gamma * 2;
-            }else{
-                if(o.gamma > 0){
-                    this.player.x = 254;
-                }else{
-                    this.player.x = 74
-                }
-            }
-            
-            if(!(o.beta > 45||o.beta < -45)){
-                this.player.y = 230 + o.beta * 2;
-            }else{
-                if(o.beta > 0){
-                    this.player.y = 320;
-                }else{
-                    this.player.y = 140; 
-                }
-            }
-            //player.x = 160 + o.gamma * 2;
-            //player.y = 240 + o.beta * 2;
-        });
+    //         if(!(o.beta > 45||o.beta < -45)){
+    //             this.player.y = 230 + o.beta * 2;
+    //         }else{
+    //             if(o.beta > 0){
+    //                 this.player.y = 320;
+    //             }else{
+    //                 this.player.y = 140; 
+    //             }
+    //         }
+    //     });
 
-    //the camera will follow the player in the world
-     //this.game.camera.follow(this.player);
-
-    //generate game elements
-    // this.generateCollectables();
-    // this.generateAsteriods();
-
+//-------------ignore below--------------------------------------
     // //show score
     // this.showLabels();
 
@@ -167,9 +157,3 @@ OfficeEscape.Game.prototype = {
 //   }
 // };
 
-// /*
-// TODO
-
-// -audio
-// -asteriod bounch
-// */

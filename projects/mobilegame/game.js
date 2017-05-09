@@ -22,9 +22,9 @@ this.playerScore = 0;
         // setting player bounce
         this.player.body.bounce.set(0.0);
         // setting gyroscope update frequency
-        gyro.frequency = 5;
+        this.gyro.frequency = 5;
         // start gyroscope detection
-        gyro.startTracking(function (o) {
+        this.gyro.startTracking(function (o) {
             // updating player velocity
             //player.body.velocity.x += o.gamma / 20; // TODO, CHANGE THIS
             //player.body.velocity.y += o.beta / 20;
