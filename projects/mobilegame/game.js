@@ -3,7 +3,7 @@
 window.onload = function () {
 
     // game definition, 320x480
-    var game = new Phaser.Game(320, 480, Phaser.CANVAS, "", {boot: onBoot; preload: onPreload, create: onCreate, update: update, render: render});
+    var game = new Phaser.Game(320, 480, Phaser.CANVAS, "", {boot: onBoot, preload: onPreload, create: onCreate, update: update, render: render});
 
     // the player
     var boss;
