@@ -66,7 +66,7 @@ window.onload = function () {
         player.anchor.setTo(0.5, -1.5);
         // enabling physics car.body.collideWorldBounds = true;
         game.physics.enable(player, Phaser.Physics.ARCADE);
-         game.time.events.repeat(Phaser.Timer.SECOND * 2, 10, createBall, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 2, 10, createBall, this);
         // the player will collide with bounds
         player.body.collideWorldBounds = true;
         // setting player bounce
@@ -114,6 +114,6 @@ window.onload = function () {
     
     function render() {
         game.debug.spriteInfo(player, 32, 32);
-        game.debug.text("Time" + game.time.events.duration.toFixed(0), 50, 50);
+        game.debug.text("Time: " + game.time.elapsed.toFixed(0), 64, 64);
     }
 };
