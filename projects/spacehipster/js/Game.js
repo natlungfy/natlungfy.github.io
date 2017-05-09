@@ -30,29 +30,29 @@ OfficeEscape.Game.prototype = {
 
     //gyroscope
 
-    // this.gyro.frequency = 5;
-    //     // start gyroscope detection
-    // this.gyro.startTracking(function (o) {
-    //         if(!(o.gamma > 45||o.gamma < -45)){
-    //             this.player.x = 164 + o.gamma * 2;
-    //         }else{
-    //             if(o.gamma > 0){
-    //                 this.player.x = 254;
-    //             }else{
-    //                 this.player.x = 74
-    //             }
-    //         }
+    this.gyro.frequency = 5;
+        // start gyroscope detection
+    this.gyro.startTracking(function (o) {
+            if(!(o.gamma > 45||o.gamma < -45)){
+                this.player.x = 164 + o.gamma * 2;
+            }else{
+                if(o.gamma > 0){
+                    this.player.x = 254;
+                }else{
+                    this.player.x = 74
+                }
+            }
             
-    //         if(!(o.beta > 45||o.beta < -45)){
-    //             this.player.y = 230 + o.beta * 2;
-    //         }else{
-    //             if(o.beta > 0){
-    //                 this.player.y = 320;
-    //             }else{
-    //                 this.player.y = 140; 
-    //             }
-    //         }
-    //     });
+            if(!(o.beta > 45||o.beta < -45)){
+                this.player.y = 230 + o.beta * 2;
+            }else{
+                if(o.beta > 0){
+                    this.player.y = 320;
+                }else{
+                    this.player.y = 140; 
+                }
+            }
+        });
 
 //-------------ignore below--------------------------------------
     // //show score
