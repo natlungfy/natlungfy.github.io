@@ -13,6 +13,7 @@ window.onload = function () {
     var bgsound;
     var score;
     var gameOver;
+    var lose;
     
     // function executed on preload
     function onPreload() {
@@ -22,6 +23,7 @@ window.onload = function () {
         game.load.image("bgtile", "assets/office.png");
         game.load.image("gameOver", "assets/ui/gameOver.png")
         game.load.audio("bgsound", ["assets/sounds/mainBackground.ogg","assets/sounds/mainBackground.mp3"]);
+        game.load.audio("lose", 'assets/sounds/lose.wav');
 
     }
 
@@ -109,6 +111,8 @@ window.onload = function () {
         player.animations.add('die',[3,4,5],4,false);
         player.animations.play('die');
         gameOver = game.add.sprite(game.world.centerX-120, game.world.centerY-100, "gameOver");
+        lose = game.add.audio('lose');
+        lose.play();
         game.physics.arcade.gravity.y = 0;
         game.time.events.pause();
         var score = game.time.totalElapsedSeconds().toFixed(0);
