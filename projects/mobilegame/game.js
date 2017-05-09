@@ -126,9 +126,6 @@ window.onload = function () {
         hit = game.add.audio('hit');
         hit.play();
         game.physics.arcade.gravity.y = 0;
-        paper.kill();
-        boss.kill();
-        game.time.events.pause();
     }
 
     function update() {
