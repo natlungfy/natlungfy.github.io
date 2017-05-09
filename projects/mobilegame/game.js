@@ -83,7 +83,7 @@ window.onload = function () {
 
         //Random spawns of enemies.
         game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
-        game.time.events.repeat(Phaser.Timer.SECOND * 3, 1200, newPaper, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 3, 2400, newPaper, this);
     }
     
     function newBoss() {
@@ -106,7 +106,7 @@ window.onload = function () {
     }
     function handleCollision(){
         //player.animations.stop('playerRun', true);
-        player.animations.add('die',[3,4,5],3,false);
+        player.animations.add('die',[3,4,5],4,false);
         player.animations.play('die');
         gameOver = game.add.sprite(game.world.centerX-120, game.world.centerY-100, "gameOver");
         game.physics.arcade.gravity.y = 0;
