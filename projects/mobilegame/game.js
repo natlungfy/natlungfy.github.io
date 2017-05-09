@@ -42,8 +42,8 @@ window.onload = function () {
 
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
 
-        bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
-        setTimeout(function() {bgsound.play();},100);
+        bgsound = game.add.audio("bgsound"); //true means looping is enabled.
+        bgsound.play();
 
         // adding the player on stage
         player = game.add.sprite(160, 320, "player");
