@@ -88,7 +88,7 @@ window.onload = function () {
         });
 
         timer = game.time.create(false);
-        timer.loop(2000, this.updateCounter this);
+        timer.loop(2000, this.updateCounter, this);
         timer.start();
 
         //Random spawns of enemies.
