@@ -10,8 +10,11 @@ window.onload = function () {
     var paper;
     var player;
     var bgtile;
-    var bgtileAhead;
     var bgsound;
+    var score;
+    var pencil;
+    var pencils;
+    var pencilTime = 0;
     
     // function executed on preload
     function onPreload() {
@@ -19,6 +22,7 @@ window.onload = function () {
         game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
         game.load.image("bgtile", "assets/office.png");
+        game.load.image("pencil", "assets/pencil.png");
         game.load.audio("bgsound", "assets/sounds/mainBackground.ogg");
 
     }
@@ -39,12 +43,10 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
-        // bgtile.anchor.setTo(0.5, 0.5);
-        // bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
-        // bgtileAhead.anchor.setTo(0.5, 0.5);
+
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
-       setTimeout(function() {bgsound.play();},100);
+        setTimeout(function() {bgsound.play();},100);
 
         // adding the player on stage
         player = game.add.sprite(160, 320, "player");
@@ -62,6 +64,15 @@ window.onload = function () {
         player.body.collideWorldBounds = true;
         // setting player bounce
         player.body.bounce.set(0.0);
+
+        pencils = game.add.group();
+        pencils.enableBody = true;
+        pencils.physicsBodyType = Phaser.Physics.ARCADE;
+        pencils.createMultiple(30, 'pencil');
+        pencils.setAll('anchor.x', 0.5);
+        pencils.setAll('anchor.y', -1.5);
+        pencils.setAll('outOfBoundsKill', true);
+        pencils.setAll('checkWorldBounds', true);
         // setting gyroscope update frequency
         gyro.frequency = 5;
         // start gyroscope detection
@@ -105,7 +116,7 @@ window.onload = function () {
         paper = game.add.sprite(random, 0, "paper");
         game.physics.enable(paper, Phaser.Physics.ARCADE);
         paper.body.collideWorldBounds = false;
-        paper.frame = 0;
+        paper.frame = game.rnd.integerInRange(0,2);
     }
     function handleCollision(){
         player.animations.stop('playerRun', true);
@@ -117,11 +128,22 @@ window.onload = function () {
 
     function update() {
         bgtile.tilePosition.y += 2;
-        game.physics.arcade.collide(player, boss, handleCollision);
-        game.physics.arcade.collide(player, paper, handleCollision);
+        if(game.input.activePointer.justPressed()) {
+          pencil = pencils.getFirstExists(false);
+          if (pencil) {
+            pencil.reset(player.x,player.y+8);
+            pencil.body.velocity.y = -400;
+
+        }
     }
-    
-    function render() {
+    game.physics.arcade.collide(player, boss, handleCollision);
+    game.physics.arcade.collide(player, paper, handleCollision);
+    games.physics.arcade.collide(pencils,boss, handleCollision);
+    games.physics.arcade.collide(pencils,paper, handleCollision);
+
+}
+
+function render() {
         //game.debug.spriteInfo(player, 32, 32);
         var seconds = game.time.totalElapsedSeconds().toFixed(0);
         game.debug.text('Score: ' + seconds * 1000, 64, 64);
