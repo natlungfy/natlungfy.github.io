@@ -10,11 +10,11 @@ window.onload = function () {
     var bgtile;
     var bgtileAhead;
     var bgsound;
-
+    
     // function executed on preload
     function onPreload() {
         game.load.spritesheet("player", "assets/guy.png",32,64);
-        game.load.spritesheet("boss","assets/boss.png",32,32);
+        game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
         game.load.image("bgtile", "assets/office.png");
         game.load.audio("bgsound", "assets/sounds/mainBackground.ogg");
@@ -37,36 +37,23 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.sprite(game.world.centerX, game.world.centerY, "bgtile");
-        bgtile.anchor.setTo(0.5, 0.5);
-        bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
-        bgtileAhead.anchor.setTo(0.5, 0.5);
+        bgtile.autoScroll(0, 150);
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
         setTimeout(function() {bgsound.play();},100);
 
         // adding the player on stage
-        player = game.add.sprite(160, 240, "player");
+        player = game.add.sprite(160, 320, "player");
         player.frame = 0;
         player.animations.add('playerRun', [0, 1], 8, true);
         player.animations.play('playerRun');
-
-        // // adding Boss obstacle on the stage
-        // boss = game.add.sprite(160,480, "boss");
-        // boss.frame = 0;
-        // boss.animations.add('bossRun', [0,1,2,3],5,true);
-        // player.animations.play('bossRun');
-
-        // // adding Paper obstacle on the stage
-        // paper = game.add.sprite(100,480, "paper");
-        // paper.frame = 0;
-        // paper.animations.add('paperChange', [0,1,2],5,true);
-        // paper.animations.play('paperChange');
         
+        //Set Gravity
+        game.physics.arcade.gravity.y = 150;
         // setting player anchor point
         player.anchor.setTo(0.5, -1.5);
         // enabling physics car.body.collideWorldBounds = true;
         game.physics.enable(player, Phaser.Physics.ARCADE);
-        //game.time.events.repeat(Phaser.Timer.SECOND * 2, 10, createBall, this);
         // the player will collide with bounds
         player.body.collideWorldBounds = true;
         // setting player bounce
@@ -79,6 +66,7 @@ window.onload = function () {
             //player.body.velocity.x += o.gamma / 20; // TODO, CHANGE THIS
             //player.body.velocity.y += o.beta / 20;
             
+            //Player's position confined to the bounds of the background
             if(!(o.gamma > 45||o.gamma < -45)){
                 player.x = 164 + o.gamma * 2;
             }else{
@@ -88,24 +76,41 @@ window.onload = function () {
                     player.x = 74
                 }
             }
-
+            //Player's position set to the bottom of the screen.
             player.y = 320;
         });
-    }
-
-    function update() {
-        bgtile.y += 2;
-        bgtileAhead.y += 2;
-        if(bgtile.y > game.world.centerY * 3 - 1){
-            bgtile.y = -game.world.centerY + 1;
-        }
-        if(bgtileAhead.y > game.world.centerY * 3 - 1){
-            bgtileAhead.y = -game.world.centerY + 1;
-        }
+        
+        game.time.events.repeat(Phaser.Timer.SECOND * 10, 5, newBoss, this);  
     }
     
-    function render() {
-        game.debug.spriteInfo(player, 32, 32);
-        game.debug.text('Score: ' + game.time.totalElapsedSeconds().toFixed(0)*100, 64, 64);
+    function newBoss() {
+        // adding Boss obstacle on the stage
+        var random = game.rnd.integerInRange(74, 254);
+        var boss = game.add.sprite(random, 0, "boss");
+        game.physics.enable(boss, Phaser.Physics.ARCADE);
+        boss.body.collideWorldBounds = false;
+        boss.frame = 0;
     }
-};
+    function newPaper(){
+        // adding Paper obstacle on the stage
+        var paper = game.add.sprite(100,480, "paper");
+        paper.frame = 0;
+    }
+
+    // function update() {
+    //     bgtile.y += 2;
+    //     bgtileAhead.y += 2;
+    //     if(bgtile.y > game.world.centerY * 3 - 1){
+    //         bgtile.y = -game.world.centerY + 1;
+    //     }
+    //     if(bgtileAhead.y > game.world.centerY * 3 - 1){
+    //         bgtileAhead.y = -game.world.centerY + 1;
+    //     }
+    // }
+    
+    function render() {
+        //game.debug.spriteInfo(player, 32, 32);
+        var seconds = game.time.totalElapsedSeconds();
+        game.debug.text('Score: ' + seconds * 1000, 64, 64);
+    }
+}
