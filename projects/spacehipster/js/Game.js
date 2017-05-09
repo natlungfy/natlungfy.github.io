@@ -30,7 +30,7 @@ OfficeEscape.Game.prototype = {
 
     //gyroscope
 
-    this.gyro.frequency = 5;
+    // this.gyro.frequency = 5;
         // start gyroscope detection
     this.gyro.startTracking(function (o) {
             if(!(o.gamma > 45||o.gamma < -45)){
