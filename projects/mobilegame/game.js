@@ -37,7 +37,9 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.sprite(game.world.centerX, game.world.centerY, "bgtile");
-        bgtile.autoScroll(0, 150);
+        bgtile.anchor.setTo(0.5, 0.5);
+        bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
+        bgtileAhead.anchor.setTo(0.5, 0.5);
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
         setTimeout(function() {bgsound.play();},100);
@@ -97,16 +99,16 @@ window.onload = function () {
         paper.frame = 0;
     }
 
-    // function update() {
-    //     bgtile.y += 2;
-    //     bgtileAhead.y += 2;
-    //     if(bgtile.y > game.world.centerY * 3 - 1){
-    //         bgtile.y = -game.world.centerY + 1;
-    //     }
-    //     if(bgtileAhead.y > game.world.centerY * 3 - 1){
-    //         bgtileAhead.y = -game.world.centerY + 1;
-    //     }
-    // }
+    function update() {
+        bgtile.y += 2;
+        bgtileAhead.y += 2;
+        if(bgtile.y > game.world.centerY * 3 - 1){
+            bgtile.y = -game.world.centerY + 1;
+        }
+        if(bgtileAhead.y > game.world.centerY * 3 - 1){
+            bgtileAhead.y = -game.world.centerY + 1;
+        }
+    }
     
     function render() {
         //game.debug.spriteInfo(player, 32, 32);
