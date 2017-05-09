@@ -123,8 +123,8 @@ window.onload = function () {
     }
     function handleCollision(){
         //player.animations.stop('playerRun', true);
-        playerDie = game.add.sprite(player.x, player.y, "playerDie");
         player.kill();
+        playerDie = game.add.sprite(game.world.centerX, game.world.centerY+120, "playerDie");
         playerDie.frame = 0;
         playerDie.animations.add('die', [0, 1,2], 3, false);
         gameOver = game.add.sprite(game.world.centerX-100, game.world.centerY-100, "gameOver");
