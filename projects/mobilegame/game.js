@@ -24,6 +24,7 @@ window.onload = function () {
     }
 
     function onBoot() {
+        game.load.image("loading","assets/ui/loading.png");
         // initializing physics system
         game.physics.startSystem(Phaser.Physics.ARCADE);
         // going full screen
@@ -32,11 +33,11 @@ window.onload = function () {
     // function executed on preload to load assets
     function onPreload() {
         game.load.image("loading","assets/ui/loading.png");
-                // initializing physics system
+        // initializing physics system
         game.physics.startSystem(Phaser.Physics.ARCADE);
         // going full screen
         goFullScreen();
-        loading = game.add.sprite(game.world.centerX, game.world.centerY, 'loading');
+        loading = game.add.sprite(game.world.centerX, game.world.centerY, "loading");
         loading.anchor.setTo(0.5);
         game.load.setPreloadSprite(loading);
         game.load.spritesheet("player", "assets/mainchar.png",32,64);
