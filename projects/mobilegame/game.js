@@ -21,6 +21,7 @@ window.onload = function () {
         game.load.spritesheet("player", "assets/guy.png",32,64);
         game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
+        gmae.load.spritesheet("playerDie", "assets/die_down.png",32,64);
         game.load.image("bgtile", "assets/office.png");
         game.load.image("pencil", "assets/pencil.png");
         game.load.audio("bgsound", "assets/sounds/mainBackground.ogg");
@@ -119,7 +120,12 @@ window.onload = function () {
         paper.frame = game.rnd.integerInRange(0,2);
     }
     function handleCollision(){
-        player.animations.stop('playerRun', true);
+        //player.animations.stop('playerRun', true);
+        player.kill();
+        playerDie = game.add.sprite(160, 320, "playerDie");
+        playerDie.frame = 0;
+        playerDie.animations.add('die', [0, 1,2], 5, true);
+        playerDie.animations.play('die');
         game.physics.arcade.gravity.y = 0;
         game.time.events.pause();
         var score = game.time.totalElapsedSeconds().toFixed(0);
@@ -138,8 +144,8 @@ window.onload = function () {
     }
     game.physics.arcade.collide(player, boss, handleCollision);
     game.physics.arcade.collide(player, paper, handleCollision);
-    games.physics.arcade.collide(pencils,boss, handleCollision);
-    games.physics.arcade.collide(pencils,paper, handleCollision);
+    game.physics.arcade.collide(pencils,boss, handleCollision);
+    game.physics.arcade.collide(pencils,paper, handleCollision);
 
 }
 
