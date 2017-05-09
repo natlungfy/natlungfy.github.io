@@ -47,16 +47,6 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
-        // score = game.time.totalElapsedSeconds().toFixed(0)*1000;
-        // scoreText = game.add.text(64,64,"-",{
-        //         font:"bold 16px Courier",
-        //         fill: "#fff"
-        //     });
-        // updateScore();
-
-        timer = game.time.create(false);
-        timer.loop(1000, total++, this);
-        timer.start();
 
         bgsound = game.add.audio("bgsound"); //true means looping is enabled.
         bgsound.play();
@@ -97,14 +87,15 @@ window.onload = function () {
             player.y = 320;
         });
 
+        timer = game.time.create(false);
+        timer.loop(1000, total++, this);
+        timer.start();
+
         //Random spawns of enemies.
         game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
         game.time.events.repeat(Phaser.Timer.SECOND * 3, 2400, newPaper, this);
     }
 
-    function updateScore() {
-        scoreText.text = "Score: "+ score;   
-    }
     
     function newBoss() {
         // adding Boss obstacle on the stage
@@ -142,7 +133,7 @@ window.onload = function () {
     }
 
 function render() {
-        game.debug.text('Score: ' + total, 64, 64);
+        game.debug.text('Score: ' + total*1000, 64, 64);
        
     }
 }
