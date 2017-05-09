@@ -106,6 +106,6 @@ window.onload = function () {
     
     function render() {
         game.debug.spriteInfo(player, 32, 32);
-        game.debug.text("Time: " + game.time.elapsed.toFixed(0), 64, 64);
+        game.debug.text('Elapsed seconds: ' + this.game.time.totalElapsedSeconds(), 32, 32);
     }
 };
