@@ -14,6 +14,8 @@ window.onload = function () {
     var score;
     var gameOver;
     var hit;
+    var score = 0;
+    var scoreText;
     
     // function executed on preload
     function onPreload() {
@@ -43,6 +45,11 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
+        score = game.time.totalElapsedSeconds().toFixed(0)*1000;
+        scoreText = game.add.text(64,64,"-",{
+                font:"bold 16px Arial"
+            });
+        updateScore();
 
         bgsound = game.add.audio("bgsound"); //true means looping is enabled.
         bgsound.play();
@@ -87,6 +94,10 @@ window.onload = function () {
         game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
         game.time.events.repeat(Phaser.Timer.SECOND * 3, 2400, newPaper, this);
     }
+
+    function updateScore() {
+        scoreText.text = "Score: "+ score;   
+    }
     
     function newBoss() {
         // adding Boss obstacle on the stage
@@ -115,8 +126,6 @@ window.onload = function () {
         hit.play();
         game.physics.arcade.gravity.y = 0;
         game.time.events.pause();
-        var score = game.time.totalElapsedSeconds().toFixed(0);
-        game.debug.text('You scored' + score * 1000, 120, 64);
     }
 
     function update() {
@@ -127,7 +136,7 @@ window.onload = function () {
 
 function render() {
         //game.debug.spriteInfo(player, 32, 32);
-        var seconds = game.time.totalElapsedSeconds().toFixed(0);
-        game.debug.text('Score: ' + seconds * 1000, 64, 64);
+        // var seconds = game.time.totalElapsedSeconds().toFixed(0);
+        // game.debug.text('Score: ' + seconds * 1000, 64, 64);
     }
 }
