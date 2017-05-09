@@ -81,8 +81,9 @@ window.onload = function () {
             //Player's position set to the bottom of the screen.
             player.y = 320;
         });
-        
-        game.time.events.repeat(Phaser.Timer.SECOND * 10, 5, newBoss, this);  
+        //Random spawns of enemies.
+        game.time.events.repeat(Phaser.Timer.SECOND * 10, 5, newBoss, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 2, 10, newPaper, this);
     }
     
     function newBoss() {
@@ -95,7 +96,10 @@ window.onload = function () {
     }
     function newPaper(){
         // adding Paper obstacle on the stage
-        var paper = game.add.sprite(100,480, "paper");
+        var random = game.rnd.integerInRange(74, 254);
+        var paper = game.add.sprite(random, 0, "paper");
+        game.physics.enable(paper, Phaser.Physics.ARCADE);
+        paper.body.collideWorldBounds = false;
         paper.frame = 0;
     }
 
