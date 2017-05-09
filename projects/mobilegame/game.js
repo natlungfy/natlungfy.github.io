@@ -14,8 +14,10 @@ window.onload = function () {
     var score;
     var gameOver;
     var hit;
-    var score = 0;
-    var scoreText;
+    // var score = 0;
+    // var scoreText;
+    var timer;
+    var total = 0;
     
     // function executed on preload
     function onPreload() {
@@ -45,12 +47,16 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
-        score = game.time.totalElapsedSeconds().toFixed(0)*1000;
-        scoreText = game.add.text(64,64,"-",{
-                font:"bold 16px Courier",
-                fill: "#fff"
-            });
-        updateScore();
+        // score = game.time.totalElapsedSeconds().toFixed(0)*1000;
+        // scoreText = game.add.text(64,64,"-",{
+        //         font:"bold 16px Courier",
+        //         fill: "#fff"
+        //     });
+        // updateScore();
+
+        timer = game.time.create(false);
+        timer.loop(1000, total++, this);
+        timer.start();
 
         bgsound = game.add.audio("bgsound"); //true means looping is enabled.
         bgsound.play();
@@ -126,6 +132,7 @@ window.onload = function () {
         hit = game.add.audio('hit');
         hit.play();
         game.physics.arcade.gravity.y = 0;
+        timer.stop();
     }
 
     function update() {
@@ -135,8 +142,7 @@ window.onload = function () {
     }
 
 function render() {
-        //game.debug.spriteInfo(player, 32, 32);
-        // var seconds = game.time.totalElapsedSeconds().toFixed(0);
-        // game.debug.text('Score: ' + seconds * 1000, 64, 64);
+        game.debug.text('Score: ' + total, 64, 64);
+       
     }
 }
