@@ -125,8 +125,6 @@ window.onload = function () {
     }
     function handleCollision(){
         //player.animations.stop('playerRun', true);
-        paper.kill();
-        boss.kill();
         player.animations.add('die',[3,4,5],3,false);
         player.animations.play('die');
         gameOver = game.add.sprite(game.world.centerX-120, game.world.centerY-100, "gameOver");
