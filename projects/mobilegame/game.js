@@ -116,7 +116,7 @@ window.onload = function () {
     }
 
     function update() {
-        bgtile.y += 2;
+        bgtile.tilePosition.y += 2;
         game.physics.arcade.collide(player, boss, handleCollision);
         game.physics.arcade.collide(player, paper, handleCollision);
     }
