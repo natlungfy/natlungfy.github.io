@@ -66,7 +66,7 @@ window.onload = function () {
         player.anchor.setTo(0.5, -1.5);
         // enabling physics car.body.collideWorldBounds = true;
         game.physics.enable(player, Phaser.Physics.ARCADE);
-        game.time.events.repeat(Phaser.Timer.SECOND * 2, 10, createBall, this);
+        //game.time.events.repeat(Phaser.Timer.SECOND * 2, 10, createBall, this);
         // the player will collide with bounds
         player.body.collideWorldBounds = true;
         // setting player bounce
@@ -86,14 +86,6 @@ window.onload = function () {
                     player.x = 254;
                 }else{
                     player.x = 74
-                }
-            }
-            
-            if(!(o.beta > 45||o.beta < -45)){
-                player.y = 230 + o.beta * 2;
-            }else{
-                if(o.beta > 0){
-                    player.y = 320;
                 }
             }
             //player.x = 160 + o.gamma * 2;
