@@ -3,7 +3,7 @@
 window.onload = function () {
 
     // game definition, 320x480
-    var game = new Phaser.Game(320, 480, Phaser.CANVAS, "", {preload: onPreload, create: onCreate, update: update, render: render});
+    var game = new Phaser.Game(320, 480, Phaser.CANVAS, "", {boot: onBoot; preload: onPreload, create: onCreate, update: update, render: render});
 
     // the player
     var boss;
@@ -15,7 +15,14 @@ window.onload = function () {
     var gameOver;
     var hit;
     
-    // function executed on preload
+    function onBoot() {
+        game.load.image("loading","assets/ui/loading.png");
+        // initializing physics system
+        game.physics.startSystem(Phaser.Physics.ARCADE);
+        // going full screen
+        goFullScreen();
+    }
+    // function executed on preload to load assets
     function onPreload() {
         game.load.spritesheet("player", "assets/mainchar.png",32,64);
         game.load.spritesheet("boss","assets/Boss.png",32,32);
@@ -37,10 +44,10 @@ window.onload = function () {
 
     // function to be called when the game has been created
     function onCreate() {
-        // initializing physics system
-        game.physics.startSystem(Phaser.Physics.ARCADE);
-        // going full screen
-        goFullScreen();
+        // // initializing physics system
+        // game.physics.startSystem(Phaser.Physics.ARCADE);
+        // // going full screen
+        // goFullScreen();
 
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
 
