@@ -102,7 +102,7 @@ window.onload = function () {
         paper = game.add.sprite(random, 0, "paper");
         game.physics.enable(paper, Phaser.Physics.ARCADE);
         paper.body.collideWorldBounds = false;
-        paper.frame = game.rnd.integerInRange(0,2);
+        paper.frame = 0;
     }
     function handleCollision(){
         //player.animations.stop('playerRun', true);
@@ -116,11 +116,10 @@ window.onload = function () {
     }
 
     function update() {
-        bgtile.tilePosition.y += 2;
+        bgtile.y += 2;
         game.physics.arcade.collide(player, boss, handleCollision);
         game.physics.arcade.collide(player, paper, handleCollision);
-
-}
+    }
 
 function render() {
         //game.debug.spriteInfo(player, 32, 32);
