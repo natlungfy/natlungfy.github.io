@@ -6,6 +6,8 @@ window.onload = function () {
     var game = new Phaser.Game(320, 480, Phaser.CANVAS, "", {preload: onPreload, create: onCreate, update: update, render: render});
 
     // the player
+    var boss;
+    var paper;
     var player;
     var bgtile;
     var bgtileAhead;
@@ -81,23 +83,26 @@ window.onload = function () {
             //Player's position set to the bottom of the screen.
             player.y = 320;
         });
+        
         //Random spawns of enemies.
-        game.time.events.repeat(Phaser.Timer.SECOND * 10, 5, newBoss, this);
-        game.time.events.repeat(Phaser.Timer.SECOND * 2, 10, newPaper, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 2, 300, newPaper, this);
     }
     
     function newBoss() {
         // adding Boss obstacle on the stage
         var random = game.rnd.integerInRange(74, 254);
-        var boss = game.add.sprite(random, 0, "boss");
+        boss = game.add.sprite(random, 0, "boss");
         game.physics.enable(boss, Phaser.Physics.ARCADE);
         boss.body.collideWorldBounds = false;
+        //Update boss size
+        boss.scale.setTo(2);
         boss.frame = 0;
     }
     function newPaper(){
         // adding Paper obstacle on the stage
         var random = game.rnd.integerInRange(74, 254);
-        var paper = game.add.sprite(random, 0, "paper");
+        paper = game.add.sprite(random, 0, "paper");
         game.physics.enable(paper, Phaser.Physics.ARCADE);
         paper.body.collideWorldBounds = false;
         paper.frame = 0;
@@ -112,11 +117,13 @@ window.onload = function () {
         if(bgtileAhead.y > game.world.centerY * 3 - 1){
             bgtileAhead.y = -game.world.centerY + 1;
         }
+        //game.physics.arcade.collide(player, boss, location.reload());
+        //game.physics.arcade.collide(player, paper, location.reload());
     }
     
     function render() {
         //game.debug.spriteInfo(player, 32, 32);
-        var seconds = game.time.totalElapsedSeconds();
+        var seconds = game.time.totalElapsedSeconds().toFixed(0);
         game.debug.text('Score: ' + seconds * 1000, 64, 64);
     }
 }
