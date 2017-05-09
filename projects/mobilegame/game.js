@@ -39,13 +39,12 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.sprite(game.world.centerX, game.world.centerY, "bgtile");
-       bgtile.autoScroll(0, 100);
-        // bgtile.anchor.setTo(0.5, 0.5);
-        // bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
-        // bgtileAhead.anchor.setTo(0.5, 0.5);
+        bgtile.anchor.setTo(0.5, 0.5);
+        bgtileAhead = game.add.sprite(game.world.centerX, -game.world.centerY, "bgtile");
+        bgtileAhead.anchor.setTo(0.5, 0.5);
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
-        setTimeout(function() {bgsound.play();},100);
+       setTimeout(function() {bgsound.play();},100);
 
         // adding the player on stage
         player = game.add.sprite(160, 320, "player");
@@ -87,7 +86,7 @@ window.onload = function () {
         
         //Random spawns of enemies.
         game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
-        game.time.events.repeat(Phaser.Timer.SECOND * 2, 300, newPaper, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 3, 200, newPaper, this);
     }
     
     function newBoss() {
@@ -108,6 +107,13 @@ window.onload = function () {
         paper.body.collideWorldBounds = false;
         paper.frame = 0;
     }
+    function handleCollision(){
+        player.animations.stop('playerRun', true);
+        game.physics.arcade.gravity.y = 0;
+        game.time.events.pause();
+        var score = game.time.totalElapsedSeconds().toFixed(0);
+        game.debug.text('You scored' + score * 1000, 120, 64);
+    }
 
     function update() {
         bgtile.y += 2;
@@ -118,8 +124,8 @@ window.onload = function () {
         if(bgtileAhead.y > game.world.centerY * 3 - 1){
             bgtileAhead.y = -game.world.centerY + 1;
         }
-        //game.physics.arcade.collide(player, boss, location.reload());
-        //game.physics.arcade.collide(player, paper, location.reload());
+        game.physics.arcade.collide(player, boss, handleCollision);
+        game.physics.arcade.collide(player, paper, handleCollision);
     }
     
     function render() {
