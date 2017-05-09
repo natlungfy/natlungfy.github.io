@@ -12,11 +12,7 @@ window.onload = function () {
     var bgtile;
     var bgsound;
     var score;
-    var pencil;
-    var pencils;
-    var pencilTime = 0;
     var gameOver;
-    var fireButton;
     
     // function executed on preload
     function onPreload() {
@@ -24,7 +20,6 @@ window.onload = function () {
         game.load.spritesheet("boss","assets/Boss.png",32,32);
         game.load.spritesheet("paper","assets/Paper.png",32,32);
         game.load.image("bgtile", "assets/office.png");
-        game.load.image("pencil", "assets/pencil.png");
         game.load.image("gameOver", "assets/ui/gameOver.png")
         game.load.audio("bgsound", "assets/sounds/mainBackground.ogg");
 
@@ -46,14 +41,6 @@ window.onload = function () {
         goFullScreen();
 
         bgtile = game.add.tileSprite(0,0,320,480, "bgtile");
-          pencils = game.add.group();
-    pencils.enableBody = true;
-    pencils.physicsBodyType = Phaser.Physics.ARCADE;
-    pencils.createMultiple(30, 'pencil');
-    pencils.setAll('anchor.x', 0.5);
-    pencils.setAll('anchor.y', 1);
-    pencils.setAll('outOfBoundsKill', true);
-    pencils.setAll('checkWorldBounds', true);
 
         bgsound = new Phaser.Sound(game,"bgsound",1,true); //true means looping is enabled.
         setTimeout(function() {bgsound.play();},100);
@@ -94,18 +81,9 @@ window.onload = function () {
             player.y = 320;
         });
 
-
-        if(game.input.activePointer.justPressed()) {
-            pencil.y-=2;
-          pencil = pencils.getFirstExists(false);
-          if (pencil) {
-            pencil.reset(player.x,player.y+8);
-            pencil.y -= 2;
-        }
-        }
         //Random spawns of enemies.
         game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
-        game.time.events.repeat(Phaser.Timer.SECOND * 3, 200, newPaper, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 2, 1200, newPaper, this);
     }
     
     function newBoss() {
