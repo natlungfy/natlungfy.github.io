@@ -124,7 +124,7 @@ window.onload = function () {
         player.kill();
         playerDie = game.add.sprite(160, 320, "playerDie");
         playerDie.frame = 0;
-        playerDie.animations.add('die', [0, 1,2], 5, true);
+        playerDie.animations.add('die', [0, 1,2], 5, false);
         playerDie.animations.play('die');
         game.physics.arcade.gravity.y = 0;
         game.time.events.pause();
