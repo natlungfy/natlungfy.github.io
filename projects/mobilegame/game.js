@@ -88,8 +88,8 @@ window.onload = function () {
                     player.x = 74
                 }
             }
-            //player.x = 160 + o.gamma * 2;
-            //player.y = 240 + o.beta * 2;
+
+            player.y = 320;
         });
     }
 
