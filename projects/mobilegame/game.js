@@ -14,10 +14,6 @@ window.onload = function () {
     var score;
     var gameOver;
     var hit;
-    // var score = 0;
-    // var scoreText;
-    var timer;
-    var total = 0;
     
     // function executed on preload
     function onPreload() {
@@ -87,19 +83,11 @@ window.onload = function () {
             player.y = 320;
         });
 
-        timer = game.time.create(false);
-        timer.loop(2000, this.updateCounter, this);
-        timer.start();
-
         //Random spawns of enemies.
-        game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, this.newBoss, this);
-        game.time.events.repeat(Phaser.Timer.SECOND * 3, 2400, this.newPaper, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
+        game.time.events.repeat(Phaser.Timer.SECOND * 3, 2400, newPaper, this);
     }
 
-    function updateCounter() {
-        total++;
-    }
-    
     function newBoss() {
         // adding Boss obstacle on the stage
         var random = game.rnd.integerInRange(74, 254);
@@ -136,7 +124,8 @@ window.onload = function () {
     }
 
 function render() {
-        game.debug.text('Score: ' + total*1000, 64, 64);
+         var seconds = game.time.totalElapsedSeconds().toFixed(0);
+        game.debug.text('Score: ' + seconds * 1000, 64, 64);
        
     }
 }
