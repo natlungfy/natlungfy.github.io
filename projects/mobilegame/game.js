@@ -16,6 +16,7 @@ window.onload = function () {
     var pencils;
     var pencilTime = 0;
     var gameOver;
+    var fireButton;
     
     // function executed on preload
     function onPreload() {
@@ -96,7 +97,9 @@ window.onload = function () {
             //Player's position set to the bottom of the screen.
             player.y = 320;
         });
-        
+
+
+        fireButton = game.input.activePointer;
         //Random spawns of enemies.
         game.time.events.repeat(Phaser.Timer.SECOND * 10, 60, newBoss, this);
         game.time.events.repeat(Phaser.Timer.SECOND * 3, 200, newPaper, this);
@@ -122,6 +125,8 @@ window.onload = function () {
     }
     function handleCollision(){
         //player.animations.stop('playerRun', true);
+        paper.kill();
+        boss.kill();
         player.animations.add('die',[3,4,5],3,false);
         player.animations.play('die');
         gameOver = game.add.sprite(game.world.centerX-120, game.world.centerY-100, "gameOver");
@@ -133,11 +138,11 @@ window.onload = function () {
 
     function update() {
         bgtile.tilePosition.y += 2;
-        if(game.input.activePointer.justPressed()) {
+        if(fireButton.justPressed()) {
           pencil = pencils.getFirstExists(false);
           if (pencil) {
             pencil.reset(player.x,player.y+8);
-            pencil.body.velocity.y = -400;
+            pencil.y -= 2;
 
         }
     }
