@@ -1,0 +1,137 @@
+[
+  {
+    "filename": "simcard.png",
+    "name": "Sim card",
+    "type": "item",
+    "location": "Columbia, Missouri",
+    "desc": "I was pleasantly surprised to find this in my exchange student packet, which Tonya at the Global Programs Office of the Journalism School mailed to my home university in Hong Kong. I thought this was a thoughtful touch as we all know how daunting it can be to not be able to make calls or get online after arriving at a foreign place."
+  },
+  {
+    "filename": "mtamanspreading.png",
+    "name": "MTA anti-manspreading campaign postcard",
+    "type": "postcard",
+    "location": "New York City, New York",
+    "desc": "Bought this at the New York Transit Museum in Brooklyn. It is more of a representation of the strong feminist discourse in American society, than merely a subway souvenir."
+  },
+  {
+    "filename": "aveqtix.png",
+    "name": "Avenue Q ticket",
+    "type": "ticket",
+    "location": "New York City, New York",
+    "desc": "My first (off) Broadway show!"
+  },
+  {
+    "filename": "bikeKey.png",
+    "name": "Bike key",
+    "type": "item",
+    "location": "Columbia, Missouri",
+    "desc": "Key to the bike that Chen lent me when I said I wanted to learn how to ride one. She's a journalism graduate student who has been an amazing friend these past few months."
+  },
+  {
+    "filename": "candy.png",
+    "name": "Peppermint pillows from The Candy Factory",
+    "type": "item",
+    "location": "Columbia, Missouri",
+    "desc": "A sweet find from when I was exploring downtown Columbia for the first time. The Candy Factory is one of the must-visit places downtown."
+  },
+  {
+    "filename": "dormRoom.png",
+    "name": "Bulletin board outside my dorm room",
+    "type": "item",
+    "location": "Columbia, Missouri",
+    "desc": "I was pleasantly surprised to find this outside the room when I first moved in. I've always wondered if they had purposefully matched the position of the globe to where the person is from."
+  },
+  {
+    "filename": "mhacks.png",
+    "name": "MHacks9 badge",
+    "type": "badge",
+    "location": "Ann Arbor, Michigan",
+    "desc": "My badge for MHacks9, the biggest US college hackathon which is held at the University of Michigan."
+  },
+  {
+    "filename": "nathist.png",
+    "name": "Souvenir coin from the American Museum of Natural History",
+    "type": "item",
+    "location": "New York City, New York",
+    "desc": "I got to admit that the reason I went was to relive some Night at the Museum memories."
+  },
+  {
+    "filename": "pennant.png",
+    "name": "Mizzou Pennant",
+    "type": "item",
+    "location": "Columbia, Missouri",
+    "desc": "From my exchange student packet. First pennant I own."
+  },
+  {
+    "filename": "ggh.png",
+    "name": "Guggenheim postcard",
+    "type": "postcard",
+    "location": "New York City, New York",
+    "desc": "One of the coolest art museums in NYC."
+  },
+  {
+    "filename": "budlight.png",
+    "name": "Anheuser-Busch brewery tour ticket",
+    "type": "ticket",
+    "location": "St Louis, Missouri",
+    "desc": "Not a fan of beer, but it was an interesting experience. And we got free beer."
+  },
+  {
+    "filename": "parkpassport.png",
+    "name": "Stamped page Missouri state parks passport",
+    "type": "item",
+    "location": "St Louis, Missouri",
+    "desc": ""
+  }, 
+ {
+    "filename": "city.png",
+    "name": "City Museum wristband",
+    "type": "item",
+    "location": "New York City, New York",
+    "desc": "A place that can really instill creativity in children. Definitely makes one question how adults often lose the carefree mindset that we once had as a child."
+  },
+  {
+    "filename": "NYCmetrocard.png",
+    "name": "NYC subway MetroCard",
+    "type": "item",
+    "location": "New York City, New York",
+    "desc": "This may be one of the most unreliable creations of mankind. I have had two tickets over a week-long trip."
+  },
+{
+    "filename": "nytPins.png",
+    "name": "Pins by the New York Times and the Washington Post",
+    "type": "item",
+    "location": "Charlotte, North Carolina",
+    "desc": "From the Society for News Design workshop swag bag. The war on media is so dire that they have to make pins about it."},
+{
+    "filename": "mtlink.png",
+    "name": "MetroLink One-Day Adventure Pass",
+    "type": "ticket",
+    "location": "St Louis, Missouri",
+    "desc": "One of the more eyeopening public transit experiences I've had was on the MetroLink."},
+    {
+    "filename": "nicarBadge.png",
+    "name": "NICAR 2017 badge",
+    "type": "badge",
+    "location": "Jacksonville, Florida",
+    "desc": "My first ever NICAR conference. "},
+    {
+    "filename": "nicarShirt.png",
+    "name": "NICAR 2017 tshirt",
+    "type": "tee",
+    "location": "Jacksonville, Florida",
+    "desc": "Redaction is in season."},
+    {
+    "filename": "sndclt1.png",
+    "name": "Society for News Design workshop badge",
+    "type": "postcard",
+    "location": "Charlotte, North Carolina.",
+    "desc": "The most functional and well-designed conference badge I've seen."},
+    {
+    "filename": "studentCard.png",
+    "name": "Mizzou student card",
+    "type": "item",
+    "location": "Columbia, Missouri",
+    "desc": "My student card at the University of Missouri. That's a photo I took on my second day in Columbia."
+}
+]
