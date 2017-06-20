@@ -1,26 +1,3 @@
-<!-- ?php
-  /* Created by Mr. Wergeles on November 9, 2016 */ 
-  
-    // HTTPS redirect
-    if ($_SERVER['HTTPS'] !== 'on') {
-    $redirectURL = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    header("Location: $redirectURL");
-    exit;
-  }
-    
-  // Every time we want to access $_SESSION, we have to call session_start()
-  if(!session_start()) {
-    header("Location: error.php");
-    exit;
-  }
-  
-  $loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
-  if (!$loggedIn) {
-    header("Location: index.php");
-    exit;
-  }
-?> -->
-
 <!DOCTYPE html>
 <html>
 <head>
