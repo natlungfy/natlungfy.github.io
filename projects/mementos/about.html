@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mementos - Items</title>
-	<meta charset="utf-8">
+  <title>Mementos - About</title>
+  <meta charset="utf-8">
 <!-- Font -->
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 
@@ -16,7 +16,7 @@
 <!-- Custom css -->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body id="items">
+<body>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -39,30 +39,9 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div id="body">
-<h2>Mementos from the U.S.</h2>
-<p>This collection is a tangible representation of the memorable experiences I have had during my exchange semester in America. Mouseover the items to learn their story.</p>
-<div id="items">
-<?php 
-$dir = "img/items/";
-if (is_dir($dir)) {
-	if ($d = opendir($dir)) {
-		while (($file = readdir($d)) !== false) {
-			$ext = substr($file, strpos($file, ".", 2) + 1);
-			if ($ext === "jpg" || $ext === "jpeg" || $ext === "png" || $ext === "gif") {
-				echo "<div class=\"item\"><div class=\"tooltip\"></div><img class=\"itemImg\" src=\"$dir" . "$file" . "\" alt=\"$file\"></div>";
-			}
-		}
-		closedir($d);
-	} else {
-		echo "Not able to open $dir";
-	}
-} else {
-	echo "$dir is not a directory";
-}
+  <h2>About</h2>
+  <p>This website is dedicated to my exchange semester in the United States. During my study abroad at the University of Missouri in Columbia, I travelled to a few other cities for conferences, hackathons, and for fun: St Louis, Kansas City, Jacksonville Florida, New York City, Charlotte, North Carolina, and Ann Arbor, Michigan. This collection of postcards, tickets, and photos is a tangible representation of the memorable experiences I have had here.</p>
+</div>
 
-?>
-</div>
-</div>
-<script type="text/javascript" src="js/items.js"></script>
 </body>
 </html>

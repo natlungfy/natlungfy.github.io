@@ -1,35 +1,43 @@
-<!-- ?php
-	/* Created by Mr. Wergeles on November 9, 2016 */ 
-	
-    // HTTPS redirect
-    if ($_SERVER['HTTPS'] !== 'on') {
-		$redirectURL = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		header("Location: $redirectURL");
-		exit;
-	}
-    
-	// Every time we want to access $_SESSION, we have to call session_start()
-	if(!session_start()) {
-		header("Location: error.php");
-		exit;
-	}
-	
-	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
-	if (!$loggedIn) {
-		header("Location: index.php");
-		exit;
-	}
-?> -->
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Mementos - Scenes</title>
 	<meta charset="utf-8">
- 	<?php include_once('head.php'); ?>
+ 	<!-- Font -->
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+<!-- Bootstrap -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<!-- Custom css -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<?php include_once('navbar.php'); ?>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Mementos</a>
+    </div>
+
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="about.html">About</a></li>
+        <li><a href="items.php">Items</a></li>
+        <li><a href="scenes.html">Scenes</a></li>
+        <!-- <li><a href="share.html">Share</a></li> -->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <div id="body">
 <h2>Scenes from the U.S.</h2>
 <p>Photos and videos from American cities.</p>
