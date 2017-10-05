@@ -78,7 +78,7 @@ projects:
     link: http://hkshophouse.wixsite.com/home/
     image: http://natalielung.xyz/images/shophouse.png
   - name: In 360 - Whampoa through the years, before and after the MTR Station
-    description: Multimedia reporting project
+    description: Multimedia reporting project using 360 photos and videos about the changes to a neighborhood after the opening of a subway station.
     tech: HTML, Google Maps, Contributed photospheres to Google Street View
     link: https://natlungfy.wordpress.com/2016/11/03/whampoa-before-and-after-in-360
     image: https://natlungfy.files.wordpress.com/2016/11/mtr.jpg?w=1200&h=800&crop=1

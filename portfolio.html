@@ -59,7 +59,9 @@ title: Natalie Lung - Portfolio
           {% endif %}
 
           <p class="t-hackcss-cards-text">{{ project.description }}</p>
+          {% if project.tech %}
           <p class="t-hackcss-cards-text">[{{ project.tech }}]</p>
+          {% endif %}
           <p class="t-hackcss-cards-link">
              {% if project.link %}
             <a href="{{ project.link }}" title="{{ project.name }}" target="_blank">
