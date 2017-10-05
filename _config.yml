@@ -51,18 +51,21 @@ projects:
   - name: Health violations by Missouri drinking water systems
     description: An interactive heatmap and data explorer for health violations committed by public water systems in Missouri. Individual project for the Advanced Data Journalism course at Mizzou. [Python, Javascript]
     link: http://natalielung.xyz/projects/mo-water-health-violations
+    github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mo-water-health-violations
     image: http://natalielung.xyz/images/screenshot_pws.PNG
   - name: Droste - Rent Control
-    description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template. [Plotly.JS, Semantic UI]
-    link: http://droste.hk
+    description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template. Github repo below. [Plotly.JS, Semantic UI]
+    github: https://github.com/drostehk/rentcontrol
     image: http://natalielung.xyz/images/rentcontrol.png
   - name: Mementos from the US
     description: Interactive, multimedia website about my exchange semester in the US [HTML, CSS, Javascript, jQuery, JSON]
     link: http://natalielung.xyz/projects/mementos
+    github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mementos
     image: http://natalielung.xyz/images/mem.png
   - name: Office Escape
-    description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked. Video demo and live game link below. [HTML, CSS, Javascript, Phaser, gyro.js]
+    description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked. [HTML, CSS, Javascript, Phaser, gyro.js]
     link: https://www.youtube.com/watch?v=gEiLgBrf2n8
+    github: https://github.com/cg-mobilegame/cg-mobilegame.github.io
     image: http://natalielung.xyz/images/officeesc.png
   - name: Hong Kong Shophouse
     description: Multimedia reporting group project about Hong Kong's historical tenement buildings. [Timeline.js, Google Maps, photosphere, infographics]
