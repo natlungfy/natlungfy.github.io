@@ -41,7 +41,8 @@ navigation:
 
 projects:
   - name: South China Morning Post - Electing the Chief Executive
-    description: Multimedia visual guide to Hong Kong’s political reform vote in 2015. Prepped data for interactive graphic and contributed text. [ArchieML, Google Sheets]
+    description: Multimedia visual guide to Hong Kong’s political reform vote in 2015. Prepped data for interactive graphic and contributed text.
+    tech: [ArchieML, Google Sheets]
     link: http://multimedia.scmp.com/hong-kong-election-2017/
     image: http://natalielung.xyz/images/scmpvote.png
   - name: South China Morning Post - Hong Kong’s wall trees
@@ -49,30 +50,36 @@ projects:
     link: http://www.scmp.com/infographics/article/1845412/hong-kongs-wall-trees-everything-you-need-know-about-banyans-define
     image: http://natalielung.xyz/images/scmptrees.PNG
   - name: Health violations by Missouri drinking water systems
-    description: An interactive heatmap and data explorer for health violations committed by public water systems in Missouri. Individual project for the Advanced Data Journalism course at Mizzou. [Python, Javascript]
+    description: An interactive heatmap and data explorer for health violations committed by public water systems in Missouri. Individual project for the Advanced Data Journalism course at Mizzou.
+    tech: [HTML, CSS, Javascript, Python for generating SVG map]
     link: http://natalielung.xyz/projects/mo-water-health-violations
     github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mo-water-health-violations
     image: http://natalielung.xyz/images/screenshot_pws.PNG
   - name: Droste - Rent Control
-    description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template. Github repo below. [Plotly.JS, Semantic UI]
+    description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template.
+    tech: [HTML, CSS, Javascript, Plotly.JS, Semantic UI]
     github: https://github.com/drostehk/rentcontrol
     image: http://natalielung.xyz/images/rentcontrol.png
   - name: Mementos from the US
-    description: Interactive, multimedia website about my exchange semester in the US [HTML, CSS, Javascript, jQuery, JSON]
+    description: Interactive, multimedia website about my exchange semester in the US. Allows users to upload their own mementos.
     link: http://natalielung.xyz/projects/mementos
+    tech: [HTML, CSS, Javascript, jQuery, JSON, PHP]
     github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mementos
     image: http://natalielung.xyz/images/mem.png
   - name: Office Escape
-    description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked. [HTML, CSS, Javascript, Phaser, gyro.js]
+    description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked.
+    tech: [HTML, CSS, Javascript, Phaser, gyro.js]
     link: https://www.youtube.com/watch?v=gEiLgBrf2n8
     github: https://github.com/cg-mobilegame/cg-mobilegame.github.io
     image: http://natalielung.xyz/images/officeesc.png
   - name: Hong Kong Shophouse
-    description: Multimedia reporting group project about Hong Kong's historical tenement buildings. [Timeline.js, Google Maps, photosphere, infographics]
+    description: Multimedia reporting group project about Hong Kong's historical tenement buildings.
+    tech: [Timeline.js, Google Maps, photosphere, infographics]
     link: http://hkshophouse.wixsite.com/home/
     image: http://natalielung.xyz/images/shophouse.png
   - name: In 360 - Whampoa through the years, before and after the MTR Station
-    description: Multimedia reporting project [Google Maps, photospheres]
+    description: Multimedia reporting project
+    tech: [HTML, Google Maps, Contributed photospheres to Google Street View]
     link: https://natlungfy.wordpress.com/2016/11/03/whampoa-before-and-after-in-360
     image: https://natlungfy.files.wordpress.com/2016/11/mtr.jpg?w=1200&h=800&crop=1
 
