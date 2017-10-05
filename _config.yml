@@ -59,11 +59,11 @@ projects:
   - name: Mementos from the US
     description: Interactive, multimedia website about my exchange semester in the US [HTML, CSS, Javascript, jQuery, JSON]
     link: http://natalielung.xyz/projects/mementos
-    image: http://natalielung.xyz/images/mem
+    image: http://natalielung.xyz/images/mem.png
   - name: Office Escape
     description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked. Video demo and live game link below. [HTML, CSS, Javascript, Phaser, gyro.js]
     link: https://www.youtube.com/watch?v=gEiLgBrf2n8
-    image: http://natalielung.xyz/images/officeesc
+    image: http://natalielung.xyz/images/officeesc.png
   - name: Hong Kong Shophouse
     description: Multimedia reporting group project about Hong Kong's historical tenement buildings. [Timeline.js, Google Maps, photosphere, infographics]
     link: http://hkshophouse.wixsite.com/home/
