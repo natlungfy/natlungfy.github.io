@@ -6,7 +6,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
-      $.get('test177.txt',function(data) {
+      $.get('test17.txt',function(data) {
       google.charts.load('current', {packages:['wordtree']});
       google.charts.setOnLoadCallback(drawSimpleNodeChart);
       var data = data;
@@ -20,7 +20,7 @@
         var options = {
           wordtree: {
             format: 'implicit',
-            type: 'prefix',
+            type: 'suffix',
             word: '我們'
           }
         };
