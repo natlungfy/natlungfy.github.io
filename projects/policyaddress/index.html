@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      $.get('test177.txt',function(data) {
+      google.charts.load('current', {packages:['wordtree']});
+      google.charts.setOnLoadCallback(drawSimpleNodeChart);
+      var data = data;
+      // var options, wordtree;
+      // var rootword = '';
+      function drawSimpleNodeChart() {
+        var datad = google.visualization.arrayToDataTable(
+          [ ['Phrases'],[data]          ]
+        );
+
+        var options = {
+          wordtree: {
+            format: 'implicit',
+            type: 'prefix',
+            word: '我們'
+          }
+        };
+
+        var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_double'));
+        wordtree.draw(data, options);
+      }
+
+      // function rootChange() {
+      //   rootword = document.getElementById('rootWord').value;
+      //   google.charts.setOnLoadCallback(drawSimpleNodeChart);
+      //   wordtree.draw(datad, options);
+      // }
+    });
+    </script>
+  </head>
+  <body>
+    <div class='row'>
+      <div class="col-lg-6">
+    <div class="input-group">
+      <input id="rootWord" type="text" class="form-control" placeholder="Enter root word" aria-label="Enter root word">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" onClick="rootChange()">Go</button>
+      </span>
+    </div>
+  </div>
+</div>
+    <div id="wordtree_double" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
