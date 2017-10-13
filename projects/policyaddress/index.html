@@ -6,15 +6,12 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
-      $.get('test177.txt',function(data) {
+      $.get('test17.txt',function(input) {
       google.charts.load('current', {packages:['wordtree']});
       google.charts.setOnLoadCallback(drawSimpleNodeChart);
-      var data = data;
-      // var options, wordtree;
-      // var rootword = '';
       function drawSimpleNodeChart() {
-        var datad = google.visualization.arrayToDataTable(
-          [ ['Phrases'],[data]          ]
+        var data = google.visualization.arrayToDataTable(
+          [ ['Phrases'],[input]          ]
         );
 
         var options = {
@@ -26,14 +23,8 @@
         };
 
         var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_double'));
-        wordtree.draw(datad, options);
+        wordtree.draw(data, options);
       }
-
-      // function rootChange() {
-      //   rootword = document.getElementById('rootWord').value;
-      //   google.charts.setOnLoadCallback(drawSimpleNodeChart);
-      //   wordtree.draw(datad, options);
-      // }
     });
     </script>
   </head>
