@@ -1,36 +1,56 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="../../css/project.css" rel="stylesheet">
     <script type="text/javascript">
     $.get('test177.txt', function(input) {
         google.charts.load('current', { packages: ['wordtree'] });
-        google.charts.setOnLoadCallback(drawSimpleNodeChart);
+
+        google.charts.setOnLoadCallback(drawWordTree171);
+        google.charts.setOnLoadCallback(drawWordTree1771)
+
         var rootword = '我們';
-        var treetype = 'suffix';
         var options;
-        var split = input.split(rootword)
-        split.shift()
-        var stringss = split.map(function(s) { return [rootword + s] })
-        stringss.unshift(['Phrases'])
+        var split = input.split(rootword);
+        split.shift();
+        var stringss = split.map(function(s) { return [rootword + s] });
+        stringss.unshift(['Phrases']);
 
-        function drawSimpleNodeChart() {
-            var data = google.visualization.arrayToDataTable(stringss);
-
-            options = {
+        function drawWordTree1771() {
+          var data = google.visualization.arrayToDataTable(stringss);
+           options = {
                 wordtree: {
                     format: 'implicit',
-                    type: treetype,
+                    type: 'suffix',
                     word: rootword
                 }
-            };
-
-            var wordtree = new google.visualization.WordTree(document.getElementById('wt1771'));
-            wordtree.draw(data, options);
         }
+
+                    var wordtree = new google.visualization.WordTree(document.getElementById('wt1771'));
+            wordtree.draw(data, options);
+
+          }
+      });
+
+    $.get('test17.txt', function(input) {
+ function drawWordTree171() {
+          var data = google.visualization.arrayToDataTable(stringss);
+           options = {
+                wordtree: {
+                    format: 'implicit',
+                    type: 'suffix',
+                    word: rootword
+                }
+        }
+
+                    var wordtree = new google.visualization.WordTree(document.getElementById('wt171'));
+            wordtree.draw(data, options);
+
+          }
+    });
 
         function drawPlotly() {
           var year = [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
@@ -39,7 +59,7 @@
             y: [10,10,10,10,10,10,10,10,10,10],
             mode: 'markers',
             marker: {
-              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+              color: ['rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)'],
               size: [2350,120,3120, 440, 50, 70,330,700,430,350,300],
               sizeref: 0.5,
               sizemode: 'area'
@@ -109,9 +129,9 @@
           var data = [oct2017, jan2017, pa2016,pa2015, pa2014, pa2013];
 
           var layout = {
-            title: '分析歷年《施政報告》的用字',
+            title: '歷年《施政報告》用字: 梁振英 vs. 林鄭',
             titlefont: {
-              size: 15
+              size: 18
             },
             autosize: false,
             width: 1000,
@@ -140,28 +160,14 @@
             showlegend: false
           };
 
-          Plotly.newPlot('plotlygraph', data, layout);
+          Plotly.newPlot('plotlygraph', data, layout, {displayModeBar: false, staticPlot: true});
 
 
         }
 
         drawPlotly();
-
-        // var goButton = $("#gobtn");
-        // goButton.parentNode.addEventListener('click', function buttonOnClick() {
-        //   rootword = $("#userinput").val();
-        //   split = input.split(rootword)
-        //   split.shift()
-        //   stringss = split.map(function(s) { return [rootword + s] })
-        //   stringss.unshift(['Phrases'])
-        //   drawSimpleNodeChart();
-        // });
-    });
     </script>
     <style>
-    body {
-      margin: 150px 100px 100px 100px;
-    }
 
     .wordtree {
       width:900px;
@@ -172,29 +178,24 @@
       width: 600px;
       height: 250px;
     }
+
+    td {
+      border: 1px solid #ccc;
+    }
     </style>
 </head>
 
 <body>
-<!--   <div class="col-lg-12">
-    <div class="input-group">
-      <input id="userinput" type="text" class="form-control" placeholder="Explore other root word">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Suffix
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" value="suffix">Suffix</a>
-          <a class="dropdown-item" value="double">Double</a>
-          <a class="dropdown-item" value="prefix">Prefix</a>
-        </div>
-      </div>
-      <div class="input-group-btn">
-        <button id="gobtn" class="btn btn-secondary" type="button" onClick="buttonOnClick()">Go</button>
-      </div>
-    </div>
-  </div> -->
-    <div id="wt1771" class="wordtree"></div>
+  <table class='columns'>
+    <tr>
+      <td>CY's last policy address (Jan 2017)</td>
+      <td>Carrie Lam's first policy address (Oct 2017)</td>
+    </tr>
+    <tr>
+      <td><div id="wt171" class="wordtree"></div></td>
+      <td><div id="wt1771" class="wordtree"></div></td>
+    </tr>
+  </table>
     <div id="plotlygraph"></div>
 </body>
 
