@@ -1,9 +1,10 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript">
     $.get('test177.txt', function(input) {
         google.charts.load('current', { packages: ['wordtree'] });
@@ -27,28 +28,158 @@
                 }
             };
 
-            var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_double'));
+            var wordtree = new google.visualization.WordTree(document.getElementById('wt1771'));
             wordtree.draw(data, options);
         }
 
-        var goButton = $("#gobtn");
-        goButton.parentNode.addEventListener('click', function buttonOnClick() {
-          rootword = $("#userinput").val();
-          split = input.split(rootword)
-          split.shift()
-          stringss = split.map(function(s) { return [rootword + s] })
-          stringss.unshift(['Phrases'])
-          drawSimpleNodeChart();
-        });
+        function drawPlotly() {
+          var year = [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
+          var oct2017 = {
+            x: year,
+            y: [10,10,10,10,10,10,10,10,10,10],
+            mode: 'markers',
+            marker: {
+              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+              size: [2350,120,3120, 440, 50, 70,330,700,430,350,300],
+              sizeref: 0.5,
+              sizemode: 'area'
+            }
+          };
+
+          var jan2017 = {
+            x: year,
+            y: [15, 15, 15,15,15,15,15,15,15,15],
+            mode: 'markers',
+            marker: {
+              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+              size: [590,10,1820,370,40,80,210,100,170,320,530],
+              sizeref: 0.5,
+              sizemode: 'area'
+            }
+          };
+
+          var pa2016 = {
+            x: year,
+            y: [20,20,20,20,20,20,20,20,20,20],
+            mode: 'markers',
+            marker: {
+              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+              size: [110,20,1650,440,60,420,240,290,290,390],
+              sizeref: 0.5,
+              sizemode: 'area'
+            }
+          };
+
+          var pa2015 = {
+            x: year,
+            y: [25,25,25,25,25,25,25,25,25,25],
+            mode: 'markers',
+            marker: {
+              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+              size: [670,20,1590,120,0,50,230,60,330,510],
+              sizeref: 0.5,
+              sizemode: 'area'
+            }
+          };
+
+          var pa2014 = {
+            x: year,
+            y: [30,30,30,30,30,30,30,30,30,30],
+            mode: 'markers',
+            marker: {
+              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+              size: [190,20,980,110,0,10,370,100,330,480],
+              sizeref: 0.5,
+              sizemode: 'area'
+            }
+          };
+
+          var pa2013 = {
+            x: year,
+            y: [35,35,35,35,35,35,35,35,35,35],
+            mode: 'markers',
+            marker: {
+              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+              size: [1910,80,1690, 170,0,50,0,270,30,550,710],
+              sizeref: 0.5,
+              sizemode: 'area'
+            }
+          };
+
+          var data = [oct2017, jan2017, pa2016,pa2015, pa2014, pa2013];
+
+          var layout = {
+            title: '分析歷年《施政報告》的用字',
+            titlefont: {
+              size: 15
+            },
+            autosize: false,
+            width: 1000,
+            height: 800,
+            margin: {
+              pad: 4
+            },
+            xaxis: {
+              side: 'top',
+              showgrid: false,
+              tickvals: [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],
+              ticktext: ['我們','希望','香港','國家','祖國','一國兩制','一帶一路','青年','創科','房屋','土地'],
+              tickfont: {
+                size: 13
+              }
+            },
+            yaxis: {
+              showgrid: false,
+              tickvals: [35,30,25,20,15,10],
+              ticktext: ['2013','2014','2015','2016','Jan 2017','Oct 2017'],
+              tickfont: {
+                size: 13,
+                family: 'serif'
+              }
+            },
+            showlegend: false
+          };
+
+          Plotly.newPlot('#plotlygraph', data, layout);
+
+
+        }
+
+        drawPlotly();
+
+        // var goButton = $("#gobtn");
+        // goButton.parentNode.addEventListener('click', function buttonOnClick() {
+        //   rootword = $("#userinput").val();
+        //   split = input.split(rootword)
+        //   split.shift()
+        //   stringss = split.map(function(s) { return [rootword + s] })
+        //   stringss.unshift(['Phrases'])
+        //   drawSimpleNodeChart();
+        // });
     });
     </script>
+    <style>
+    body {
+      margin: 150px 100px 100px 100px;
+    }
+
+    .wordtree {
+      width:900px;
+      height: 500px;
+    }
+
+    #plotlygraph {
+      width: 600px;
+      height: 250px;
+    }
+    </style>
 </head>
 
 <body>
-  <div class="col-lg-12">
+<!--   <div class="col-lg-12">
     <div class="input-group">
       <input id="userinput" type="text" class="form-control" placeholder="Explore other root word">
-<!--       <div class="input-group-btn">
+      <div class="input-group-btn">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Suffix
         </button>
@@ -57,13 +188,14 @@
           <a class="dropdown-item" value="double">Double</a>
           <a class="dropdown-item" value="prefix">Prefix</a>
         </div>
-      </div> -->
+      </div>
       <div class="input-group-btn">
         <button id="gobtn" class="btn btn-secondary" type="button" onClick="buttonOnClick()">Go</button>
       </div>
     </div>
-  </div>
-    <div id="wordtree_double" style="width: 900px; height: 500px;"></div>
+  </div> -->
+    <div id="wt1771" class="wordtree"></div>
+    <div id="plotlygraph"></div>
 </body>
 
 </html>
