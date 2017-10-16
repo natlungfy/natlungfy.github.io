@@ -1,36 +1,68 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type="text/javascript">
     $.get('test177.txt', function(input) {
         google.charts.load('current', { packages: ['wordtree'] });
         google.charts.setOnLoadCallback(drawSimpleNodeChart);
-
-        var split = input.split('我們')
+        var rootword = '我們';
+        var treetype = 'suffix';
+        var options;
+        var split = input.split(rootword)
         split.shift()
-        var stringss = split.map(function(s) { return ['我們' + s] })
+        var stringss = split.map(function(s) { return [rootword + s] })
         stringss.unshift(['Phrases'])
 
         function drawSimpleNodeChart() {
             var data = google.visualization.arrayToDataTable(stringss);
 
-            var options = {
+            options = {
                 wordtree: {
                     format: 'implicit',
-                    type: 'suffix',
-                    word: '我們'
+                    type: treetype,
+                    word: rootword
                 }
             };
 
             var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_double'));
             wordtree.draw(data, options);
         }
+
+        var goButton = $("#gobtn");
+        goButton.parentNode.addEventListener('click', function buttonOnClick() {
+          rootword = $("#userinput").val();
+          split = input.split(rootword)
+          split.shift()
+          stringss = split.map(function(s) { return [rootword + s] })
+          stringss.unshift(['Phrases'])
+          drawSimpleNodeChart();
+        });
     });
     </script>
 </head>
 
 <body>
+  <div class="col-lg-12">
+    <div class="input-group">
+      <input id="userinput" type="text" class="form-control" placeholder="Explore other root word">
+<!--       <div class="input-group-btn">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Suffix
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" value="suffix">Suffix</a>
+          <a class="dropdown-item" value="double">Double</a>
+          <a class="dropdown-item" value="prefix">Prefix</a>
+        </div>
+      </div> -->
+      <div class="input-group-btn">
+        <button id="gobtn" class="btn btn-secondary" type="button" onClick="buttonOnClick()">Go</button>
+      </div>
+    </div>
+  </div>
     <div id="wordtree_double" style="width: 900px; height: 500px;"></div>
 </body>
 
