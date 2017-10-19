@@ -10,9 +10,9 @@
         google.charts.load('current', { packages: ['wordtree'] });
 
         google.charts.setOnLoadCallback(drawWordTree1771);
+        google.charts.setOnLoadCallback(drawWordTree1772);
 
-        var rootword = '我們';
-        var options;
+        var rootword = '香港';
         var split = input.split(rootword);
         split.shift();
         var stringss = split.map(function(s) { return [rootword + s] });
@@ -20,7 +20,7 @@
 
         function drawWordTree1771() {
           var data = google.visualization.arrayToDataTable(stringss);
-           options = {
+          var options = {
                 wordtree: {
                     format: 'implicit',
                     type: 'suffix',
@@ -29,6 +29,27 @@
         }
 
                     var wordtree = new google.visualization.WordTree(document.getElementById('wt1771'));
+            wordtree.draw(data, options);
+
+          } 
+
+        rootword = '政府';
+        split = input.split(rootword);
+        split.shift();
+        var stringss = split.map(function(s) { return [rootword + s] });
+        stringss.unshift(['Phrases']);
+
+        function drawWordTree1772() {
+          var data = google.visualization.arrayToDataTable(stringss);
+          var options = {
+                wordtree: {
+                    format: 'implicit',
+                    type: 'suffix',
+                    word: rootword
+                }
+        }
+
+                    var wordtree = new google.visualization.WordTree(document.getElementById('wt1772'));
             wordtree.draw(data, options);
 
           } 
@@ -150,11 +171,12 @@
     <style>
 
     .wordtree {
-      width:900px;
+      width:50%;
       height: 500px;
     }
 
     #plotlygraph {
+      margin: 0 auto;
       width: 600px;
       height: 250px;
     }
@@ -166,8 +188,9 @@
 </head>
 
 <body>
-  <div id="wt1771" class="wordtree"></div></td>
-    <!-- <div id="plotlygraph"></div> -->
+  <table><tr><td>
+  <div id="wt1771" class="wordtree"></div></td><td><div id="wt1772" class="wordtree"></div></td></tr></table>
+  <div id="plotlygraph"></div>
 </body>
 
 </html>
