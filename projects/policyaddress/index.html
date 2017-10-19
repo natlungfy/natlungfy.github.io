@@ -10,14 +10,13 @@
         google.charts.load('current', { packages: ['wordtree'] });
 
         google.charts.setOnLoadCallback(drawWordTree1771);
-        google.charts.setOnLoadCallback(drawWordTree1772);
 
-
-        function drawWordTree1771() {
-                  var split = input.split('香港');
+         var split = input.split('香港');
         split.shift();
         var stringss = split.map(function(s) { return ['香港' + s] });
         stringss.unshift(['Phrases']);
+
+        function drawWordTree1771() {
           var data = google.visualization.arrayToDataTable(stringss);
           var options = {
                 wordtree: {
@@ -31,136 +30,117 @@
             wordtree.draw(data, options);
 
           } 
-
-        function drawWordTree1772() {
-       var split = input.split('政府');
-        split.shift();
-        var stringss = split.map(function(s) { return ['政府' + s] });
-        stringss.unshift(['Phrases']);
-          var data = google.visualization.arrayToDataTable(stringss);
-          var options = {
-                wordtree: {
-                    format: 'implicit',
-                    type: 'suffix',
-                    word: '政府'
-                }
-        }
-
-                    var wordtree = new google.visualization.WordTree(document.getElementById('wt1772'));
-            wordtree.draw(data, options);
-
-          } 
           
 
 
-          var year = [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
-          var oct2017 = {
-            x: year,
-            y: [10,10,10,10,10,10,10,10,10,10],
-            mode: 'markers',
-            marker: {
-              color: ['rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)'],
-              size: [2350,120,3120, 440, 50, 70,330,700,430,350,300],
-              sizeref: 0.5,
-              sizemode: 'area'
-            }
-          };
+          // var year = [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
+          // var oct2017 = {
+          //   x: year,
+          //   y: [10,10,10,10,10,10,10,10,10,10],
+          //   mode: 'markers',
+          //   marker: {
+          //     color: ['rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)','rgb(66, 170, 255)'],
+          //     size: [2350,120,3120, 440, 50, 70,330,700,430,350,300],
+          //     sizeref: 0.5,
+          //     sizemode: 'area'
+          //   }
+          // };
 
-          var jan2017 = {
-            x: year,
-            y: [15, 15, 15,15,15,15,15,15,15,15],
-            mode: 'markers',
-            marker: {
-              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
-              size: [590,10,1820,370,40,80,210,100,170,320,530],
-              sizeref: 0.5,
-              sizemode: 'area'
-            }
-          };
+          // var jan2017 = {
+          //   x: year,
+          //   y: [15, 15, 15,15,15,15,15,15,15,15],
+          //   mode: 'markers',
+          //   marker: {
+          //     color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+          //     size: [590,10,1820,370,40,80,210,100,170,320,530],
+          //     sizeref: 0.5,
+          //     sizemode: 'area'
+          //   }
+          // };
 
-          var pa2016 = {
-            x: year,
-            y: [20,20,20,20,20,20,20,20,20,20],
-            mode: 'markers',
-            marker: {
-              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
-              size: [110,20,1650,440,60,420,240,290,290,390],
-              sizeref: 0.5,
-              sizemode: 'area'
-            }
-          };
+          // var pa2016 = {
+          //   x: year,
+          //   y: [20,20,20,20,20,20,20,20,20,20],
+          //   mode: 'markers',
+          //   marker: {
+          //     color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+          //     size: [110,20,1650,440,60,420,240,290,290,390],
+          //     sizeref: 0.5,
+          //     sizemode: 'area'
+          //   }
+          // };
 
-          var pa2015 = {
-            x: year,
-            y: [25,25,25,25,25,25,25,25,25,25],
-            mode: 'markers',
-            marker: {
-              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
-              size: [670,20,1590,120,0,50,230,60,330,510],
-              sizeref: 0.5,
-              sizemode: 'area'
-            }
-          };
+          // var pa2015 = {
+          //   x: year,
+          //   y: [25,25,25,25,25,25,25,25,25,25],
+          //   mode: 'markers',
+          //   marker: {
+          //     color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+          //     size: [670,20,1590,120,0,50,230,60,330,510],
+          //     sizeref: 0.5,
+          //     sizemode: 'area'
+          //   }
+          // };
 
-          var pa2014 = {
-            x: year,
-            y: [30,30,30,30,30,30,30,30,30,30],
-            mode: 'markers',
-            marker: {
-              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
-              size: [190,20,980,110,0,10,370,100,330,480],
-              sizeref: 0.5,
-              sizemode: 'area'
-            }
-          };
+          // var pa2014 = {
+          //   x: year,
+          //   y: [30,30,30,30,30,30,30,30,30,30],
+          //   mode: 'markers',
+          //   marker: {
+          //     color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+          //     size: [190,20,980,110,0,10,370,100,330,480],
+          //     sizeref: 0.5,
+          //     sizemode: 'area'
+          //   }
+          // };
 
-          var pa2013 = {
-            x: year,
-            y: [35,35,35,35,35,35,35,35,35,35],
-            mode: 'markers',
-            marker: {
-              color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
-              size: [1910,80,1690, 170,0,50,0,270,30,550,710],
-              sizeref: 0.5,
-              sizemode: 'area'
-            }
-          };
+          // var pa2013 = {
+          //   x: year,
+          //   y: [35,35,35,35,35,35,35,35,35,35],
+          //   mode: 'markers',
+          //   marker: {
+          //     color: ['rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)','rgb(115, 115, 115)'],
+          //     size: [1910,80,1690, 170,0,50,0,270,30,550,710],
+          //     sizeref: 0.5,
+          //     sizemode: 'area'
+          //   }
+          // };
 
-          var data = [oct2017, jan2017, pa2016,pa2015, pa2014, pa2013];
+          // var data = [oct2017, jan2017, pa2016,pa2015, pa2014, pa2013];
 
-          var layout = {
-            title: '歷年《施政報告》用字: 梁振英 vs. 林鄭',
-            titlefont: {
-              size: 18
-            },
-            autosize: false,
-            width: 1000,
-            height: 800,
-            margin: {
-              pad: 4
-            },
-            xaxis: {
-              side: 'top',
-              showgrid: false,
-              tickvals: [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],
-              ticktext: ['我們','希望','香港','國家','祖國','一國兩制','一帶一路','青年','創科','房屋','土地'],
-              tickfont: {
-                size: 13
-              }
-            },
-            yaxis: {
-              showgrid: false,
-              tickvals: [35,30,25,20,15,10],
-              ticktext: ['2013','2014','2015','2016','Jan 2017','Oct 2017'],
-              tickfont: {
-                size: 13,
-                family: 'serif'
-              }
-            },
-            showlegend: false
-          };
+          // var layout = {
+          //   title: '歷年《施政報告》用字: 梁振英 vs. 林鄭',
+          //   titlefont: {
+          //     size: 18
+          //   },
+          //   autosize: false,
+          //   width: 1000,
+          //   height: 800,
+          //   margin: {
+          //     pad: 4
+          //   },
+          //   xaxis: {
+          //     side: 'top',
+          //     showgrid: false,
+          //     tickvals: [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],
+          //     ticktext: ['我們','希望','香港','國家','祖國','一國兩制','一帶一路','青年','創科','房屋','土地'],
+          //     tickfont: {
+          //       size: 13
+          //     }
+          //   },
+          //   yaxis: {
+          //     showgrid: false,
+          //     tickvals: [35,30,25,20,15,10],
+          //     ticktext: ['2013','2014','2015','2016','Jan 2017','Oct 2017'],
+          //     tickfont: {
+          //       size: 13,
+          //       family: 'serif'
+          //     }
+          //   },
+          //   showlegend: false
+          // };
 
-          Plotly.newPlot('plotlygraph', data, layout, {displayModeBar: false, staticPlot: true});
+          // Plotly.newPlot('plotlygraph', data, layout, {displayModeBar: false, staticPlot: true});
 
 
         });     
@@ -168,8 +148,8 @@
     <style>
 
     .wordtree {
-      width:650px;
-      height: 500px;
+      width:100%;
+      height: 100%;
     }
 
     #plotlygraph {
@@ -185,9 +165,8 @@
 </head>
 
 <body>
-  <table><tr><td>
-  <div id="wt1771" class="wordtree"></div></td><td><div id="wt1772" class="wordtree"></div></td></tr></table>
-  <div id="plotlygraph"></div>
+  <div id="wt1771" class="wordtree"></div>
+  <!-- <div id="plotlygraph"></div> -->
 </body>
 
 </html>
