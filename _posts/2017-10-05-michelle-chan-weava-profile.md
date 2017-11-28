@@ -48,7 +48,7 @@ It was during this time that she met her schoolmates— Lai, Anthony Chiu, and G
 It was a similar scene every day in Room 11, the room they booked in HKU’s Chi Wah Learning Commons: Lai typing furiously on his laptop, followed by a loud thump on the table, then a triumphant "yes". Lai had crushed a bug in their JavaScript code, a language they grew to love and hate. "I have figured it out," he told Chan, as he continued scribbling his thought process in a flowchart on the white board behind him. Chan looked up from her laptop with a reassuring nod.
 The team's momentum grew albeit with Chan in Seattle and Lai working as a Credit Suisse intern in Hong Kong in the summer of 2016. "I rushed back home at 5PM to work on Weava till past midnight and Skyped with Lai every day," she recalled. 
 
-<img src="http://natalielung.xyz/images/michelle-at-work.jpg" alt="michelle-at-work" style="width: 100%;"/>
+<img src="http://natalielung.xyz/images/michelle-at-work.JPG" alt="michelle-at-work" style="width: 100%;"/>
 
 *Chan replying emails in Room 11 in HKU’s Chi Wah Learning Commons*
 
