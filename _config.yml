@@ -30,14 +30,12 @@ email: nat@natalielung.xyz
 navigation:
   - text: Home
     url: /
-  - text: Media Work
+  - text: Portfolio
     url: /portfolio
-  - text: Community Work
+  - text: Community Projects
     url: /affiliations
   - text: Resume
     url: /Natalie_Lung_CV.pdf
-  # - text: Blog
-  #   url: /blog
 
 projects:
   - name: South China Morning Post - Electing the Chief Executive
