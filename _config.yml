@@ -58,7 +58,7 @@ projects:
   - name: Droste - Rent Control
     description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template.
     tech: HTML, CSS, Javascript, Plotly.JS, Semantic UI
-    github: https://github.com/drostehk/rentcontrol
+    link: https://github.com/drostehk/rentcontrol
     image: http://natalielung.xyz/images/rentcontrol.png
   - name: Mementos from the US
     description: Interactive, multimedia website about my exchange semester in the US. Allows users to upload their own mementos.
