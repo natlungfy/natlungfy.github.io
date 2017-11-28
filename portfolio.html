@@ -15,23 +15,23 @@ title: Natalie Lung - Portfolio
 <section>
   <h2 id="writing">Writing</h2>
 
-  {% for clip in site.clips %}
+  {% for post in site.posts %}
   <div class="media t-hackcss-media">
 
     <div class="media-body">
       <div class="media-heading">
-        {% if clip.external_url %}
-        <a href="{{ clip.external_url }}" target="_blank">
-          {{ clip.title }}
+        {% if post.external_url %}
+        <a href="{{ post.external_url }}" target="_blank" title="{{ project.name }}">
+          {{ post.title }}
         </a>
         {% else %}
-        <a href="{{ clip.url | prepend: site.baseurl }}" title="{{ clip.title }}">
-          {{ clip.title }}
+        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ project.name }}">
+          {{ post.title }}
         </a>
         {% endif %}
       </div>
       <div class="media-content">
-        <em>{{ clip.short_description }}</em>, {{ clip.date | date_to_string }}
+        <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
       </div>
     </div>
   </div>
