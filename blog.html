@@ -11,3 +11,39 @@ title: Natalie Lung - Blog
     This space is for my observations on tech culture, journalism, both in Hong Kong and beyond.
   </p>
 </section>
+
+<section>
+  <h2 id="writing">Recent</h2>
+
+  {% for post in site.posts %}
+  <!--     {% assign nth = forloop.index0 | modulo:2 %} -->
+  <div class="media t-hackcss-media">
+
+    <div class="media-body">
+      <div class="media-heading">
+        {% if post.external_url %}
+        <a href="{{ post.external_url }}" target="_blank">
+          {{ post.title }}
+        </a>
+        {% else %}
+        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+          {{ post.title }}
+        </a>
+        {% endif %}
+      </div>
+      <div class="media-content">
+        <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
+      </div>
+    </div>
+    {% if nth == 1 %}
+      <div class="t-hackcss-media-shift media-right">
+        <img class="t-hackcss-media-image"
+             src="{{ post.image_preview }}" alt="{{ post.title }}"
+             title="{{ post.title }}" />
+      </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+  </div>
+  {% endfor %}
+</section>

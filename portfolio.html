@@ -15,24 +15,24 @@ title: Natalie Lung - Portfolio
 <section>
   <h2 id="writing">Writing</h2>
 
-  {% for post in site.posts %}
+  {% for clip in site.clips %}
   <!--     {% assign nth = forloop.index0 | modulo:2 %} -->
   <div class="media t-hackcss-media">
 
     <div class="media-body">
       <div class="media-heading">
-        {% if post.external_url %}
-        <a href="{{ post.external_url }}" target="_blank" title="{{ project.name }}">
-          {{ post.title }}
+        {% if clip.external_url %}
+        <a href="{{ clip.external_url }}" target="_blank">
+          {{ clip.title }}
         </a>
         {% else %}
-        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ project.name }}">
-          {{ post.title }}
+        <a href="{{ clip.url | prepend: site.baseurl }}" title="{{ clip.title }}">
+          {{ clip.title }}
         </a>
         {% endif %}
       </div>
       <div class="media-content">
-        <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
+        <em>{{ clip.short_description }}</em>, {{ clip.date | date_to_string }}
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@ title: Natalie Lung - Portfolio
            {% endif %}
            {% if project.github %}
            | <a href="{{ project.github }}" title="Code" target="_blank">
-             Code
+             Code |
            </a>
            {% endif %}
          </p>
