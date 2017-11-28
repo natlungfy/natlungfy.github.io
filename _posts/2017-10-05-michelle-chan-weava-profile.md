@@ -18,6 +18,7 @@ The product was an online tool that organizes user highlights from websites and 
 Liu loved the idea, and even offered to help her practise her business pitch. Chan was elated.
 
 Until two years ago, Chan was still a third-year student studying International Business and Global Management and Computer Science at the University. She had just returned to Hong Kong from a year-long exchange at Yale and an internship at a San Francisco startup. Empowered by entrepreneurial culture in the States, she decided to pursue a startup idea she and Lai had while writing academic papers—all the while juggling seven courses and planning a technical final year project to graduate on time.
+
 By the time they launched Weava into the world in October 2016, Chan had returned from a second pilgrimage in the States—a coveted design internship at Amazon's Seattle headquarters—and had made a decision that would have been daunting to most would-be graduates at HKU: giving up the full-time position Amazon had offered to pursue her dream full-time.
 
 <img src="http://natalielung.xyz/images/michelle-front.JPG" alt="michelle-front" style="width: 100%;"/>
@@ -46,11 +47,12 @@ In the months before heading to Seattle for Amazon, she met up with friends, sch
 It was during this time that she met her schoolmates— Lai, Anthony Chiu, and George Leung—who became the colleagues whom she spent more time with than her parents in subsequent months. "We hacked ourselves a free co-working space at school — by writing a program that books the same room every day using seven of our friends’ accounts, since each student had a booking quota of 2 hours," she said. "Every day we worked on Weava and do our homework together. 10am to midnight—even on weekends."
 
 It was a similar scene every day in Room 11, the room they booked in HKU’s Chi Wah Learning Commons: Lai typing furiously on his laptop, followed by a loud thump on the table, then a triumphant "yes". Lai had crushed a bug in their JavaScript code, a language they grew to love and hate. "I have figured it out," he told Chan, as he continued scribbling his thought process in a flowchart on the white board behind him. Chan looked up from her laptop with a reassuring nod.
-The team's momentum grew albeit with Chan in Seattle and Lai working as a Credit Suisse intern in Hong Kong in the summer of 2016. "I rushed back home at 5PM to work on Weava till past midnight and Skyped with Lai every day," she recalled. 
 
 <img src="http://natalielung.xyz/images/michelle-at-work.JPG" alt="michelle-at-work" style="width: 100%;"/>
 
 *Chan replying emails in Room 11 in HKU’s Chi Wah Learning Commons*
+
+The team's momentum grew albeit with Chan in Seattle and Lai working as a Credit Suisse intern in Hong Kong in the summer of 2016. "I rushed back home at 5PM to work on Weava till past midnight and Skyped with Lai every day," she recalled. 
 
 The hard work during summer paid off. With everyone in Hong Kong in October 2016, her team launched the tool into a global market of over 48,000 Google Chrome browser plug-ins. Much to the team's surprise, their tool was featured on the homepage of the Chrome App Store hours later. 
 
