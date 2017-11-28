@@ -7,7 +7,7 @@ short_description: JMSC2005 Feature Writing
 ---
 Like on most nights, Michelle Chan was silent, poking away at her favourite deep-fried milk at the dim sum joint she and schoolmate Andy Lai frequented after long hours of work for their startup. Still recovering from information overload and light alcohol from a prior meeting with a heavy-weight investor at a country club, which unexpectedly lasted for three hours, the two 2016 graduates of the University of Hong Kong were lost in their own thoughts. Lai would pose a question about some user reviews he saw in the company email, to which Chan quickly answered and got back to her meal. They both couldn't wait to go back to their homes and have a good night's sleep.
 
-But on this September evening, an unusual energy was in the air. Accompanied by her three colleagues who were all suited up, Chan was walking, with a slight spring in her step, on the elevated bridge over Queensway, Admiralty as the Bank of China Tower glistened in the distance.
+But on this September evening, an unusual energy was in the air. With a wide smile, Chan was walking alongside her three colleagues who were all suited up on the elevated bridge over Queensway, Admiralty. The Bank of China Tower glistened in the distance.
 
 She had just met with the South China Morning Post's new CEO, Gary Liu, a serial technology executive whose work and business values she respected deeply and was eager to seek his mentorship for her company. 
 
@@ -60,4 +60,4 @@ One year on, Weava now has 4,000 monthly active users, and 30 percent of all use
 
 When Chan learnt that she could meet with Gary Liu, Pun said she got “really excited”. She had been looking forward to his advice when her team found themselves at a critical junction—they had to make a decision that would change their product’s target market. “Liu was the right person for [Chan] to talk to. He had been there before,” said Pun.
 
-Despite the fatigue from replying emails and back-to-back meetings in the day, Chan left the meeting in Admiralty with a slight spring in her step. As a recently turned full-time entrepreneur and a paying employer of three, she was uncertain of the future, but also as determined as she could ever be. "Time is always a startup's enemy,” she said. “But in the coming few years, we are going to build a productivity tool that everyone will use." 
+Despite the fatigue from replying emails and back-to-back meetings in the day, Chan left the meeting in Admiralty smiling from ear to ear. As a recently turned full-time entrepreneur and a paying employer of three, she was uncertain of the future, but also as determined as she could ever be. "Time is always a startup's enemy,” she said. “But in the coming few years, we are going to build a productivity tool that everyone will use." 
