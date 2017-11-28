@@ -16,7 +16,7 @@ As of February 2016, teenagers between the age of 18 and 24 make up most of Snap
 Between Snapchat’s private and semi-public communication features, users mainly use the app for its private chat function. In [a survey by influencer marketing platform Social Soup](http://www.slideshare.net/SocialSoup/snapchat-research-understanding-the-users-of-snapchat-their-motivations-and-the-role-of-brands-in-this-emerging-platform), 95% of its respondents use the app for “communicating with friends”, while 63% share their stories. Compared with other social media platforms where user posts are archived on a personal feed, the kind of content Snapchatters send to friends are quite characteristic due to ephemerality. [A University of Washington study](https://homes.cs.washington.edu/~yoshi/papers/snapchat-FC2014.pdf) on common usage patterns of the app shows that 60% of respondents primarily send “funny things”, such as stupid faces. Generally, they send more casual, in-the-moment content “that they might not otherwise send via a messaging platform that emphasizes archival rather than temporariness” such as Facebook or Instagram.
 
 <p align="center">
-  <img src="https://natlungfy.files.wordpress.com/2016/12/g1.png">
+  <img src="https://natlungfy.files.wordpress.com/2016/12/g1.png" style="width: 100%;"/>
 </p>  
 
 *A UW study on common usage patterns of Snapchat shows that 60% of respondents primarily send "funny things", such as stupid faces.*
