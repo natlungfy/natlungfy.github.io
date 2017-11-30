@@ -2,8 +2,9 @@
 layout: post
 title: Straight Outta Chi Wah - Michelle Chan's unorthodox journey
 author: Natalie Lung
-categories: work
+categories: portfolio
 short_description: JMSC2005 Feature Writing
+image: http://natalielung.xyz/images/michelle-front.JPG
 ---
 Like on most nights, Michelle Chan was silent, poking away at her favourite deep-fried milk at the dim sum joint she and schoolmate Andy Lai frequented after long hours of work for their startup. Still recovering from information overload and light alcohol from the prior meeting with a heavy-weight investor at a country club, which unexpectedly lasted for three hours, the two 2016 graduates of the University of Hong Kong were lost in their own thoughts. Lai would pose a question about some user reviews he saw in the company email, to which Chan quickly answered and got back to her meal. They both couldn't wait to go back to their homes and have a good night's sleep.
 

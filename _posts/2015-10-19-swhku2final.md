@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog - Reviewing the Final Pitches at Startup Weekend HKU 2
+title: Reviewing Business Pitches at HKU's 2nd Startup Weekend
 date: 2015-10-19
 author: Natalie Lung
 categories: work

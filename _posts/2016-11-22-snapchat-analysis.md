@@ -3,8 +3,9 @@ layout: post
 title: Has Snapchat changed the way we communicate? A critical analysis
 date: 2016-11-22
 author: Natalie Lung
-categories: work
+categories: portfolio
 short_description: JMSC2010 Multimedia Magazine Design
+image: https://natlungfy.files.wordpress.com/2016/11/snap-generation-a-guide-to-history-of-snapchat-garyvee1.png
 ---
 <img src="https://natlungfy.files.wordpress.com/2016/11/snap-generation-a-guide-to-history-of-snapchat-garyvee1.png" alt="snapchat-cover" style="width: 100%;"/>
 
