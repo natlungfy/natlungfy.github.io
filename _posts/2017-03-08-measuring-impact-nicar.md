@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Best Practices for Measuring Impact from Pro Publica, Reveal, and the American Press Institute
+title: Measuring the impact of investigative journalism: Best Practices from Pro Publica, Reveal, and the American Press Institute
 date: 2017-03-08
 author: Natalie Lung
 categories: work

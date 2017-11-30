@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keeping Hong Kong's historical shophouses alive - Conservation vs Development
+title: The forces keeping Hong Kong's historical shophouses alive
 date: 2016-12-04
 author: Natalie Lung
 categories: work
