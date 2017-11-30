@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Straight Outta Chi Wah - Michelle Chan's unorthodox journey
+title: Straight Outta Chi Wah - Michelle Chan's unorthodox startup journey
 author: Natalie Lung
 categories: portfolio
 short_description: JMSC2005 Feature Writing
