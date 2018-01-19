@@ -9,52 +9,64 @@
   <!-- Meta information -->
   <title>{% if page.title %}Natalie Lung - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description"
-        content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical"
-        href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-  
-<!-- Open Graph Tags -->
+  href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+
+  <!-- Open Graph Tags -->
 <!-- {% if page.title %}
-  <meta content="{{ page.title }}" property="og:title">
+<meta content="{{ page.title }}" property="og:title">
 {% else %}
-  <meta content="{{ site.title }}" property="og:title">
+<meta content="{{ site.title }}" property="og:title">
 {% endif %}
 {% if page.description %}
-  <meta content="{{ page.description }}" property="og:description">
+<meta content="{{ page.description }}" property="og:description">
 {% else %}
-  <meta content="{{ site.description }}" property="og:description">
+<meta content="{{ site.description }}" property="og:description">
 {% endif %}
 {% if page.url %}
-  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+<meta content="{{ site.url }}{{ page.url }}" property="og:url">
 {% endif %}
 {% if page.date %}
-  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-  <meta content="{{ site.url }}/about/" property="article:author">
+<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+<meta content="{{ site.url }}/about/" property="article:author">
 {% endif %} -->
 {% if page.image %}
-  <meta content="{{ page.image }}" property="og:image">
+<meta content="{{ page.image }}" property="og:image">
 {% else %}
-  <meta content="http://natalielung.xyz/images/tiled-bg.jpg" property="og:image">
+<meta content="http://natalielung.xyz/images/tiled-bg.jpg" property="og:image">
 {% endif %}
 
-  <!-- hack.css -->
-  <link rel="stylesheet" href="https://npmcdn.com/hack/dist/hack.css" />
-  {% if site.theme_mode == 'standard' %}
-  <link rel="stylesheet" href="https://npmcdn.com/hack/dist/standard.css" />
-  {% elsif site.theme_mode == 'dark' %}
-  <link rel="stylesheet" href="https://npmcdn.com/hack/dist/dark.css" />
-  {% endif %}
+<!-- hack.css -->
+<link rel="stylesheet" href="https://npmcdn.com/hack/dist/hack.css" />
+{% if site.theme_mode == 'standard' %}
+<link rel="stylesheet" href="https://npmcdn.com/hack/dist/standard.css" />
+{% elsif site.theme_mode == 'dark' %}
+<link rel="stylesheet" href="https://npmcdn.com/hack/dist/dark.css" />
+{% endif %}
 
-  <!-- Prism.js -->
-  <link rel="stylesheet" href="https://npmcdn.com/prismjs@1.5.1/themes/prism.css" />
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://npmcdn.com/prismjs@1.5.1/themes/prism.css" />
 
-  <!-- Custom style -->
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
+<!-- Custom style -->
+<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
 
-  <!-- Feed -->
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-        href="{{ "/feed.xml" | prepend: site.baseurl }}" />
+<!-- Feed -->
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+href="{{ "/feed.xml" | prepend: site.baseurl }}" />
 
-  <!-- 'jekyll-seo' plugin -->
-  {% seo %}
+<!-- 'jekyll-seo' plugin -->
+{% seo %}
+
+<!-- Hotjar Tracking -->
+<script>
+  (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:751724,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 </head>
