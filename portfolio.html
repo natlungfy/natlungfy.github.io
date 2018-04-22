@@ -65,6 +65,9 @@ title: Portfolio
              {% if project.link %}
             <a href="{{ project.link }}" title="{{ project.name }}" target="_blank">{{ project.name }}</a>
            {% endif %}
+           {% if project.inlink %}
+           <a href="{{ project.inlink }}" title="{{ project.name }}">{{ project.name }}</a>
+           {% endif %}
            {% if project.github %}
            | <a href="{{ project.github }}" title="Code" target="_blank">
              Code

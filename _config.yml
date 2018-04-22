@@ -40,7 +40,7 @@ navigation:
 projects:
   - name: Forbes Asia Graphics
     description: Graphics for Asia-focused stories such as electric vehicles, the Shinzo Abe scandal, 30 Under 30 Asia, Netflix vs. Amazon in India
-    link: http://natalielung.xyz/portfolio/forbes.html
+    inlink: http://natalielung.xyz/portfolio/forbes.html
     tech: Illustrator, Photoshop, CartoDB
     image: http://natalielung.xyz/images/forbes.gif
   - name: South China Morning Post - Electing the Chief Executive
