@@ -38,6 +38,21 @@ navigation:
     url: /Natalie_Lung_CV.pdf
 
 projects:
+  - name: Forbes Asia - Shinzo Abe and the Moritomo Scandal
+    description: Timeline of Abe, Moritomo scandal
+    tech: Illustrator, Photoshop
+    link: https://www.forbes.com/sites/adelsteinjake/2018/03/29/school-scandal-may-get-japans-pm-expelled-can-abenomics-survive-without-abe
+    image: http://natalielung.xyz/images/abe_timeline.jpg
+  - name: Forbes Asia - U30 Asia 2018 top dream mentors
+    description: Graphic about 30 Under 30 Asia honorees' top dream mentors
+    tech: Photoshop
+    link: https://www.forbes.com/sites/ranawehbe/2018/03/26/the-30-under-30-asia-innovators-working-towards-a-sustainable-future-in-the-region/
+    image: http://natalielung.xyz/images/dream_mentors.jpg
+  - name: Forbes Asia - U30 Asia 2018 region breakdown
+    description: Interactive map illustrating where the 2018 30 Under 30 Asia honorees came from.
+    tech: CartoDB
+    link:  https://www.forbes.com/sites/ranawehbe/2018/03/26/how-did-the-countries-fare-on-forbes-30-under-30-asia-2018-list
+    image: http://natalielung.xyz/images/countryBreakdown.jpg
   - name: South China Morning Post - Electing the Chief Executive
     description: Multimedia visual guide to Hong Kong’s political reform vote in 2015. Prepped data for interactive graphic and contributed text.
     tech: ArchieML, Google Sheets
@@ -63,7 +78,7 @@ projects:
     link: http://natalielung.xyz/projects/mementos
     tech: HTML, CSS, Javascript, jQuery, JSON, PHP
     github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mementos
-    image: http://natalielung.xyz/images/mem.png
+    image: http://natalielung.xyz/images/mementosGIF.gif
   - name: Office Escape
     description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked.
     tech: HTML, CSS, Javascript, Phaser, gyro.js
