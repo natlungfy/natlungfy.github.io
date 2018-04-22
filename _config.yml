@@ -74,7 +74,7 @@ projects:
     tech: HTML, CSS, Javascript, Phaser, gyro.js
     link: https://www.youtube.com/watch?v=gEiLgBrf2n8
     github: https://github.com/cg-mobilegame/cg-mobilegame.github.io
-    image: http://natalielung.xyz/images/officeesc.png
+    image: http://natalielung.xyz/images/officeesc.gif
   - name: Hong Kong Shophouse
     description: Multimedia reporting group project about Hong Kong's historical tenement buildings.
     tech: Timeline.js, Google Maps, photosphere, infographics
