@@ -38,21 +38,11 @@ navigation:
     url: /Natalie_Lung_CV.pdf
 
 projects:
-  - name: Forbes Asia - Shinzo Abe and the Moritomo Scandal
-    description: Timeline of Abe, Moritomo scandal
-    tech: Illustrator, Photoshop
-    link: https://www.forbes.com/sites/adelsteinjake/2018/03/29/school-scandal-may-get-japans-pm-expelled-can-abenomics-survive-without-abe
-    image: http://natalielung.xyz/images/abe_timeline.jpg
-  - name: Forbes Asia - U30 Asia 2018 top dream mentors
-    description: Graphic about 30 Under 30 Asia honorees' top dream mentors
-    tech: Photoshop
-    link: https://www.forbes.com/sites/ranawehbe/2018/03/26/the-30-under-30-asia-innovators-working-towards-a-sustainable-future-in-the-region/
-    image: http://natalielung.xyz/images/dream_mentors.jpg
-  - name: Forbes Asia - U30 Asia 2018 region breakdown
-    description: Interactive map illustrating where the 2018 30 Under 30 Asia honorees came from.
-    tech: CartoDB
-    link:  https://www.forbes.com/sites/ranawehbe/2018/03/26/how-did-the-countries-fare-on-forbes-30-under-30-asia-2018-list
-    image: http://natalielung.xyz/images/countryBreakdown.jpg
+  - name: Forbes Asia Graphics
+    description: Graphics for Asia-focused stories such as electric vehicles, the Shinzo Abe scandal, 30 Under 30 Asia, Netflix vs. Amazon in India
+    link: http://natalielung.xyz/portfolio/forbes.html
+    tech: Illustrator, Photoshop, CartoDB
+    image: http://natalielung.xyz/images/forbes.gif
   - name: South China Morning Post - Electing the Chief Executive
     description: Multimedia visual guide to Hong Kong’s political reform vote in 2015. Prepped data for interactive graphic and contributed text.
     tech: ArchieML, Google Sheets
@@ -62,23 +52,23 @@ projects:
     description: Infographic of everything you need to know about the banyans that define the city’s landscape. Contributed research and graphic concept.
     link: http://www.scmp.com/infographics/article/1845412/hong-kongs-wall-trees-everything-you-need-know-about-banyans-define
     image: http://natalielung.xyz/images/scmptrees.PNG
-  - name: Health violations by Missouri drinking water systems
-    description: An interactive heatmap and data explorer for health violations committed by public water systems in Missouri. Individual project for the Advanced Data Journalism course at Mizzou.
-    tech: HTML, CSS, Javascript, Python for generating SVG map
-    link: http://natalielung.xyz/projects/mo-water-health-violations
-    github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mo-water-health-violations
-    image: http://natalielung.xyz/images/screenshot_pws.PNG
-  - name: Droste - Rent Control
-    description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template.
-    tech: HTML, CSS, Javascript, Plotly.JS, Semantic UI
-    link: https://github.com/drostehk/rentcontrol
-    image: http://natalielung.xyz/images/rentcontrol.png
   - name: Mementos from the US
     description: Interactive, multimedia website about my exchange semester in the US. Allows users to upload their own mementos.
     link: http://natalielung.xyz/projects/mementos
     tech: HTML, CSS, Javascript, jQuery, JSON, PHP
     github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mementos
     image: http://natalielung.xyz/images/mementosGIF.gif
+  - name: Health violations by Missouri drinking water systems
+    description: An interactive heatmap and data explorer for health violations committed by public water systems in Missouri. Individual project for the Advanced Data Journalism course at Mizzou.
+    tech: HTML, CSS, Javascript, Python for generating SVG map
+    link: http://natalielung.xyz/projects/mo-water-health-violations
+    github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mo-water-health-violations
+    image: http://natalielung.xyz/images/mowaterGIF.gif
+  - name: Droste - Rent Control
+    description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template.
+    tech: HTML, CSS, Javascript, Plotly.JS, Semantic UI
+    link: https://github.com/drostehk/rentcontrol
+    image: http://natalielung.xyz/images/rentcontrol.png
   - name: Office Escape
     description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked.
     tech: HTML, CSS, Javascript, Phaser, gyro.js

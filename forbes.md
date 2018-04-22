@@ -1,0 +1,17 @@
+---
+layout: post
+title: Graphics for Forbes Asia
+date: 2018-04-20
+author: Natalie Lung
+categories: portfolio
+---
+
+<div>
+<img src="https://natalielung.xyz/images/abe_timeline.jpg" alt="Abe and the Moritomo scandal" style="width: 100%;"/>
+
+
+<img src="https://natalielung.xyz/images/countryBreakdown.jpg" alt="U30 Asia 2018 Region Breakdown" style="width: 100%;"/>
+
+<img src="https://natalielung.xyz/images/dream_mentors.jpg" alt="U30 Asia 2018 Dream Mentors" style="width: 100%;"/>
+
+</div>
