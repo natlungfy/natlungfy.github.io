@@ -19,7 +19,7 @@
 	<div class="container text-center"><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt">Home</a><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt/methods.html">Methods</a><a class="mx-3" href="https://github.com/natlungfy/natlungfy.github.io/blob/master/projects/china-nyt/scraper.ipynb">Code</a></div>
 <div id="main-text" class="mt-5">
 <h4>How this was made</h4>
-<p>>Using the New York Times Article Search API and web scraping, I managed to obtain 6503 NYT articles (=12,850,998 words) that mention the word "China" from January 1, 1995 to December 31, 2017. The breakdown is shown in the chart below.</p>
+<p>Using the New York Times Article Search API and web scraping, I managed to obtain 6503 NYT articles (=12,850,998 words) that mention the word "China" from January 1, 1995 to December 31, 2017. The breakdown is shown in the chart below.</p>
 <p class="text-center"><img src="http://natalielung.xyz/projects/china-nyt/article_count.png"></p>
 <p>After collecting all article text and organizing them by year, I cleaned the data by removing stop words and retaining only the nouns and adjectives in the articles. Then these were trained using the skip-gram model provided by the Gensim implementation of Word2Vec. From there I was able to get the most similar words.</p>
 
