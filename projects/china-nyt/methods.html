@@ -16,12 +16,16 @@
 <body class="mx-5">
 	<h1 class="container mt-5 text-center">Deep dive: China in the eyes of the Gray Lady</h1>
 	<p class="font-weight-light container mt-2 text-center">by Natalie Lung</p>
-	<div class="container text-center"><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt">Home</a><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt/methods.html">How this was made</a><a class="mx-3" href="https://github.com/natlungfy/natlungfy.github.io/blob/master/projects/china-nyt/scraper.ipynb">Code</a></div>
+	<div class="container text-center"><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt">Home</a><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt/methods.html">Methods</a><a class="mx-3" href="https://github.com/natlungfy/natlungfy.github.io/blob/master/projects/china-nyt/scraper.ipynb">Code</a></div>
 <div id="main-text" class="mt-5">
 <h4>How this was made</h4>
-<img src="http://natalielung.xyz/projects/china-nyt/article_count.png">
-<p>Each frame in the animated graph shows the 50 most similar words to the word "China" in all articles published in a particular year. The word similarities are calculated mathematically using Word2Vec's skip-gram model, which is used to predict the context of a specific word by looking at the words around it. Finally, the word embeddings are visualized on the scatter plot with the help of t-SNE representations.</p>
-<iframe width="100%" src="http://natalielung.xyz/projects/china-nyt/scraper.html"></iframe>
+<p>>Using the New York Times Article Search API and web scraping, I managed to obtain 6503 NYT articles (=12,850,998 words) that mention the word "China" from January 1, 1995 to December 31, 2017. The breakdown is shown in the chart below.</p>
+<p class="text-center"><img src="http://natalielung.xyz/projects/china-nyt/article_count.png"></p>
+<p>After collecting all article text and organizing them by year, I cleaned the data by removing stop words and retaining only the nouns and adjectives in the articles. Then these were trained using the skip-gram model provided by the Gensim implementation of Word2Vec. From there I was able to get the most similar words.</p>
+
+<p>After collecting the similar words, I mapped and visualized each word on a scatter plot with the help of t-SNE representations.</p>
+
+<p>Due to copy right, the raw data of all article text will not be shared. However, you can find the data behind the main graphic, with all similar words sorted by year, <a href="https://github.com/natlungfy/datasets/blob/master/similar_words_new.csv" target="_blank">here</a>.</p>
 </div>
 </body>
 </html>
