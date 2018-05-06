@@ -16,23 +16,23 @@
 <body class="mx-5">
 	<h1 class="container mt-5 text-center">Deep dive: China in the eyes of the Gray Lady</h1>
 	<p class="font-weight-light container mt-2 text-center">by Natalie Lung</p>
-	<div class="container text-center"><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt">Home</a><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt/methods.html">How this was made</a><a class="mx-3" href="https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/china-nyt">Code</a><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt/references.html">References</a></div>
+	<div class="container text-center"><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt">Home</a><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt/methods.html">Methods</a><a class="mx-3" href="https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/china-nyt">Code</a><a class="mx-3" href="http://natalielung.xyz/projects/china-nyt/references.html">References</a></div>
 	<div id="myDiv"></div>
-<div id="main-text" class="mt-5">
-<p>
-		“China will be a global leader in terms of composite national strength and international influence,” said President Xi Jinping at the 19th National Congress of the Communist Party of China.</p>
+	<p><em>Interactive graphic of changing semantics of the word "China" in New York Times articles. Zoom in/out (top right) to see more/less similar words.</em></p>
+<div id="main-text" class="mt-5 mx-5">
+		<p>“China will be a global leader in terms of composite national strength and international influence,” said President Xi Jinping at the 19th National Congress of the Communist Party of China.</p>
 
 		<p>In addition to military buildup and economic growth, he recognises soft power as an essential part of the effort.</p>
 
 		<p>“We will improve our capacity for engaging in international communication so as to tell China’s stories well, present a true, multi-dimensional and panoramic view of China, and enhance our country’s cultural soft power,” Xi said.</p>
 
-		<p>This goal of the "great rejuvenation of the Chinese nation" is one shared by Chinese leaders since Mao Zedong, whose party narrative propogates that China had lost its supreme position in the world during the "century of humiliation" at the hands of foreign countries, particularly Japan and European empires.</p>
+		<p>"The great rejuvenation of the Chinese nation" is a goal shared by Chinese leaders since Mao Zedong, whose party narrative propogates that China had lost its supreme position in the world during the "century of humiliation" at the hands of foreign countries, particularly Japan and European empires.</p>
 
 		<p>Have these efforts been successful? I set out to explore the changing perception of China through the lens of the other superpower with the help of data. In particular, that lens will be that of American liberal mainstream media, as represented by the New York Times. Word embeddings, or word semantics, will be the metric used to analyze perception.</p>
 
 		<p>Nicknamed "The Gray Lady", The New York Times has been the second largest  circulated newspaper in the United States, and has been regarded a reputable news source for the liberal mainstream media.</p>
 
-		<p>With a set of 6503 NYT articles (= 12,850,998 words) that mention the word "China" from 1995-2017, I hope to explore the changing semantics of the word to understand more about U.S. mainstream perception of:</p>
+		<p>Using the New York Times Article Search API and web scraping, I managed to obtain 6503 NYT articles (=12,850,998 words) that mention the word "China" from January 1, 1995 to December 31, 2017. With this set of data, I hope to explore the changing semantics of the word to understand more about U.S. mainstream perception of:</p>
 		<ol>
 			<li>China's partners and allies</li>
 			<li>China's role and involvement in international arena and diplomacy</li>
@@ -40,16 +40,24 @@
 		</ol>
 
 		<h4>How to read the graph</h4>
-		<p>This main graph shows the changing embeddings of the word "China" from 1995 (beginning of the Bush administration) up until 2017. Word embeddings can be summed up by the phrase <em>"A word is known by the company it keeps"</em>.</p>
+		<p>This main graph shows the changing embeddings of the word "China" from 1995 to 2017. Word embeddings can be summed up by the phrase <em>"A word is known by the company it keeps"</em>.</p>
 
-		<p>Each frame in the animated graph shows the 50 most similar words to the word "China" in all articles published in a particular year. The word similarities are calculated mathematically using Word2Vec's skip-gram model, which is used to predict the context of a specific word by looking at the words around it. Finally, the word embeddings are visualized on the scatter plot with the help of t-SNE representations. You can read more about the methods of the analysis <a href="http://natalielung.xyz/projects/china-nyt/methods.html">here</a>.
+		<p>Each frame in the animated graph shows the 50 most similar words to the word "China" in all articles published in a particular year. The word similarities are calculated mathematically using Word2Vec's skip-gram model, which is used to predict the context of a specific word by looking at the words around it. Finally, the word embeddings are visualized on the scatter plot with the help of t-SNE representations.</p>
+
+
+		<p>Read more about the methods of the analysis <a href="http://natalielung.xyz/projects/china-nyt/methods.html">here</a>.</p>
 
 		<h4>Observations</h4>
-		<p>
-			
+		<p>The similar words, or the word embeddings/contexts, serve as a reflection of the key China-related topics and the overall media narrative of China in a particular year. For example, in 1999, the top similar words included "bombing", "attacks", "embassy", "dangerous", "yugoslavia", all of which are linked to the U.S. bombings of the Chinese embassy in Belgrade in May 1999. Another good example is 2008, 
+		<p>By observing the changing similar words over the years, it is obvious that the overall narrative portrays China as an increasingly active player in the international arena, taking part in an ever-increasing variety of issues, such as climate change, the Korean peninsula, etc.</p>
+
+
+			<p>Similar words in the late 90's and early 2000's often relate to trade and finance, war , a lingering Cold War narrative</p>
+
+			<p>Let's delve into the context in which the words appear in different time periods.
 		</p>
 
-		<h4>The Bush years: 1995-2008</h4>
+		<h4>Clinton: 1995-2001</h4>
 </div>
 </body>
 </html>

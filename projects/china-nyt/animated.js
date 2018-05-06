@@ -7,7 +7,8 @@ function getData(year) {
     trace = lookup[year] = {
       x: [],
       y: [],
-      text: []
+      text: [],
+      marker: {color: []}
     };
   }
   return trace;
@@ -19,6 +20,7 @@ for (var i = 0; i < data.length; i++) {
   trace.x.push(datum.x);
   trace.y.push(datum.y);
   trace.text.push(datum.word);
+  trace.marker.color.push(datum.color)
 }
 
 
@@ -41,7 +43,10 @@ for (i = 0; i < years.length; i++) {
       size: 18,
       color: '#000'
     },
-    mode: 'markers+text'
+    mode: 'markers+text',
+    marker: {
+        color: data.marker.color.slice()
+      }
   });
 }
 
