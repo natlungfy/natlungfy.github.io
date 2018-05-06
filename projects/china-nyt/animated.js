@@ -75,16 +75,16 @@ for (i = 0; i < years.length; i++) {
 var layout = {
   xaxis: {
     title: 'x',
-    range: [-250, 250]
+    range: [-80, 80]
   },
   yaxis: {
     title: 'y',
-    range: [-400,400]
+    range: [-200,120]
 
   },
   showlegend: false,
-  paper_bgcolor: 'rgba(0,0,0,0)',
-  plot_bgcolor: 'rgba(0,0,0,0)',
+  paper_bgcolor: '#F5F5F5',
+  plot_bgcolor: '#F5F5F5',
   hovermode: 'closest',
   updatemenus: [{
     x: 0,
