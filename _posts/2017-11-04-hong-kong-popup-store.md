@@ -87,12 +87,5 @@ Multiple hands shot up with wallets in clear view. The salesperson proceeded to 
 Back at the shop, the vendor lit a cigarette while his assistant, a young girl in her teens, who had been standing behind him the entire time, threw away the egg inside the pot and restocked the counter top with kitchen towels.
 
 The customer in pink emerged from the back alley next to the store. It had been ten minutes since she made her purchase and left the shop. She left the black plastic bag of goods, which had the large box containing the ceramic pot she bought earlier, on the steps of the shop front. The teenage girl hurriedly shoved some dollar bills into her hands. Looking left and right, the women in pink scurried off to the Jockey Club betting branch on the opposite side of the street, joining a group of elderly people who were looking at the newest football match scores on oversized LED displays.
- 
-Kwei Lin Street, Sham Shui Po: A shop space that used to be an electronics store (its signage still intact) is now subdivided and leased to 4 different vendors selling local snacks, clothes steamers, sim cards, and inexpensive clothing. 
-
- 
-An online advertisement for one of the subdivided shop spaces pictured above. This is also the same space that the food blender vendors rented. The measurements for the shop space is 13 feet by 16 feet, plus an extra 13x4 square feet raised platform at the store front.
- 
-A saleswoman promotes her company's kitchen knife at shop space on Fuk Wah Street, Sham Shui Po. The banner behind her reads: “Air groove knife. All-new technology; Arc blade. Doesn’t stick to meat. Super sharp.”
 
 
