@@ -5,5 +5,5 @@ date: 2017-03-08
 author: Natalie Lung
 categories: work
 short_description: NICAR Conference
-external_url: https://ire.org/blog/car-conference-blog/2017/03/08/best-practices-measuring-impact
+external_url: https://www.ire.org/archives/30545
 ---
