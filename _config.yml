@@ -43,8 +43,8 @@ projects:
     inlink: http://natalielung.xyz/portfolio/forbes.html
     tech: Illustrator, Photoshop, CartoDB
     image: http://natalielung.xyz/images/forbes.gif
-  - name: MIT Media Lab, Center for Civic Media - MediaCloud
-    description: Implemented Chinese natural language processing on Media Cloud, a text aggregator tool that monitors and analyzes media coverage and the relationships between influential news sources andstories. Curated Greater China news sources.
+  - name: MIT Media Lab, Center for Civic Media - Media Cloud
+    description: Implemented Chinese natural language processing on Media Cloud, a text aggregator tool that monitors and analyzes media coverage and the relationships between influential news sources andstories. Curated Greater China news sources. Thumbnail shows text analysis for Xi Jinping. 
     tech: Python, NLTK, jieba, Ubuntu, VirtualBox
     link: https://mediacloud.org/
     github: https://github.com/berkmancenter/mediacloud/commits?author=natlungfy
