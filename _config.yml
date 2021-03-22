@@ -47,8 +47,7 @@ projects:
     description: Implemented Chinese natural language processing on Media Cloud, a text aggregator tool that monitors and analyzes media coverage and the relationships between influential news sources andstories. Curated Greater China news sources. Thumbnail shows text analysis for Xi Jinping. 
     tech: Python, NLTK, jieba, Ubuntu, VirtualBox
     link: https://mediacloud.org/
-    github: https://github.com/berkmancenter/mediacloud/commits?author=natlungfy
-    image: https://media.giphy.com/media/kF630AbHlzBz7SCPNq/giphy.gif
+    image: https://miro.medium.com/fit/c/262/262/2*sAg1ZS1GKVLBZoITntVriA@2x.png
   - name: South China Morning Post - Electing the Chief Executive
     description: Multimedia visual guide to Hong Kong’s political reform vote in 2015. Prepped data for interactive graphic and contributed text.
     tech: ArchieML, Google Sheets
@@ -58,25 +57,14 @@ projects:
     description: Infographic of everything you need to know about the banyans that define the city’s landscape. Contributed research and graphic concept.
     link: http://www.scmp.com/infographics/article/1845412/hong-kongs-wall-trees-everything-you-need-know-about-banyans-define
     image: http://natalielung.xyz/images/scmptrees.PNG
-  - name: Mementos from the US
-    description: Interactive, multimedia website about my exchange semester in the US. Allows users to upload their own mementos.
+  - name: Mementos from the U.S.
+    description: Interactive website about my exchange semester in the US. Final project for web development course at Mizzou.
     link: http://natalielung.xyz/projects/mementos
     tech: HTML, CSS, Javascript, jQuery, JSON, PHP
     github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mementos
     image: http://natalielung.xyz/images/mementosGIF.gif
-  - name: Health violations by Missouri drinking water systems
-    description: An interactive heatmap and data explorer for health violations committed by public water systems in Missouri. Individual project for the Advanced Data Journalism course at Mizzou.
-    tech: HTML, CSS, Javascript, Python for generating SVG map
-    link: http://natalielung.xyz/projects/mo-water-health-violations
-    github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mo-water-health-violations
-    image: http://natalielung.xyz/images/mowaterGIF.gif
-  - name: Droste - Rent Control
-    description: Negotiate with your landlord using data whenever he proposes an unrealistic rent increase. This public service tool generates a graph of historical rent prices of your district and an email template.
-    tech: HTML, CSS, Javascript, Plotly.JS, Semantic UI
-    link: https://github.com/drostehk/rentcontrol
-    image: http://natalielung.xyz/images/rentcontrol.png
   - name: Office Escape
-    description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked.
+    description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked. Final project for computer graphics course at Mizzou.
     tech: HTML, CSS, Javascript, Phaser, gyro.js
     link: https://www.youtube.com/watch?v=gEiLgBrf2n8
     github: https://github.com/cg-mobilegame/cg-mobilegame.github.io
@@ -86,8 +74,8 @@ projects:
     tech: Timeline.js, Google Maps, photosphere, infographics
     link: http://hkshophouse.wixsite.com/home/
     image: http://natalielung.xyz/images/shophouse.png
-  - name: In 360 - Whampoa through the years, before and after the MTR Station
-    description: Multimedia reporting project using 360 photos and videos about the changes to a neighborhood after the opening of a subway station.
+  - name: In 360 - Before & After A New Subway Station
+    description: Multimedia reporting project using 360 photos and videos about the changes to a Hong Kong neighborhood after the opening of a subway station.
     tech: HTML, Google Maps, Contributed photospheres to Google Street View
     link: https://natlungfy.wordpress.com/2016/11/03/whampoa-before-and-after-in-360
     image: https://natlungfy.files.wordpress.com/2016/11/mtr.jpg?w=1200&h=800&crop=1
