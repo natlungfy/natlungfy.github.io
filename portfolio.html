@@ -31,8 +31,10 @@ title: Portfolio
         {% endif %}
       </div>
       <div class="media-content">
-        <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}<br>
-        {{ post.accolade }}
+        <em>{{ post.short_description }}</em>, {{ post.date | date_to_string }}
+        {% if post.accolade %}
+          <br>*{{ post.accolade }}
+        {% endif %}
       </div>
     </div>
   </div>
