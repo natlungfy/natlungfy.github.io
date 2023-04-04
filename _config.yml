@@ -11,7 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
   A Portfolio
 repository: https://github.com/natlungfy/natlungfy.github.io
 baseurl:  # the subpath of your site, e.g. /blog
-url: http://natalielung.xyz  # the base hostname & protocol for your site
+url: http://natalielung.com  # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -40,9 +40,9 @@ navigation:
 projects:
   - name: Forbes Asia Graphics
     description: Graphics for Asia-focused stories such as electric vehicles, the Shinzo Abe scandal, 30 Under 30 Asia, Netflix vs. Amazon in India
-    inlink: http://natalielung.xyz/portfolio/forbes.html
+    inlink: http://natalielung.com/portfolio/forbes.html
     tech: Illustrator, Photoshop, CartoDB
-    image: http://natalielung.xyz/images/forbes.gif
+    image: http://natalielung.com/images/forbes.gif
   - name: MIT Media Lab, Center for Civic Media - Media Cloud
     description: Implemented Chinese natural language processing on Media Cloud, a text aggregator tool that monitors and analyzes media coverage and the relationships between influential news sources andstories. Curated Greater China news sources. Thumbnail shows text analysis for Xi Jinping. 
     tech: Python, NLTK, jieba, Ubuntu, VirtualBox
@@ -52,28 +52,28 @@ projects:
     description: Multimedia visual guide to Hong Kong’s political reform vote in 2015. Prepped data for interactive graphic and contributed text.
     tech: ArchieML, Google Sheets
     link: http://multimedia.scmp.com/hong-kong-election-2017/
-    image: http://natalielung.xyz/images/scmpvote.png
+    image: http://natalielung.com/images/scmpvote.png
   - name: South China Morning Post - Hong Kong’s wall trees
     description: Infographic of everything you need to know about the banyans that define the city’s landscape. Contributed research and graphic concept.
     link: http://www.scmp.com/infographics/article/1845412/hong-kongs-wall-trees-everything-you-need-know-about-banyans-define
-    image: http://natalielung.xyz/images/scmptrees.PNG
+    image: http://natalielung.com/images/scmptrees.PNG
   - name: Mementos from the U.S.
     description: Interactive website about my exchange semester in the US. Final project for web development course at Mizzou.
-    link: http://natalielung.xyz/projects/mementos
+    link: http://natalielung.com/projects/mementos
     tech: HTML, CSS, Javascript, jQuery, JSON, PHP
     github: https://github.com/natlungfy/natlungfy.github.io/tree/master/projects/mementos
-    image: http://natalielung.xyz/images/mementosGIF.gif
+    image: http://natalielung.com/images/mementosGIF.gif
   - name: Office Escape
     description: An endless runner mobile game where players tilt their devices to avoid obstacles. Best viewed on a gyroscope-equipped Android device with device orientation locked. Final project for computer graphics course at Mizzou.
     tech: HTML, CSS, Javascript, Phaser, gyro.js
     link: https://www.youtube.com/watch?v=gEiLgBrf2n8
     github: https://github.com/cg-mobilegame/cg-mobilegame.github.io
-    image: http://natalielung.xyz/images/officeesc.gif
+    image: http://natalielung.com/images/officeesc.gif
   - name: Hong Kong Shophouse
     description: Multimedia reporting group project about Hong Kong's historical tenement buildings.
     tech: Timeline.js, Google Maps, photosphere, infographics
     link: http://hkshophouse.wixsite.com/home/
-    image: http://natalielung.xyz/images/shophouse.png
+    image: http://natalielung.com/images/shophouse.png
   - name: In 360 - Before & After A New Subway Station
     description: Multimedia reporting project using 360 photos and videos about the changes to a Hong Kong neighborhood after the opening of a subway station.
     tech: HTML, Google Maps, Contributed photospheres to Google Street View
