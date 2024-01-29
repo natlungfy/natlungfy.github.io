@@ -25,7 +25,7 @@ theme_mode: standard  # choices are: 'dark', 'standard', 'markdown'
 
 # Customizations
 your_name: Natalie Lung
-email: nat@natalielung.xyz
+email: hi@natalielung.com
 
 navigation:
   - text: Home
