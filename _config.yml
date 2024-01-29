@@ -87,9 +87,6 @@ social:
   - service: instagram
     username: natlungfy
     link: https://instagram.com/natlungfy
-  - service: youtube
-    username: natlungfy
-    link: https://youtube.com/user/natlungfy
   - service: linkedin
     username: natlungfy
     link: https://linkedin.com/in/natlungfy
